@@ -1,10 +1,9 @@
-Windows 7 (loader) (on /dev/sda2)
+ECE411 Practicum Project
+========================
 
+**Project Focus:** Classroom Interactive Device
 
+**Team:** Chris Halseth, Kyle Lu, Matt Downey, Michael Schmidt
 
-1 1/3 1 3 1 5;
-3 1 1 1 3 3;
-1 1 1 3 1 5;
-1/3 1 1/3 1 1 3;
-1 1/3 1 1 1 5;
-1/5 1/3 1/5 1/3 1/5 1
+**Advisor:** Andrew Greenberg
+
