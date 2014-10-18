@@ -1,0 +1,4 @@
+INCLUDE $HPEESOF_DIR/oalibs/analog_rf.defs
+INCLUDE $HPEESOF_DIR/oalibs/dsp.defs
+DEFINE ECE411Antenna_lib ECE411Antenna_lib
+ASSIGN ECE411Antenna_lib libMode shared
