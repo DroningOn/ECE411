@@ -1,0 +1,14 @@
+BEGIN_SUBSTRATE
+6 __BOTTOM
+5 __SubstrateLayer1
+4 __ExpandLayer__SubstrateLayer1_9
+3 __SubstrateLayer2
+2 __ExpandLayer__SubstrateLayer3_6
+1 __SubstrateLayer3
+0 __TOP
+END_SUBSTRATE
+BEGIN_MASK
+25 pcvia2
+2 cond2
+1 cond
+END_MASK

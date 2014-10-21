@@ -12,8 +12,8 @@
         <material materialname="AIR" BAL_TYPE="INHERIT" BAL_NUM="0"/>
     </stack>
     <layers>
-        <layer materialname="Copper" toprough="" pinsOnly="0" bottomrough="" thick="-1.4" precedence="0" sheet="0" thickunit="mil" layer="16" negative="0" subtype="0" expand="1" index="1"/>
-        <layer materialname="Copper" toprough="" pinsOnly="0" bottomrough="" thick="1.4" precedence="0" sheet="0" thickunit="mil" layer="18" negative="0" subtype="0" expand="1" index="2"/>
+        <layer materialname="Copper" toprough="" pinsOnly="0" bottomrough="" thick="-1.4" precedence="0" sheet="0" thickunit="mil" layer="2" negative="0" subtype="0" expand="1" index="1"/>
+        <layer materialname="Copper" toprough="" pinsOnly="0" bottomrough="" thick="1.4" precedence="0" sheet="0" thickunit="mil" layer="1" negative="0" subtype="0" expand="1" index="2"/>
     </layers>
     <vias>
         <via materialname="Copper" rough="" index1="1" index2="2" precedence="0" layer="25" subtype="0"/>

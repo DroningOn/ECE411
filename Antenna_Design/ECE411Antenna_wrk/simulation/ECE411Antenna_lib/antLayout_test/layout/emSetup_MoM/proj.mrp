@@ -1,0 +1,13 @@
+Using the minimal snap distance of 0.004 mm
+(4 layout resolution points) for layout healing.
+
+--- WARNING -------------------------------------------------------------------
+
+The port setup needed to be corrected:
+Calibration will not be used for port "P1" (pin
+"P1" is not on the edge between a conductive and
+a nonconductive region).
+
+-------------------------------------------------------------------------------
+
+Generating mesh at 2.4 GHz...

@@ -1,0 +1,233 @@
+Momentum MomEngine_64 10.24.175 (*) 2012.08-HF4 May  3 2013
+Copyright 1992-2013, Agilent Technologies
+Simulation started on: Sat Oct 18 15:56:23 2014
+Simulation Mode: uW
+Substrate valid
+Using the minimal snap distance of 0.004 mm
+(4 layout resolution points) for layout healing.
+Layout simplification started
+.........|.........|.........|.........| 
+Layout simplification finished
+
+--- WARNING -------------------------------------------------------------------
+
+The port setup needed to be corrected:
+Calibration will not be used for port "P1" (pin
+"P1" is not on the edge between a conductive and
+a nonconductive region).
+
+-------------------------------------------------------------------------------
+Generating mesh at 2.4 GHz...
+S-parameter simulation
+S-parameter simulation started
+...initializing
+...extracting layout
+...expanding thick conductors
+...analyzing ports
+...reducing mesh
+Automatic selection: direct dense matrix solver
+Using multi-threading (4 threads)
+Matrix size: 303 (reduced: 275)
+Adaptive frequency sweep started
+Simulation frequency [1] = 500 MHz
+...loading Green functions
+...creating Basis sections
+...allocating interaction matrix
+...loading interaction matrix
+.........|.........|.........|.........| 
+...solving interaction matrix
+.........|.........|.........|.........| 
+...calculating S-parameters
+
+--- WARNING -------------------------------------------------------------------
+
+S-parameter results show unphysical behavior for certain frequencies.
+Cause        : - inaccurate (high frequency) calibration ;
+               - electrically large via using lumped model ;
+               - higher order modes at the ports ;
+               - slot mode at coplanar ports ;
+               - grouped strip-slot ports ;
+               - mesh density is too coarse.
+
+-------------------------------------------------------------------------------
+Simulation frequency [2] = 2.4 GHz
+...loading Green functions
+...loading interaction matrix
+.........|.........|.........|.........| 
+...solving interaction matrix
+.........|.........|.........|.........| 
+...calculating S-parameters
+Adaptive:   0.0 % of frequency range covered
+Simulation frequency [3] = 1.76667 GHz
+...loading Green functions
+...loading interaction matrix
+.........|.........|.........|.........| 
+...solving interaction matrix
+.........|.........|.........|.........| 
+...calculating S-parameters
+Simulation frequency [4] = 1.13333 GHz
+...loading Green functions
+...loading interaction matrix
+.........|.........|.........|.........| 
+...solving interaction matrix
+.........|.........|.........|.........| 
+...calculating S-parameters
+Simulation frequency [5] = 1.45 GHz
+...loading Green functions
+...loading interaction matrix
+.........|.........|.........|.........| 
+...solving interaction matrix
+.........|.........|.........|.........| 
+...calculating S-parameters
+Simulation frequency [6] = 2.08333 GHz
+...loading Green functions
+...loading interaction matrix
+.........|.........|.........|.........| 
+...solving interaction matrix
+.........|.........|.........|.........| 
+...calculating S-parameters
+Simulation frequency [7] = 1.925 GHz
+...loading Green functions
+...loading interaction matrix
+.........|.........|.........|.........| 
+...solving interaction matrix
+.........|.........|.........|.........| 
+...calculating S-parameters
+Simulation frequency [8] = 1.60833 GHz
+...loading Green functions
+...loading interaction matrix
+.........|.........|.........|.........| 
+...solving interaction matrix
+.........|.........|.........|.........| 
+...calculating S-parameters
+Simulation frequency [9] = 1.34444 GHz
+...loading Green functions
+...loading interaction matrix
+.........|.........|.........|.........| 
+...solving interaction matrix
+.........|.........|.........|.........| 
+...calculating S-parameters
+Simulation frequency [10] = 1.23889 GHz
+...loading Green functions
+...loading interaction matrix
+.........|.........|.........|.........| 
+...solving interaction matrix
+.........|.........|.........|.........| 
+...calculating S-parameters
+Simulation frequency [11] = 1.29167 GHz
+...loading Green functions
+...loading interaction matrix
+.........|.........|.........|.........| 
+...solving interaction matrix
+.........|.........|.........|.........| 
+...calculating S-parameters
+Simulation frequency [12] = 1.31806 GHz
+...loading Green functions
+...loading interaction matrix
+.........|.........|.........|.........| 
+...solving interaction matrix
+.........|.........|.........|.........| 
+...calculating S-parameters
+Simulation frequency [13] = 1.33125 GHz
+...loading Green functions
+...loading interaction matrix
+.........|.........|.........|.........| 
+...solving interaction matrix
+.........|.........|.........|.........| 
+...calculating S-parameters
+Simulation frequency [14] = 1.39722 GHz
+...loading Green functions
+...loading interaction matrix
+.........|.........|.........|.........| 
+...solving interaction matrix
+.........|.........|.........|.........| 
+...calculating S-parameters
+Simulation frequency [15] = 1.37083 GHz
+...loading Green functions
+...loading interaction matrix
+.........|.........|.........|.........| 
+...solving interaction matrix
+.........|.........|.........|.........| 
+...calculating S-parameters
+Simulation frequency [16] = 711.111 MHz
+...loading Green functions
+...loading interaction matrix
+.........|.........|.........|.........| 
+...solving interaction matrix
+.........|.........|.........|.........| 
+...calculating S-parameters
+Simulation frequency [17] = 922.222 MHz
+...loading Green functions
+...loading interaction matrix
+.........|.........|.........|.........| 
+...solving interaction matrix
+.........|.........|.........|.........| 
+...calculating S-parameters
+Simulation frequency [18] = 816.667 MHz
+...loading Green functions
+...loading interaction matrix
+.........|.........|.........|.........| 
+...solving interaction matrix
+.........|.........|.........|.........| 
+...calculating S-parameters
+Simulation frequency [19] = 763.889 MHz
+...loading Green functions
+...loading interaction matrix
+.........|.........|.........|.........| 
+...solving interaction matrix
+.........|.........|.........|.........| 
+...calculating S-parameters
+Simulation frequency [20] = 737.5 MHz
+...loading Green functions
+...loading interaction matrix
+.........|.........|.........|.........| 
+...solving interaction matrix
+.........|.........|.........|.........| 
+...calculating S-parameters
+Simulation frequency [21] = 605.556 MHz
+...loading Green functions
+...loading interaction matrix
+.........|.........|.........|.........| 
+...solving interaction matrix
+.........|.........|.........|.........| 
+...calculating S-parameters
+Simulation frequency [22] = 658.333 MHz
+...loading Green functions
+...loading interaction matrix
+.........|.........|.........|.........| 
+...solving interaction matrix
+.........|.........|.........|.........| 
+...calculating S-parameters
+Simulation frequency [23] = 684.722 MHz
+...loading Green functions
+...loading interaction matrix
+.........|.........|.........|.........| 
+...solving interaction matrix
+.........|.........|.........|.........| 
+...calculating S-parameters
+Simulation frequency [24] = 724.306 MHz
+...loading Green functions
+...loading interaction matrix
+.........|.........|.........|.........| 
+...solving interaction matrix
+.........|.........|.........|.........| 
+...calculating S-parameters
+Simulation frequency [25] = 697.917 MHz
+...loading Green functions
+...loading interaction matrix
+.........|.........|.........|.........| 
+...solving interaction matrix
+.........|.........|.........|.........| 
+...calculating S-parameters
+Adaptive:  61.1 % of frequency range covered
+Simulation frequency [26] = 717.708 MHz
+...loading Green functions
+...loading interaction matrix
+.........|.........|.........|.........| 
+...solving interaction matrix
+.........|.........|.........|.........| 
+...calculating S-parameters
+Adaptive: 100.0 % of frequency range covered
+S-parameter simulation finished
+Simulation finished on: Sat Oct 18 15:56:36 2014
+The simulation results have been saved in dataset "antLayout_test_MomUW".

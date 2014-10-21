@@ -1,0 +1,16 @@
+#
+# Edit Lock-Stake file. CAUTION: Please do not change.
+#
+# Information about current Edit Lock Owner.
+#
+LockStakeVersion               1.1
+LoginName                      Seth
+HostName                       Seth-PC
+ProcessIdentifier              379016
+ProcessCreationTime_UTC        1413660909
+ProcessCreationTime_Readable   10/18/14 12:35:09 Pacific Daylight Time
+AppIdentifier                  OA File System Design Manager
+OSType                         win32
+ReasonForPlacingEditLock       OpenAccess edit lock
+FilePathUsedToEditLock         C:\Users\Seth\Desktop\ECE411\GitHub\ECE411\Antenna_Design\ECE411Antenna_wrk\ECE411Antenna_lib\%F_ant%Layout_1\layout\layout.oa.cdslck
+TimeEditLocked                 10/20/14 11:20:43 Pacific Daylight Time

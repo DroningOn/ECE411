@@ -1,0 +1,7 @@
+<!DOCTYPE DisplayAttributes>
+<Lpp_Differences_List>
+    <LPP purpose="drawing" protect="1" layer="ads_drc_error" visible="0"/>
+    <LPP purpose="drawing" protect="1" layer="ads_text" visible="0"/>
+    <LPP purpose="drawing" protect="1" layer="ads_y7" visible="0"/>
+    <LPP purpose="drawing" protect="1" layer="ads_y8" visible="0"/>
+</Lpp_Differences_List>
