@@ -1,0 +1,16 @@
+#Momentum: B.10.24.175 (*) 2012.08-HF4 May  3 2013 
+#Momentum Date and Time: Sat Oct 18 16:31:48 2014
+
+Overall database status : 1 (file present and valid)
+
+Frequency range : from 0.5 GHz to 2.4 GHz.
+
+Requested frequency range : from 0.5 GHz to 2.4 GHz.
+
+Individual status fields : (0 = FALSE, 1 = TRUE)
+ File exists             : 1
+ Substrates match        : 1
+ Frequency-range matches : 1
+
+Corresponding potentialpath : C:\Users\Seth\Desktop\Schematics/
+Corresponding potentialname : C:\Users\Seth\Desktop\Schematics\\substrates\0003.sdb

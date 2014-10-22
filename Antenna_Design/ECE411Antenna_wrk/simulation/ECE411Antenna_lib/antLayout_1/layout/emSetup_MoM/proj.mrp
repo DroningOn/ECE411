@@ -1,0 +1,24 @@
+Using the minimal snap distance of 0.004 mm
+(4 layout resolution points) for layout healing.
+
+--- WARNING -------------------------------------------------------------------
+
+Layout healing changed the layout. The actual
+highest aggregate snap distance was 0.003 mm.
+Further details have been written to the DRC
+report.
+
+-------------------------------------------------------------------------------
+
+
+--- WARNING -------------------------------------------------------------------
+
+The port setup needed to be corrected:
+Calibration will not be used for port "P1" (pin
+sets {"P1"} and {"P2"} are in different
+reference planes, although identical reference
+planes are required for TML calibration).
+
+-------------------------------------------------------------------------------
+
+Generating mesh at 2.4 GHz...

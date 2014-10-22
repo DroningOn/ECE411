@@ -1,0 +1,41 @@
+<!DOCTYPE DisplayAttributes>
+<Lpp_Differences_List>
+    <LPP purpose="drawing" protect="1" layer="IC_pin1_marker" visible="0"/>
+    <LPP purpose="drawing" protect="1" layer="IC_pin_number" visible="0"/>
+    <LPP purpose="drawing" protect="1" layer="bond" visible="0"/>
+    <LPP purpose="drawing" protect="1" layer="bound" visible="0"/>
+    <LPP purpose="drawing" protect="1" layer="case_dimensions" visible="0"/>
+    <LPP purpose="drawing" mode="2" protect="1" layer="cond2" visible="0"/>
+    <LPP purpose="drawing" mode="2" layer="cond"/>
+    <LPP purpose="drawing" protect="1" layer="default" visible="0"/>
+    <LPP purpose="drawing" protect="1" layer="diel2" visible="0"/>
+    <LPP purpose="drawing" protect="1" layer="diel" visible="0"/>
+    <LPP purpose="drawing" protect="1" layer="hole" visible="0"/>
+    <LPP purpose="drawing" layer="hpeesof_region" visible="0"/>
+    <LPP purpose="drawing" protect="1" layer="leads" visible="0"/>
+    <LPP purpose="drawing" layer="momentum_box" visible="0"/>
+    <LPP purpose="drawing" protect="1" layer="momentum_err" visible="0"/>
+    <LPP purpose="drawing" layer="momentum_ref_offset" visible="0"/>
+    <LPP purpose="drawing" protect="1" layer="packages" visible="0"/>
+    <LPP purpose="drawing" protect="1" layer="pc1" visible="0"/>
+    <LPP purpose="drawing" protect="1" layer="pc2" visible="0"/>
+    <LPP purpose="drawing" protect="1" layer="pc3" visible="0"/>
+    <LPP purpose="drawing" protect="1" layer="pc4" visible="0"/>
+    <LPP purpose="drawing" protect="1" layer="pc5" visible="0"/>
+    <LPP purpose="drawing" protect="1" layer="pc6" visible="0"/>
+    <LPP purpose="drawing" protect="1" layer="pc7" visible="0"/>
+    <LPP purpose="drawing" protect="1" layer="pc8" visible="0"/>
+    <LPP purpose="drawing" protect="1" layer="pcvia1" visible="0"/>
+    <LPP purpose="drawing" protect="1" layer="pcvia2" visible="0"/>
+    <LPP purpose="drawing" protect="1" layer="pcvia3" visible="0"/>
+    <LPP purpose="drawing" protect="1" layer="pcvia4" visible="0"/>
+    <LPP purpose="drawing" protect="1" layer="pcvia5" visible="0"/>
+    <LPP purpose="drawing" protect="1" layer="pcvia6" visible="0"/>
+    <LPP purpose="drawing" protect="1" layer="pcvia7" visible="0"/>
+    <LPP purpose="drawing" protect="1" layer="ports" visible="0"/>
+    <LPP purpose="drawing" protect="1" layer="resi" visible="0"/>
+    <LPP purpose="drawing" protect="1" layer="silk_screen" visible="0"/>
+    <LPP purpose="drawing" protect="1" layer="solder_mask" visible="0"/>
+    <LPP purpose="drawing" protect="1" layer="symbol" visible="0"/>
+    <LPP purpose="drawing" protect="1" layer="text" visible="0"/>
+</Lpp_Differences_List>

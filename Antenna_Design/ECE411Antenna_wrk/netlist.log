@@ -1,0 +1,40 @@
+
+Options ResourceUsage=yes UseNutmegFormat=no EnableOptim=no TopDesignName="ECE411Antenna_lib:MatchSim_1:schematic"
+define F_antLayout_1 ( P1  P2  Ref=0 ) 
+;parameters 
+MomCmpt:em_data  S1 Ref \
+    name="ECE411Antenna_lib:F_antLayout_1:emModel" \
+    paramFile="" \
+    modelFile="C:\Users\Seth\Desktop\ECE411\GitHub\ECE411\Antenna_Design\ECE411Antenna_wrk\ECE411Antenna_lib\%F_ant%Layout_1\em%Model\model.ndx" \
+    ModelReuse=1 \
+    ModelType="MOMMW" \
+    ExtrapolationMode="linear" \
+    EnforcePassivity=-1
+
+#uselib "ckt" , "tf"
+
+; Port S1
+Short:ShortSP1_1 P1 SP1 Mode=0 SaveCurrent=no
+Short:ShortSN1_1 P2 SN1 Mode=0 SaveCurrent=no
+tf:TFSP1 SP1 S1 S1_common Ref T=1/2
+tf:TFSN1 S1_common S1 SN1 Ref T=1/2
+R:RS1_common_bias S1_common Ref R=1 TOhm
+end F_antLayout_1
+S_Param:SP1 CalcS=yes CalcY=no CalcZ=no GroupDelayAperture=1e-4 FreqConversion=no FreqConversionPort=1 StatusLevel=2 CalcNoise=no SortNoise=0 BandwidthForNoise=1.0 Hz DevOpPtLevel=0 \
+SweepVar="freq" SweepPlan="SP1_stim" OutputPlan="SP1_Output" 
+
+SweepPlan: SP1_stim Start=500 MHz Stop=1.2 GHz Step=1 MHz 
+
+OutputPlan:SP1_Output \
+      Type="Output" \
+      UseEquationNestLevel=yes \
+      EquationNestLevel=2 \
+      UseSavedEquationNestLevel=yes \
+      SavedEquationNestLevel=2
+
+
+;#@# autodisplay="S_Params_Quad_dB_Smith"
+Port:Term1  N__1 0 Num=1 Z=50 Ohm Noise=yes 
+F_antLayout_1:I__4  N__4 0 
+L:L1  N__4 0 L=5.6 nH Noise=yes  
+C:C1  N__1 N__4 C=16 pF 

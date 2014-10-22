@@ -1,0 +1,31 @@
+CITIFILE A.01.01
+#Momentum: B.10.24.175 (*) 2012.08-HF4 May  3 2013 
+#Momentum Date and Time: Sat Oct 18 20:54:51 2014
+
+NAME PortSet1
+
+CONSTANT NBR_OF_PORTS 1
+
+VAR freq MAG 2
+
+DATA GAMMA_1[1] RI
+DATA Z0_1[1,1] RI
+DATA LAMBADAI_1[1,1] RI
+
+VAR_LIST_BEGIN
+	 500000000
+	 1200000000
+VAR_LIST_END
+
+BEGIN
+	 0,	 0
+	 0,	 0
+END
+BEGIN
+	 50 ,	 0 
+	 50 ,	 0 
+END
+BEGIN
+	 0,	 0
+	 0,	 0
+END
