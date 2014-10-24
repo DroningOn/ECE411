@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="yes"/>
@@ -61,7 +61,7 @@
 <layer number="52" name="bDocu" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="91" name="Nets" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="92" name="Busses" color="1" fill="1" visible="yes" active="yes"/>
-<layer number="93" name="Pins" color="2" fill="1" visible="no" active="yes"/>
+<layer number="93" name="Pins" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="94" name="Symbols" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="95" name="Names" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="96" name="Values" color="7" fill="1" visible="yes" active="yes"/>
@@ -70,44 +70,62 @@
 </layers>
 <library>
 <packages>
-<package name="CR2032-SNAPDRAGON">
-<smd name="V+" x="14.605" y="0" dx="4.064" dy="2.794" layer="1" rot="R90"/>
-<wire x1="-1.27" y1="1.27" x2="1.27" y2="1.27" width="0.127" layer="51"/>
-<wire x1="1.27" y1="1.27" x2="1.27" y2="-1.27" width="0.127" layer="51"/>
-<wire x1="1.27" y1="-1.27" x2="-1.27" y2="-1.27" width="0.127" layer="51"/>
-<wire x1="-1.27" y1="-1.27" x2="-1.27" y2="1.27" width="0.127" layer="51"/>
-<smd name="V-" x="-14.605" y="0" dx="4.064" dy="2.794" layer="1" rot="R90"/>
-<wire x1="-11.049" y1="11.049" x2="-11.049" y2="-11.049" width="0.127" layer="51"/>
-<wire x1="-11.049" y1="-11.049" x2="11.049" y2="-11.049" width="0.127" layer="51"/>
-<wire x1="11.049" y1="-11.049" x2="11.049" y2="11.049" width="0.127" layer="51"/>
-<wire x1="11.049" y1="11.049" x2="-11.049" y2="11.049" width="0.127" layer="51"/>
+<package name="5X-TVS">
+<smd name="5" x="0" y="0.4826" dx="0.254" dy="0.6604" layer="1" rot="R180"/>
+<smd name="2" x="0" y="-0.4826" dx="0.254" dy="0.6604" layer="1" rot="R180"/>
+<smd name="6" x="-0.508" y="0.4826" dx="0.254" dy="0.6604" layer="1" rot="R180"/>
+<smd name="4" x="0.508" y="0.4826" dx="0.254" dy="0.6604" layer="1" rot="R180"/>
+<smd name="3" x="0.508" y="-0.4826" dx="0.254" dy="0.6604" layer="1" rot="R180"/>
+<smd name="1" x="-0.508" y="-0.4826" dx="0.254" dy="0.6604" layer="1" rot="R180"/>
+<wire x1="-0.7239" y1="0.4953" x2="0.7239" y2="0.4953" width="0.127" layer="51"/>
+<wire x1="-0.7239" y1="-0.4953" x2="0.7239" y2="-0.4953" width="0.127" layer="51"/>
+<wire x1="0.7239" y1="0.5" x2="0.7239" y2="-0.5" width="0.127" layer="51"/>
+<wire x1="-0.7239" y1="0.5" x2="-0.7239" y2="-0.5" width="0.127" layer="51"/>
+<circle x="-0.45" y="-0.15" radius="0.05" width="0.1" layer="51"/>
 </package>
 </packages>
 <symbols>
-<symbol name="CR2032">
-<wire x1="-5.08" y1="2.54" x2="5.08" y2="2.54" width="0.254" layer="94"/>
+<symbol name="TVS">
 <wire x1="-2.54" y1="0" x2="2.54" y2="0" width="0.254" layer="94"/>
-<pin name="V+" x="0" y="7.62" visible="off" length="middle" rot="R270"/>
-<pin name="V-" x="0" y="-5.08" visible="off" length="middle" rot="R90"/>
-<text x="-7.62" y="10.16" size="1.27" layer="96">&gt;Value</text>
-<text x="-7.62" y="12.7" size="1.27" layer="95">&gt;Name</text>
-<wire x1="-6.096" y1="5.08" x2="-4.064" y2="5.08" width="0.254" layer="94"/>
-<wire x1="-5.588" y1="-2.54" x2="-4.318" y2="-2.54" width="0.254" layer="94"/>
-<wire x1="-5.08" y1="4.318" x2="-5.08" y2="5.842" width="0.254" layer="94"/>
+<wire x1="2.54" y1="0" x2="0" y2="2.54" width="0.254" layer="94"/>
+<wire x1="0" y1="2.54" x2="-2.54" y2="0" width="0.254" layer="94"/>
+<wire x1="0" y1="2.54" x2="1.778" y2="2.54" width="0.254" layer="94"/>
+<wire x1="1.778" y1="2.54" x2="2.286" y2="3.048" width="0.254" layer="94"/>
+<wire x1="0" y1="2.54" x2="-1.778" y2="2.54" width="0.254" layer="94"/>
+<wire x1="-1.778" y1="2.54" x2="-2.286" y2="2.032" width="0.254" layer="94"/>
+<pin name="ANODE" x="0" y="-2.54" visible="off" length="short" rot="R90"/>
+<pin name="CATHODE" x="0" y="5.08" visible="off" length="short" rot="R270"/>
+</symbol>
+<symbol name="TVSP2">
+<wire x1="-2.54" y1="0" x2="0" y2="0" width="0.254" layer="94"/>
+<wire x1="0" y1="0" x2="2.54" y2="0" width="0.254" layer="94"/>
+<wire x1="2.54" y1="0" x2="0" y2="2.54" width="0.254" layer="94"/>
+<wire x1="0" y1="2.54" x2="-2.54" y2="0" width="0.254" layer="94"/>
+<wire x1="-1.524" y1="2.54" x2="1.524" y2="2.54" width="0.254" layer="94"/>
+<wire x1="1.524" y1="2.54" x2="2.032" y2="3.048" width="0.254" layer="94"/>
+<wire x1="-1.524" y1="2.54" x2="-2.032" y2="2.032" width="0.254" layer="94"/>
+<pin name="P$1" x="0" y="5.08" visible="off" length="short" rot="R270"/>
+<wire x1="0" y1="0" x2="0" y2="-2.54" width="0.254" layer="94"/>
 </symbol>
 </symbols>
 <devicesets>
-<deviceset name="CR2032-SNAPDRAGON" prefix="U">
-<description>HOLDER SNAP DRAGON CR2032 SMD
-Digikey P/N: BHSD-2032-SMCT-ND</description>
+<deviceset name="ESDA6V1-5M6">
 <gates>
-<gate name="CR2032" symbol="CR2032" x="0" y="0"/>
+<gate name="G$1" symbol="TVS" x="0" y="0"/>
+<gate name="G$2" symbol="TVSP2" x="7.62" y="0"/>
+<gate name="G$3" symbol="TVSP2" x="15.24" y="0"/>
+<gate name="G$4" symbol="TVSP2" x="22.86" y="0"/>
+<gate name="G$5" symbol="TVSP2" x="30.48" y="0"/>
 </gates>
 <devices>
-<device name="CR2032" package="CR2032-SNAPDRAGON">
+<device name="" package="5X-TVS">
 <connects>
-<connect gate="CR2032" pin="V+" pad="V+"/>
-<connect gate="CR2032" pin="V-" pad="V-"/>
+<connect gate="G$1" pin="ANODE" pad="2"/>
+<connect gate="G$1" pin="CATHODE" pad="1"/>
+<connect gate="G$2" pin="P$1" pad="3"/>
+<connect gate="G$3" pin="P$1" pad="4"/>
+<connect gate="G$4" pin="P$1" pad="5"/>
+<connect gate="G$5" pin="P$1" pad="6"/>
 </connects>
 <technologies>
 <technology name=""/>

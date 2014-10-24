@@ -61,7 +61,7 @@
 <layer number="52" name="bDocu" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="91" name="Nets" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="92" name="Busses" color="1" fill="1" visible="yes" active="yes"/>
-<layer number="93" name="Pins" color="2" fill="1" visible="no" active="yes"/>
+<layer number="93" name="Pins" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="94" name="Symbols" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="95" name="Names" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="96" name="Values" color="7" fill="1" visible="yes" active="yes"/>
@@ -70,44 +70,41 @@
 </layers>
 <library>
 <packages>
-<package name="CR2032-SNAPDRAGON">
-<smd name="V+" x="14.605" y="0" dx="4.064" dy="2.794" layer="1" rot="R90"/>
-<wire x1="-1.27" y1="1.27" x2="1.27" y2="1.27" width="0.127" layer="51"/>
-<wire x1="1.27" y1="1.27" x2="1.27" y2="-1.27" width="0.127" layer="51"/>
-<wire x1="1.27" y1="-1.27" x2="-1.27" y2="-1.27" width="0.127" layer="51"/>
-<wire x1="-1.27" y1="-1.27" x2="-1.27" y2="1.27" width="0.127" layer="51"/>
-<smd name="V-" x="-14.605" y="0" dx="4.064" dy="2.794" layer="1" rot="R90"/>
-<wire x1="-11.049" y1="11.049" x2="-11.049" y2="-11.049" width="0.127" layer="51"/>
-<wire x1="-11.049" y1="-11.049" x2="11.049" y2="-11.049" width="0.127" layer="51"/>
-<wire x1="11.049" y1="-11.049" x2="11.049" y2="11.049" width="0.127" layer="51"/>
-<wire x1="11.049" y1="11.049" x2="-11.049" y2="11.049" width="0.127" layer="51"/>
+<package name="TOUCH-PAD">
+<description>Simple touch pad</description>
+<smd name="P$1" x="0" y="2.54" dx="3.175" dy="0.635" layer="1"/>
+<smd name="P$2" x="2.54" y="0" dx="3.175" dy="0.635" layer="1" rot="R90"/>
+<smd name="P$3" x="0" y="-2.54" dx="3.175" dy="0.635" layer="1" rot="R180"/>
+<smd name="P$4" x="-2.54" y="0" dx="3.175" dy="0.635" layer="1" rot="R270"/>
+<smd name="VCC" x="0" y="0" dx="1.905" dy="1.905" layer="1"/>
 </package>
 </packages>
 <symbols>
-<symbol name="CR2032">
-<wire x1="-5.08" y1="2.54" x2="5.08" y2="2.54" width="0.254" layer="94"/>
-<wire x1="-2.54" y1="0" x2="2.54" y2="0" width="0.254" layer="94"/>
-<pin name="V+" x="0" y="7.62" visible="off" length="middle" rot="R270"/>
-<pin name="V-" x="0" y="-5.08" visible="off" length="middle" rot="R90"/>
-<text x="-7.62" y="10.16" size="1.27" layer="96">&gt;Value</text>
-<text x="-7.62" y="12.7" size="1.27" layer="95">&gt;Name</text>
-<wire x1="-6.096" y1="5.08" x2="-4.064" y2="5.08" width="0.254" layer="94"/>
-<wire x1="-5.588" y1="-2.54" x2="-4.318" y2="-2.54" width="0.254" layer="94"/>
-<wire x1="-5.08" y1="4.318" x2="-5.08" y2="5.842" width="0.254" layer="94"/>
+<symbol name="TOUCH-PAD">
+<wire x1="2.54" y1="-2.54" x2="0" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="0" y1="-2.54" x2="0" y2="2.54" width="0.254" layer="94"/>
+<wire x1="0" y1="2.54" x2="2.54" y2="2.54" width="0.254" layer="94"/>
+<pin name="P$1" x="-2.54" y="0" visible="off" length="short"/>
+<pin name="VCC" x="7.62" y="0" visible="off" length="short" rot="R180"/>
+<wire x1="2.54" y1="0" x2="5.08" y2="0" width="0.254" layer="94"/>
+<pin name="P$3" x="-2.54" y="2.54" visible="off" length="short"/>
+<pin name="P$4" x="-2.54" y="-2.54" visible="off" length="short"/>
+<pin name="P$5" x="2.54" y="5.08" visible="off" length="short" rot="R270"/>
 </symbol>
 </symbols>
 <devicesets>
-<deviceset name="CR2032-SNAPDRAGON" prefix="U">
-<description>HOLDER SNAP DRAGON CR2032 SMD
-Digikey P/N: BHSD-2032-SMCT-ND</description>
+<deviceset name="TOUCH-PAD">
 <gates>
-<gate name="CR2032" symbol="CR2032" x="0" y="0"/>
+<gate name="G$1" symbol="TOUCH-PAD" x="0" y="0"/>
 </gates>
 <devices>
-<device name="CR2032" package="CR2032-SNAPDRAGON">
+<device name="" package="TOUCH-PAD">
 <connects>
-<connect gate="CR2032" pin="V+" pad="V+"/>
-<connect gate="CR2032" pin="V-" pad="V-"/>
+<connect gate="G$1" pin="P$1" pad="P$1"/>
+<connect gate="G$1" pin="P$3" pad="P$2"/>
+<connect gate="G$1" pin="P$4" pad="P$3"/>
+<connect gate="G$1" pin="P$5" pad="P$4"/>
+<connect gate="G$1" pin="VCC" pad="VCC"/>
 </connects>
 <technologies>
 <technology name=""/>

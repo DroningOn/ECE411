@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="yes" active="yes"/>
@@ -15406,13 +15406,13 @@ For RGZ48</description>
 <wire x1="17.78" y1="33.02" x2="-17.78" y2="33.02" width="0.254" layer="94"/>
 <wire x1="-17.78" y1="-35.56" x2="17.78" y2="-35.56" width="0.254" layer="94"/>
 <circle x="-16" y="30.59" radius="1.27" width="0.254" layer="94"/>
-<text x="16.51" y="15.24" size="1.016" layer="95" font="vector" rot="MR0">P5.1/XOUT</text>
-<text x="16.51" y="17.78" size="1.016" layer="95" font="vector" rot="MR0">P5.0/XIN</text>
+<text x="16.51" y="15.24" size="1.016" layer="95" font="vector" rot="MR0">P5.1</text>
+<text x="16.51" y="17.78" size="1.016" layer="95" font="vector" rot="MR0">P5.0</text>
 <text x="16.51" y="-10.16" size="1.016" layer="95" font="vector" rot="MR0">R_BIAS</text>
-<text x="16.51" y="27.94" size="1.016" layer="95" font="vector" rot="MR0">P2.3/...</text>
-<text x="-16.51" y="22.86" size="1.016" layer="95" font="vector">P2.0/PM_CBOUT1/...</text>
-<text x="-16.51" y="25.4" size="1.016" layer="95" font="vector">P2.1/PM_TA1CCR0A/...</text>
-<text x="16.51" y="25.4" size="1.016" layer="95" font="vector" rot="MR0">P2.4/PM_RTCCLK/...</text>
+<text x="16.51" y="27.94" size="1.016" layer="95" font="vector" rot="MR0">P2.3</text>
+<text x="-16.51" y="22.86" size="1.016" layer="95" font="vector">P2.0</text>
+<text x="-16.51" y="25.4" size="1.016" layer="95" font="vector">P2.1</text>
+<text x="16.51" y="25.4" size="1.016" layer="95" font="vector" rot="MR0">P2.4</text>
 <text x="16.51" y="2.54" size="1.016" layer="95" font="vector" rot="MR0">PJ.3/TCK</text>
 <text x="16.51" y="0" size="1.016" layer="95" font="vector" rot="MR0">PJ.2/TMS</text>
 <text x="16.51" y="-2.54" size="1.016" layer="95" font="vector" rot="MR0">PJ.1/TDI/TCLK</text>
@@ -15420,23 +15420,23 @@ For RGZ48</description>
 <text x="-17.78" y="-40.64" size="3.81" layer="96" font="vector">CC430F513x</text>
 <text x="-16.51" y="12.7" size="1.016" layer="95" font="vector">VCORE</text>
 <text x="-16.51" y="10.16" size="1.016" layer="95" font="vector">DVCC</text>
-<text x="-16.51" y="7.62" size="1.016" layer="95" font="vector">P1.4/PM_UCB0CLK/...</text>
-<text x="-16.51" y="5.08" size="1.016" layer="95" font="vector">P1.3/PM_UCB0SIMO/...</text>
-<text x="-16.51" y="-7.62" size="1.016" layer="95" font="vector">P3.6/PM_RFGDO1</text>
-<text x="-16.51" y="-10.16" size="1.016" layer="95" font="vector">P3.5/PM_TA0CCR4A</text>
-<text x="-16.51" y="-12.7" size="1.016" layer="95" font="vector">P3.4/PM_TA0CCR3A</text>
-<text x="-16.51" y="-15.24" size="1.016" layer="95" font="vector">P3.3/PM_TA0CCR2A</text>
-<text x="-16.51" y="-17.78" size="1.016" layer="95" font="vector">P3.2/PM_TA0CCR1A</text>
-<text x="-16.51" y="-20.32" size="1.016" layer="95" font="vector">P3.1/PM_TA0CCR0A</text>
-<text x="-16.51" y="-22.86" size="1.016" layer="95" font="vector">P3.0/PM_CBOUT0/PM_TA0CLK</text>
+<text x="-16.51" y="7.62" size="1.016" layer="95" font="vector">P1.4</text>
+<text x="-16.51" y="5.08" size="1.016" layer="95" font="vector">P1.3</text>
+<text x="-16.51" y="-7.62" size="1.016" layer="95" font="vector">P3.6</text>
+<text x="-16.51" y="-10.16" size="1.016" layer="95" font="vector">P3.5</text>
+<text x="-16.51" y="-12.7" size="1.016" layer="95" font="vector">P3.4</text>
+<text x="-16.51" y="-15.24" size="1.016" layer="95" font="vector">P3.3</text>
+<text x="-16.51" y="-17.78" size="1.016" layer="95" font="vector">P3.2</text>
+<text x="-16.51" y="-20.32" size="1.016" layer="95" font="vector">P3.1</text>
+<text x="-16.51" y="-22.86" size="1.016" layer="95" font="vector">P3.0</text>
 <text x="-16.51" y="-25.4" size="1.016" layer="95" font="vector">DVCC</text>
 <text x="16.51" y="-5.08" size="1.016" layer="95" font="vector" rot="MR0">PJ.0/TDO</text>
 <text x="16.51" y="-7.62" size="1.016" layer="95" font="vector" rot="MR0">GUARD</text>
-<text x="-16.51" y="-5.08" size="1.016" layer="95" font="vector">P3.7/PM_SMCLK</text>
-<text x="-16.51" y="-2.54" size="1.016" layer="95" font="vector">P1.0/PM_RFGDO0</text>
-<text x="-16.51" y="0" size="1.016" layer="95" font="vector">P1.1/PM_RFGDO2</text>
-<text x="-16.51" y="2.54" size="1.016" layer="95" font="vector">P1.2/PM_UCB0SOMI/...</text>
-<text x="16.51" y="22.86" size="1.016" layer="95" rot="MR0">P2.5/PM_SVMOUT/...</text>
+<text x="-16.51" y="-5.08" size="1.016" layer="95" font="vector">P3.7</text>
+<text x="-16.51" y="-2.54" size="1.016" layer="95" font="vector">P1.0</text>
+<text x="-16.51" y="0" size="1.016" layer="95" font="vector">P1.1</text>
+<text x="-16.51" y="2.54" size="1.016" layer="95" font="vector">P1.2</text>
+<text x="16.51" y="22.86" size="1.016" layer="95" rot="MR0">P2.5</text>
 <text x="16.51" y="20.32" size="1.016" layer="95" rot="MR0">AVCC</text>
 <text x="16.51" y="-27.94" size="1.016" layer="95" rot="MR0">RF_XOUT</text>
 <text x="16.51" y="-30.48" size="1.016" layer="95" rot="MR0">RF_XIN</text>
@@ -15446,15 +15446,15 @@ For RGZ48</description>
 <text x="16.51" y="-25.4" size="1.016" layer="95" rot="MR0">AVCC_RF</text>
 <text x="16.51" y="-12.7" size="1.016" layer="95" rot="MR0">AVCC_RF</text>
 <text x="16.51" y="-15.24" size="1.016" layer="95" rot="MR0">AVCC_RF</text>
-<text x="-16.51" y="20.32" size="1.016" layer="95" font="vector">P1.7/PM_UCA0CLK/PM_UCB0STE</text>
-<text x="-16.51" y="27.94" size="1.016" layer="95" font="vector">P2.2/PM_TA1CCR1A/...</text>
-<text x="-16.51" y="17.78" size="1.016" layer="95" font="vector">P1.6/PM_UCA0TXD/...</text>
-<text x="-16.51" y="15.24" size="1.016" layer="95" font="vector">P1.5/PM_UCA0RXD/...</text>
+<text x="-16.51" y="20.32" size="1.016" layer="95" font="vector">P1.7</text>
+<text x="-16.51" y="27.94" size="1.016" layer="95" font="vector">P2.2</text>
+<text x="-16.51" y="17.78" size="1.016" layer="95" font="vector">P1.6</text>
+<text x="-16.51" y="15.24" size="1.016" layer="95" font="vector">P1.5</text>
 <text x="16.51" y="-22.86" size="1.016" layer="95" rot="MR0">AVCC_RF</text>
 <text x="16.51" y="-20.32" size="1.016" layer="95" rot="MR0">RF_P</text>
 <text x="16.51" y="-17.78" size="1.016" layer="95" rot="MR0">RF_N</text>
-<text x="-16.51" y="-30.48" size="1.016" layer="95">P2.6/PM_ACLK</text>
-<text x="-16.51" y="-27.94" size="1.016" layer="95">P2.7/PM_MODCLK/PM_DMAE0</text>
+<text x="-16.51" y="-30.48" size="1.016" layer="95">P2.6</text>
+<text x="-16.51" y="-27.94" size="1.016" layer="95">P2.7</text>
 <text x="16.51" y="5.08" size="1.016" layer="95" font="vector" rot="MR0">TEST/SBWTCK</text>
 <text x="15.24" y="30.48" size="1.016" layer="95" font="vector" rot="MR0">Thermal Pad</text>
 <pin name="1" x="-22.86" y="27.94" visible="pad" length="middle"/>

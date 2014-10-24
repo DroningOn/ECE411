@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
@@ -4027,38 +4027,6 @@ Digikey P/N: BHSD-2032-SMCT-ND</description>
 </deviceset>
 </devicesets>
 </library>
-<library name="SparkFun-Aesthetics">
-<description>&lt;h3&gt;SparkFun Electronics' preferred foot prints&lt;/h3&gt;
-In this library you'll find non-functional items- supply symbols, logos, notations, frame blocks, etc.&lt;br&gt;&lt;br&gt;
-We've spent an enormous amount of time creating and checking these footprints and parts, but it is the end user's responsibility to ensure correctness and suitablity for a given componet or application. If you enjoy using this library, please buy one of our products at www.sparkfun.com.
-&lt;br&gt;&lt;br&gt;
-&lt;b&gt;Licensing:&lt;/b&gt; CC v3.0 Share-Alike You are welcome to use this library for commercial purposes. For attribution, we ask that when you begin to sell your device using our footprint, you email us with a link to the product being sold. We want bragging rights that we helped (in a very small part) to create your 8th world wonder. We would like the opportunity to feature your device on our homepage.</description>
-<packages>
-</packages>
-<symbols>
-<symbol name="GND">
-<pin name="3.3V" x="0" y="2.54" visible="off" length="short" direction="sup" rot="R270"/>
-<wire x1="-2.032" y1="0" x2="2.032" y2="0" width="0.254" layer="94"/>
-<wire x1="-1.27" y1="-0.762" x2="1.27" y2="-0.762" width="0.254" layer="94"/>
-<wire x1="-0.508" y1="-1.524" x2="0.508" y2="-1.524" width="0.254" layer="94"/>
-<text x="2.54" y="0" size="1.778" layer="94">&gt;NAME</text>
-</symbol>
-</symbols>
-<devicesets>
-<deviceset name="GND2" prefix="GND">
-<gates>
-<gate name="G$1" symbol="GND" x="2.54" y="0"/>
-</gates>
-<devices>
-<device name="">
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-</devicesets>
-</library>
 <library name="aMJK_General">
 <packages>
 <package name="1X05">
@@ -4261,15 +4229,12 @@ We've spent an enormous amount of time creating and checking these footprints an
 <part name="SUPPLY2" library="supply2" deviceset="GND" device=""/>
 <part name="SUPPLY3" library="supply2" deviceset="GND" device=""/>
 <part name="U$2" library="CR2032-SnapDragon" deviceset="CR2032-SNAPDRAGON" device=""/>
-<part name="GND1" library="SparkFun-Aesthetics" deviceset="GND2" device=""/>
 <part name="JTAG" library="aMJK_General" deviceset="PINHD-1X5" device=""/>
 <part name="C1" library="rcl" deviceset="C-EU" device="C0603"/>
 <part name="C2" library="rcl" deviceset="C-EU" device="C0603"/>
 <part name="C3" library="rcl" deviceset="C-EU" device="C0603"/>
 <part name="C4" library="rcl" deviceset="C-EU" device="C0603"/>
 <part name="C5" library="rcl" deviceset="C-EU" device="C0603"/>
-<part name="GND2" library="SparkFun-Aesthetics" deviceset="GND2" device=""/>
-<part name="P+1" library="aVLA_SYmbols" deviceset="VCC" device=""/>
 <part name="P+2" library="aVLA_SYmbols" deviceset="VCC" device=""/>
 </parts>
 <sheets>
@@ -4343,16 +4308,13 @@ We've spent an enormous amount of time creating and checking these footprints an
 <attribute name="VALUE" x="243.84" y="144.78" size="1.27" layer="96" rot="R90"/>
 <attribute name="NAME" x="246.38" y="144.78" size="1.27" layer="95" rot="R90"/>
 </instance>
-<instance part="GND1" gate="G$1" x="236.22" y="134.62"/>
 <instance part="JTAG" gate="A" x="134.62" y="129.54"/>
 <instance part="C1" gate="G$1" x="187.96" y="149.86"/>
 <instance part="C2" gate="G$1" x="195.58" y="149.86"/>
 <instance part="C3" gate="G$1" x="203.2" y="149.86"/>
 <instance part="C4" gate="G$1" x="210.82" y="149.86"/>
 <instance part="C5" gate="G$1" x="218.44" y="149.86"/>
-<instance part="GND2" gate="G$1" x="187.96" y="134.62"/>
-<instance part="P+1" gate="VCC" x="170.18" y="157.48"/>
-<instance part="P+2" gate="VCC" x="175.26" y="157.48"/>
+<instance part="P+2" gate="VCC" x="187.96" y="157.48"/>
 </instances>
 <busses>
 </busses>
@@ -4471,7 +4433,6 @@ We've spent an enormous amount of time creating and checking these footprints an
 <segment>
 <pinref part="U$2" gate="G$1" pin="V-"/>
 <wire x1="236.22" y1="142.24" x2="236.22" y2="137.16" width="0.1524" layer="91"/>
-<pinref part="GND1" gate="G$1" pin="3.3V"/>
 </segment>
 </net>
 <net name="ANTENNA" class="0">
@@ -4522,54 +4483,6 @@ We've spent an enormous amount of time creating and checking these footprints an
 <pinref part="JTAG" gate="A" pin="2"/>
 </segment>
 </net>
-<net name="3.3V" class="0">
-<segment>
-<pinref part="C5" gate="G$1" pin="2"/>
-<wire x1="218.44" y1="144.78" x2="210.82" y2="144.78" width="0.1524" layer="91"/>
-<wire x1="210.82" y1="144.78" x2="203.2" y2="144.78" width="0.1524" layer="91"/>
-<wire x1="203.2" y1="144.78" x2="195.58" y2="144.78" width="0.1524" layer="91"/>
-<wire x1="195.58" y1="144.78" x2="187.96" y2="144.78" width="0.1524" layer="91"/>
-<wire x1="187.96" y1="144.78" x2="187.96" y2="137.16" width="0.1524" layer="91"/>
-<pinref part="GND2" gate="G$1" pin="3.3V"/>
-<pinref part="C1" gate="G$1" pin="2"/>
-<junction x="187.96" y="144.78"/>
-<pinref part="C2" gate="G$1" pin="2"/>
-<junction x="195.58" y="144.78"/>
-<pinref part="C3" gate="G$1" pin="2"/>
-<junction x="203.2" y="144.78"/>
-<pinref part="C4" gate="G$1" pin="2"/>
-<junction x="210.82" y="144.78"/>
-<junction x="218.44" y="144.78"/>
-</segment>
-</net>
-<net name="DVCC_8" class="0">
-<segment>
-<pinref part="C1" gate="G$1" pin="1"/>
-<wire x1="187.96" y1="152.4" x2="187.96" y2="154.94" width="0.1524" layer="91"/>
-<label x="187.96" y="154.94" size="2.54" layer="95" rot="R90" xref="yes"/>
-</segment>
-</net>
-<net name="DVCC_24" class="0">
-<segment>
-<pinref part="C2" gate="G$1" pin="1"/>
-<wire x1="195.58" y1="152.4" x2="195.58" y2="154.94" width="0.1524" layer="91"/>
-<label x="195.58" y="154.94" size="2.54" layer="95" rot="R90" xref="yes"/>
-</segment>
-</net>
-<net name="DVCC_41" class="0">
-<segment>
-<pinref part="C3" gate="G$1" pin="1"/>
-<wire x1="203.2" y1="152.4" x2="203.2" y2="154.94" width="0.1524" layer="91"/>
-<label x="203.2" y="154.94" size="2.54" layer="95" rot="R90" xref="yes"/>
-</segment>
-</net>
-<net name="AVCC_45" class="0">
-<segment>
-<pinref part="C4" gate="G$1" pin="1"/>
-<wire x1="210.82" y1="152.4" x2="210.82" y2="154.94" width="0.1524" layer="91"/>
-<label x="210.82" y="154.94" size="2.54" layer="95" rot="R90" xref="yes"/>
-</segment>
-</net>
 <net name="N$17" class="0">
 <segment>
 <pinref part="C5" gate="G$1" pin="1"/>
@@ -4581,6 +4494,25 @@ We've spent an enormous amount of time creating and checking these footprints an
 <pinref part="U$1" gate="G$1" pin="42"/>
 <wire x1="93.98" y1="142.24" x2="104.14" y2="142.24" width="0.1524" layer="91"/>
 <wire x1="104.14" y1="142.24" x2="104.14" y2="139.7" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$10" class="0">
+<segment>
+<pinref part="C5" gate="G$1" pin="2"/>
+<wire x1="218.44" y1="144.78" x2="210.82" y2="144.78" width="0.1524" layer="91"/>
+<wire x1="210.82" y1="144.78" x2="203.2" y2="144.78" width="0.1524" layer="91"/>
+<wire x1="203.2" y1="144.78" x2="195.58" y2="144.78" width="0.1524" layer="91"/>
+<wire x1="195.58" y1="144.78" x2="187.96" y2="144.78" width="0.1524" layer="91"/>
+<wire x1="187.96" y1="144.78" x2="187.96" y2="137.16" width="0.1524" layer="91"/>
+<pinref part="C1" gate="G$1" pin="2"/>
+<junction x="187.96" y="144.78"/>
+<pinref part="C2" gate="G$1" pin="2"/>
+<junction x="195.58" y="144.78"/>
+<pinref part="C3" gate="G$1" pin="2"/>
+<junction x="203.2" y="144.78"/>
+<pinref part="C4" gate="G$1" pin="2"/>
+<junction x="210.82" y="144.78"/>
+<junction x="218.44" y="144.78"/>
 </segment>
 </net>
 </nets>
