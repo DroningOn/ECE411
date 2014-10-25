@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="6.4">
+<eagle version="7.1.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="yes"/>
@@ -66,7 +66,7 @@
 <layer number="57" name="tCAD" color="7" fill="1" visible="no" active="no"/>
 <layer number="59" name="tCarbon" color="7" fill="1" visible="no" active="no"/>
 <layer number="60" name="bCarbon" color="7" fill="1" visible="no" active="no"/>
-<layer number="90" name="Modules" color="5" fill="1" visible="yes" active="yes"/>
+<layer number="90" name="Modules" color="5" fill="1" visible="no" active="no"/>
 <layer number="91" name="Nets" color="2" fill="1" visible="no" active="no"/>
 <layer number="92" name="Busses" color="1" fill="1" visible="no" active="no"/>
 <layer number="93" name="Pins" color="2" fill="1" visible="no" active="no"/>
@@ -1612,6 +1612,34 @@ We've spent an enormous amount of time creating and checking these footprints an
 </package>
 </packages>
 </library>
+<library name="PCB_Antenna_915MHz-halseth">
+<packages>
+<package name="PCB_ANTENNA_915MHZ">
+<smd name="ANT" x="0" y="-0.5" dx="1.016" dy="0.508" layer="1" rot="R90" stop="no" cream="no"/>
+<smd name="GPLANE" x="-6.5" y="-0.35" dx="1.27" dy="0.635" layer="1" rot="R270" stop="no" cream="no"/>
+<rectangle x1="-1" y1="0" x2="1" y2="20" layer="1"/>
+<rectangle x1="-6" y1="19" x2="-1" y2="20" layer="1"/>
+<rectangle x1="-7" y1="-1" x2="-6" y2="20" layer="1"/>
+<rectangle x1="1" y1="19" x2="5" y2="20" layer="1"/>
+<rectangle x1="5" y1="10" x2="6" y2="20" layer="1"/>
+<rectangle x1="5" y1="9" x2="11" y2="10" layer="1"/>
+<rectangle x1="10" y1="10" x2="11" y2="20" layer="1"/>
+<rectangle x1="11" y1="19" x2="15" y2="20" layer="1"/>
+<rectangle x1="15" y1="10" x2="16" y2="20" layer="1"/>
+<rectangle x1="15" y1="9" x2="21" y2="10" layer="1"/>
+<rectangle x1="20" y1="10" x2="21" y2="20" layer="1"/>
+<rectangle x1="21" y1="19" x2="25" y2="20" layer="1"/>
+<rectangle x1="25" y1="10" x2="26" y2="20" layer="1"/>
+<rectangle x1="25" y1="9" x2="31" y2="10" layer="1"/>
+<rectangle x1="30" y1="10" x2="31" y2="20" layer="1"/>
+<polygon width="0.01" layer="1">
+<vertex x="-1" y="0"/>
+<vertex x="0" y="-1"/>
+<vertex x="1" y="0"/>
+</polygon>
+</package>
+</packages>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -1707,6 +1735,9 @@ design rules under a new name.</description>
 <autorouter>
 <pass name="Default">
 <param name="RoutingGrid" value="50mil"/>
+<param name="AutoGrid" value="1"/>
+<param name="Efforts" value="0"/>
+<param name="TopRouterVariant" value="1"/>
 <param name="tpViaShape" value="round"/>
 <param name="PrefDir.1" value="|"/>
 <param name="PrefDir.2" value="0"/>
@@ -1872,6 +1903,10 @@ design rules under a new name.</description>
 <element name="TP3" library="SparkFun-Passives" package="PAD.03X.03" value="TEST-POINT3" x="-68.58" y="-27.94"/>
 <element name="F1" library="SparkFun-PowerIC" package="0603" value="PTC0603" x="-67.31" y="-30.48"/>
 <element name="R8" library="QuadResistor" package="2012(4_RES)" value="DNI" x="-74.93" y="-26.67"/>
+<element name="U$7" library="PCB_Antenna_915MHz-halseth" package="PCB_ANTENNA_915MHZ" value="PCB_ANTENNA_915MHZOSHP" x="-69.85" y="-53.34"/>
+<element name="C35" library="rcl" package="C0603" value="16pF" x="-76.2" y="-57.15"/>
+<element name="L8" library="rcl-amber" package="L0603" value="5.6nH" x="-76.2" y="-60.96"/>
+<element name="L9" library="rcl-amber" package="L0603" value="DNP" x="-76.2" y="-63.5"/>
 </elements>
 <signals>
 <signal name="N$1">
@@ -1969,6 +2004,12 @@ design rules under a new name.</description>
 <contactref element="C22" pad="2"/>
 <contactref element="C10" pad="2"/>
 <contactref element="C1" pad="2"/>
+<contactref element="U$7" pad="GPLANE"/>
+<contactref element="L9" pad="1"/>
+<contactref element="L8" pad="1"/>
+<wire x1="-76.9" y1="-60.96" x2="-76.9" y2="-63.5" width="0" layer="19" extent="1-1"/>
+<wire x1="-76.35" y1="-53.69" x2="-76.9" y2="-60.96" width="0" layer="19" extent="1-1"/>
+<wire x1="-68.58" y1="-27.94" x2="-76.35" y2="-53.69" width="0" layer="19" extent="1-1"/>
 <wire x1="-68.58" y1="-25.4" x2="-68.58" y2="-27.94" width="0" layer="19" extent="1-1"/>
 <wire x1="-68.58" y1="-22.86" x2="-68.58" y2="-25.4" width="0" layer="19" extent="1-1"/>
 <wire x1="-69.23" y1="-20" x2="-68.58" y2="-22.86" width="0" layer="19" extent="1-1"/>
@@ -2013,9 +2054,6 @@ design rules under a new name.</description>
 <wire x1="42.16" y1="31.29" x2="-15.66" y2="55.88" width="0" layer="19" extent="1-1"/>
 <wire x1="41.91" y1="27.94" x2="42.16" y2="31.29" width="0" layer="19" extent="1-1"/>
 <wire x1="76.2" y1="13.335" x2="41.91" y2="27.94" width="0" layer="19" extent="1-1"/>
-</signal>
-<signal name="ANTENNA">
-<contactref element="C29" pad="1"/>
 </signal>
 <signal name="VCC">
 <contactref element="R1" pad="2"/>
@@ -2382,6 +2420,20 @@ design rules under a new name.</description>
 <contactref element="U1" pad="10"/>
 <contactref element="R8" pad="7"/>
 <wire x1="38.56" y1="26.19" x2="-76.48" y2="-24.765" width="0" layer="19" extent="1-1"/>
+</signal>
+<signal name="N$7">
+<contactref element="C29" pad="1"/>
+<contactref element="C35" pad="2"/>
+<contactref element="L9" pad="2"/>
+<wire x1="-75.35" y1="-57.15" x2="-75.5" y2="-63.5" width="0" layer="19" extent="1-1"/>
+<wire x1="-37.68" y1="46.99" x2="-75.35" y2="-57.15" width="0" layer="19" extent="1-1"/>
+</signal>
+<signal name="N$10">
+<contactref element="U$7" pad="ANT"/>
+<contactref element="C35" pad="1"/>
+<contactref element="L8" pad="2"/>
+<wire x1="-77.05" y1="-57.15" x2="-75.5" y2="-60.96" width="0" layer="19" extent="1-1"/>
+<wire x1="-69.85" y1="-53.84" x2="-77.05" y2="-57.15" width="0" layer="19" extent="1-1"/>
 </signal>
 </signals>
 </board>
