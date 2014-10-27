@@ -104,7 +104,7 @@ Digikey P/N: BHSD-2032-SMCT-ND</description>
 <gate name="CR2032" symbol="CR2032" x="0" y="0"/>
 </gates>
 <devices>
-<device name="" package="CR2032-SNAPDRAGON">
+<device name="CR2032" package="CR2032-SNAPDRAGON">
 <connects>
 <connect gate="CR2032" pin="V+" pad="V+"/>
 <connect gate="CR2032" pin="V-" pad="V-"/>

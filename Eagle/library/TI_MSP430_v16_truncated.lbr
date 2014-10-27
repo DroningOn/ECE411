@@ -15499,11 +15499,11 @@ For RGZ48</description>
 <pin name="40" x="22.86" y="7.62" visible="pad" length="middle" rot="R180"/>
 <pin name="41" x="22.86" y="10.16" visible="pad" length="middle" direction="pwr" rot="R180"/>
 <pin name="42" x="22.86" y="12.7" visible="pad" length="middle" direction="pwr" rot="R180"/>
-<pin name="43" x="22.86" y="15.24" visible="pad" length="middle" direction="in" rot="R180"/>
+<pin name="43" x="22.86" y="15.24" visible="pad" length="middle" rot="R180"/>
 <pin name="44" x="22.86" y="17.78" visible="pad" length="middle" direction="in" rot="R180"/>
 <pin name="45" x="22.86" y="20.32" visible="pad" length="middle" direction="in" rot="R180"/>
 <pin name="46" x="22.86" y="22.86" visible="pad" length="middle" rot="R180"/>
-<pin name="47" x="22.86" y="25.4" visible="pad" length="middle" direction="in" rot="R180"/>
+<pin name="47" x="22.86" y="25.4" visible="pad" length="middle" rot="R180"/>
 <pin name="48" x="22.86" y="27.94" visible="pad" length="middle" rot="R180"/>
 <pin name="49" x="22.86" y="30.48" visible="pad" length="middle" direction="pwr" rot="R180"/>
 </symbol>
