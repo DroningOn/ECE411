@@ -9575,19 +9575,19 @@ We've spent an enormous amount of time creating and checking these footprints an
 </instance>
 <instance part="LED1" gate="G$1" x="142.24" y="76.2" smashed="yes" rot="MR0">
 <attribute name="NAME" x="138.684" y="71.628" size="1.778" layer="95" font="vector" rot="MR90"/>
-<attribute name="VALUE" x="139.065" y="64.008" size="1.778" layer="96" rot="MR90"/>
+<attribute name="VALUE" x="139.065" y="61.468" size="1.778" layer="96" rot="MR90"/>
 </instance>
 <instance part="LED2" gate="G$1" x="132.08" y="76.2" smashed="yes" rot="MR0">
 <attribute name="NAME" x="128.524" y="71.628" size="1.778" layer="95" font="vector" rot="MR90"/>
-<attribute name="VALUE" x="128.905" y="64.008" size="1.778" layer="96" rot="MR90"/>
+<attribute name="VALUE" x="128.905" y="61.468" size="1.778" layer="96" rot="MR90"/>
 </instance>
 <instance part="LED3" gate="G$1" x="111.76" y="76.2" smashed="yes" rot="MR0">
 <attribute name="NAME" x="108.204" y="71.628" size="1.778" layer="95" font="vector" rot="MR90"/>
-<attribute name="VALUE" x="108.585" y="64.008" size="1.778" layer="96" rot="MR90"/>
+<attribute name="VALUE" x="108.585" y="61.468" size="1.778" layer="96" rot="MR90"/>
 </instance>
 <instance part="LED4" gate="G$1" x="121.92" y="76.2" smashed="yes" rot="MR0">
 <attribute name="NAME" x="118.364" y="71.628" size="1.778" layer="95" font="vector" rot="MR90"/>
-<attribute name="VALUE" x="118.745" y="64.008" size="1.778" layer="96" rot="MR90"/>
+<attribute name="VALUE" x="118.745" y="61.468" size="1.778" layer="96" rot="MR90"/>
 </instance>
 <instance part="R9" gate="-1" x="53.34" y="116.84" smashed="yes" rot="R270">
 <attribute name="NAME" x="54.8386" y="120.65" size="1.778" layer="95" font="vector" rot="R270"/>

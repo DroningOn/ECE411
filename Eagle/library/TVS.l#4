@@ -93,22 +93,27 @@
 <wire x1="1.778" y1="2.54" x2="2.286" y2="3.048" width="0.254" layer="94"/>
 <wire x1="0" y1="2.54" x2="-1.778" y2="2.54" width="0.254" layer="94"/>
 <wire x1="-1.778" y1="2.54" x2="-2.286" y2="2.032" width="0.254" layer="94"/>
-<pin name="ANODE" x="0" y="-2.54" visible="off" length="short" rot="R90"/>
-<pin name="CATHODE" x="0" y="5.08" visible="off" length="short" rot="R270"/>
+<pin name="2" x="0" y="-2.54" visible="off" length="short" rot="R90"/>
+<pin name="1" x="0" y="5.08" visible="off" length="short" rot="R270"/>
+<text x="-5.08" y="-2.54" size="1.778" layer="95" rot="R90">&gt;NAME</text>
+<text x="5.08" y="-2.54" size="1.778" layer="96" rot="R90">&gt;VALUE</text>
 </symbol>
 <symbol name="TVSP2">
-<wire x1="-2.54" y1="0" x2="2.54" y2="0" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="0" x2="0" y2="0" width="0.254" layer="94"/>
+<wire x1="0" y1="0" x2="2.54" y2="0" width="0.254" layer="94"/>
 <wire x1="2.54" y1="0" x2="0" y2="2.54" width="0.254" layer="94"/>
 <wire x1="0" y1="2.54" x2="-2.54" y2="0" width="0.254" layer="94"/>
 <wire x1="-1.524" y1="2.54" x2="1.524" y2="2.54" width="0.254" layer="94"/>
 <wire x1="1.524" y1="2.54" x2="2.032" y2="3.048" width="0.254" layer="94"/>
 <wire x1="-1.524" y1="2.54" x2="-2.032" y2="2.032" width="0.254" layer="94"/>
 <pin name="P$1" x="0" y="5.08" visible="off" length="short" rot="R270"/>
-<pin name="P$2" x="0" y="-2.54" visible="off" length="short" direction="nc" rot="R90"/>
+<wire x1="0" y1="0" x2="0" y2="-2.54" width="0.1524" layer="94"/>
+<text x="-2.54" y="-2.54" size="1.778" layer="95" rot="R90">&gt;NAME</text>
+<text x="5.08" y="-2.54" size="1.778" layer="96" rot="R90">&gt;VALUE</text>
 </symbol>
 </symbols>
 <devicesets>
-<deviceset name="ESDA6V1-5M6">
+<deviceset name="ESDA6V1-5M6" prefix="D">
 <gates>
 <gate name="G$1" symbol="TVS" x="0" y="0"/>
 <gate name="G$2" symbol="TVSP2" x="7.62" y="0"/>
@@ -119,8 +124,8 @@
 <devices>
 <device name="" package="5X-TVS">
 <connects>
-<connect gate="G$1" pin="ANODE" pad="2"/>
-<connect gate="G$1" pin="CATHODE" pad="1"/>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
 <connect gate="G$2" pin="P$1" pad="3"/>
 <connect gate="G$3" pin="P$1" pad="4"/>
 <connect gate="G$4" pin="P$1" pad="5"/>
