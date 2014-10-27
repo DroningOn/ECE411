@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.05" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.025" altunitdist="inch" altunit="inch"/>
+<grid distance="0.01" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
@@ -53,7 +53,7 @@
 <layer number="43" name="vRestrict" color="2" fill="10" visible="yes" active="yes"/>
 <layer number="44" name="Drills" color="7" fill="1" visible="no" active="yes"/>
 <layer number="45" name="Holes" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="46" name="Milling" color="3" fill="1" visible="no" active="yes"/>
+<layer number="46" name="Milling" color="3" fill="1" visible="yes" active="yes"/>
 <layer number="47" name="Measures" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="48" name="Document" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="49" name="Reference" color="7" fill="1" visible="yes" active="yes"/>
@@ -1843,7 +1843,7 @@ design rules under a new name.</description>
 <element name="L6" library="rcl-amber" package="L0603" value="2.2nH" x="-54.61" y="59.69"/>
 <element name="L7" library="rcl-amber" package="L0603" value="15nH" x="-57.15" y="59.69"/>
 <element name="C26" library="rcl" package="C0603" value="1.5pF" x="-17.78" y="46.99"/>
-<element name="U$2" library="CR2032-SnapDragon" package="CR2032-SNAPDRAGON" value="CR2032-SNAPDRAGON" x="76.2" y="27.94" rot="R90"/>
+<element name="U$2" library="CR2032-SnapDragon" package="CR2032-SNAPDRAGON" value="CR2032-SNAPDRAGON" x="27.94" y="21.59" rot="MR270"/>
 <element name="C1" library="rcl" package="C0603" value="10uF" x="-50.8" y="55.88"/>
 <element name="C2" library="rcl" package="C0603" value="10uF" x="-54.61" y="55.88"/>
 <element name="C3" library="rcl" package="C0603" value="100nF" x="-58.42" y="55.88"/>
@@ -1901,12 +1901,12 @@ design rules under a new name.</description>
 <element name="TP1" library="SparkFun-Passives" package="PAD.03X.03" value="TEST-POINT3" x="-68.58" y="-22.86"/>
 <element name="TP2" library="SparkFun-Passives" package="PAD.03X.03" value="TEST-POINT3" x="-68.58" y="-25.4"/>
 <element name="TP3" library="SparkFun-Passives" package="PAD.03X.03" value="TEST-POINT3" x="-68.58" y="-27.94"/>
-<element name="F1" library="SparkFun-PowerIC" package="0603" value="PTC0603" x="-67.31" y="-30.48"/>
+<element name="F1" library="SparkFun-PowerIC" package="0603" value="PTC0603" x="54.61" y="30.48"/>
 <element name="R8" library="QuadResistor" package="2012(4_RES)" value="DNI" x="-74.93" y="-26.67"/>
-<element name="U$7" library="PCB_Antenna_915MHz-halseth" package="PCB_ANTENNA_915MHZ" value="PCB_ANTENNA_915MHZOSHP" x="-69.85" y="-53.34"/>
-<element name="C35" library="rcl" package="C0603" value="16pF" x="-76.2" y="-57.15"/>
-<element name="L8" library="rcl-amber" package="L0603" value="5.6nH" x="-76.2" y="-60.96"/>
-<element name="L9" library="rcl-amber" package="L0603" value="DNP" x="-76.2" y="-63.5"/>
+<element name="U$7" library="PCB_Antenna_915MHz-halseth" package="PCB_ANTENNA_915MHZ" value="PCB_ANTENNA_915MHZOSHP" x="67.31" y="34.29" rot="R270"/>
+<element name="C35" library="rcl" package="C0603" value="16pF" x="64.516" y="33.02" rot="R225"/>
+<element name="L8" library="rcl-amber" package="L0603" value="5.6nH" x="66.294" y="32.512" rot="R135"/>
+<element name="L9" library="rcl-amber" package="L0603" value="DNP" x="62.484" y="33.528" rot="R315"/>
 </elements>
 <signals>
 <signal name="N$1">
@@ -2007,9 +2007,9 @@ design rules under a new name.</description>
 <contactref element="U$7" pad="GPLANE"/>
 <contactref element="L9" pad="1"/>
 <contactref element="L8" pad="1"/>
-<wire x1="-76.9" y1="-60.96" x2="-76.9" y2="-63.5" width="0" layer="19" extent="1-1"/>
-<wire x1="-76.35" y1="-53.69" x2="-76.9" y2="-60.96" width="0" layer="19" extent="1-1"/>
-<wire x1="-68.58" y1="-27.94" x2="-76.35" y2="-53.69" width="0" layer="19" extent="1-1"/>
+<wire x1="66.788971875" y1="32.017025" x2="61.989025" y2="34.022971875" width="0" layer="19" extent="1-1"/>
+<wire x1="66.96" y1="40.79" x2="66.788971875" y2="32.017025" width="0" layer="19" extent="1-1"/>
+<wire x1="-68.58" y1="-27.94" x2="66.96" y2="40.79" width="0" layer="19" extent="1-1"/>
 <wire x1="-68.58" y1="-25.4" x2="-68.58" y2="-27.94" width="0" layer="19" extent="1-1"/>
 <wire x1="-68.58" y1="-22.86" x2="-68.58" y2="-25.4" width="0" layer="19" extent="1-1"/>
 <wire x1="-69.23" y1="-20" x2="-68.58" y2="-22.86" width="0" layer="19" extent="1-1"/>
@@ -2053,7 +2053,7 @@ design rules under a new name.</description>
 <wire x1="-56.3" y1="41.91" x2="-58.84" y2="46.99" width="0" layer="19" extent="1-1"/>
 <wire x1="42.16" y1="31.29" x2="-15.66" y2="55.88" width="0" layer="19" extent="1-1"/>
 <wire x1="41.91" y1="27.94" x2="42.16" y2="31.29" width="0" layer="19" extent="1-1"/>
-<wire x1="76.2" y1="13.335" x2="41.91" y2="27.94" width="0" layer="19" extent="1-1"/>
+<wire x1="27.94" y1="36.195" x2="41.91" y2="27.94" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="VCC">
 <contactref element="R1" pad="2"/>
@@ -2088,7 +2088,7 @@ design rules under a new name.</description>
 <contactref element="U1" pad="41"/>
 <contactref element="F1" pad="2"/>
 <contactref element="U1" pad="44"/>
-<wire x1="-60.54" y1="50.8" x2="-66.46" y2="-30.48" width="0" layer="19" extent="1-1"/>
+<wire x1="-60.54" y1="50.8" x2="55.46" y2="30.48" width="0" layer="19" extent="1-1"/>
 <wire x1="-55.46" y1="50.8" x2="-60.54" y2="50.8" width="0" layer="19" extent="1-1"/>
 <wire x1="-50.38" y1="50.8" x2="-55.46" y2="50.8" width="0" layer="19" extent="1-1"/>
 <wire x1="-45.3" y1="50.8" x2="-50.38" y2="50.8" width="0" layer="19" extent="1-1"/>
@@ -2399,7 +2399,7 @@ design rules under a new name.</description>
 <signal name="N$9">
 <contactref element="U$2" pad="V+"/>
 <contactref element="F1" pad="1"/>
-<wire x1="-68.16" y1="-30.48" x2="76.2" y2="42.545" width="0" layer="19" extent="1-1"/>
+<wire x1="53.76" y1="30.48" x2="27.94" y2="6.985" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="P1.0">
 <contactref element="U1" pad="13"/>
@@ -2425,15 +2425,15 @@ design rules under a new name.</description>
 <contactref element="C29" pad="1"/>
 <contactref element="C35" pad="2"/>
 <contactref element="L9" pad="2"/>
-<wire x1="-75.35" y1="-57.15" x2="-75.5" y2="-63.5" width="0" layer="19" extent="1-1"/>
-<wire x1="-37.68" y1="46.99" x2="-75.35" y2="-57.15" width="0" layer="19" extent="1-1"/>
+<wire x1="63.91495625" y1="32.41895625" x2="62.978971875" y2="33.033025" width="0" layer="19" extent="1-1"/>
+<wire x1="-37.68" y1="46.99" x2="63.91495625" y2="32.41895625" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$10">
 <contactref element="U$7" pad="ANT"/>
 <contactref element="C35" pad="1"/>
 <contactref element="L8" pad="2"/>
-<wire x1="-77.05" y1="-57.15" x2="-75.5" y2="-60.96" width="0" layer="19" extent="1-1"/>
-<wire x1="-69.85" y1="-53.84" x2="-77.05" y2="-57.15" width="0" layer="19" extent="1-1"/>
+<wire x1="65.117040625" y1="33.621040625" x2="65.799025" y2="33.006971875" width="0" layer="19" extent="1-1"/>
+<wire x1="66.81" y1="34.29" x2="65.117040625" y2="33.621040625" width="0" layer="19" extent="1-1"/>
 </signal>
 </signals>
 </board>
