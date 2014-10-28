@@ -1,0 +1,76 @@
+Weekly Progress Reports
+
+Week Ending 2014-10-26
+=======================================================================================================================
+***********************************************************************************************************************
+
+Chris Halseth
+--------------
+Last Week
+-----------------------
+Designed, simulated PCB antenna and matching network
+Implemented full RF section in schematic/layout (chip->balun->match->antenna)
+Tested CC430 dev kit functionality (*see issues)
+Wrote simple program for turning on/off LED on dev kit with switch using CCS(TI IDE)
+Created low cost resistive button prototype, tested on Arduino platform, decent results
+
+Next Week
+----------------------
+Isolate emulator/programming interface on dev kit for breakout
+Set up dev kit to pass serial information via USB
+Implement resistive button prototype in layout
+
+Issues
+-------------------
+Dev kit unable to connect wirelessly using demo program, strongly suspect radio is damaged on base board or satellite. 
+Recommend RMA ASAP so I can hash out/test wireless protocol in functioning environment.
+=====================================================================================================================
+
+Kyle Lu
+--------
+Last Week
+---------------------------------------
+Finished schematic
+Completed BOM
+
+Next Week
+--------------------------------------
+Order Parts
+Order Boards
+
+Issues
+----------------------------------------
+Decide on Tag-Connect
+Decide on Tx enclosure
+=====================================================================================================================
+
+Matthew Downey
+--------------
+
+Last Week
+--------------------------------
+Researched GUI language options
+Conducted GUI concept discussion with Kyle
+
+Next Week
+--------------------------------
+Conduct feasibility of GUI languages compatibility to MCU (wrappers)
+RMA dev kit
+Continue GUI concept discussions
+======================================================================================================================
+
+Michael Schmidt
+---------------
+
+Last Week
+------------------------------
+Researched feasibility of wxPython as GUI dev wrapper
+Researched Pyserial module for serial com to base station
+
+
+Next Week
+----------------------------------------
+Prototype wxPython GUI 
+Attempt serial communication using Pyserial module
+Order CR2032 batteries for transmitters
+=======================================================================================================================
