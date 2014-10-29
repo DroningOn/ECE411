@@ -6217,8 +6217,8 @@ In this library the device names are the same as the pin names of the symbols, t
 <symbol name="CR2032">
 <wire x1="-5.08" y1="2.54" x2="5.08" y2="2.54" width="0.254" layer="94"/>
 <wire x1="-2.54" y1="0" x2="2.54" y2="0" width="0.254" layer="94"/>
-<pin name="V+" x="0" y="7.62" visible="off" length="middle" rot="R270"/>
-<pin name="V-" x="0" y="-5.08" visible="off" length="middle" rot="R90"/>
+<pin name="V+" x="0" y="7.62" visible="off" length="middle" direction="pas" rot="R270"/>
+<pin name="V-" x="0" y="-5.08" visible="off" length="middle" direction="pwr" rot="R90"/>
 <text x="-7.62" y="10.16" size="1.27" layer="96">&gt;Value</text>
 <text x="-7.62" y="12.7" size="1.27" layer="95">&gt;Name</text>
 <wire x1="-6.096" y1="5.08" x2="-4.064" y2="5.08" width="0.254" layer="94"/>
@@ -6234,7 +6234,7 @@ Digikey P/N: BHSD-2032-SMCT-ND</description>
 <gate name="CR2032" symbol="CR2032" x="0" y="0"/>
 </gates>
 <devices>
-<device name="" package="CR2032-SNAPDRAGON">
+<device name="CR2032" package="CR2032-SNAPDRAGON">
 <connects>
 <connect gate="CR2032" pin="V+" pad="V+"/>
 <connect gate="CR2032" pin="V-" pad="V-"/>
@@ -9032,11 +9032,11 @@ We've spent an enormous amount of time creating and checking these footprints an
 <pin name="40" x="22.86" y="7.62" visible="pad" length="middle" rot="R180"/>
 <pin name="41" x="22.86" y="10.16" visible="pad" length="middle" direction="pwr" rot="R180"/>
 <pin name="42" x="22.86" y="12.7" visible="pad" length="middle" direction="pwr" rot="R180"/>
-<pin name="43" x="22.86" y="15.24" visible="pad" length="middle" direction="in" rot="R180"/>
+<pin name="43" x="22.86" y="15.24" visible="pad" length="middle" rot="R180"/>
 <pin name="44" x="22.86" y="17.78" visible="pad" length="middle" direction="in" rot="R180"/>
 <pin name="45" x="22.86" y="20.32" visible="pad" length="middle" direction="in" rot="R180"/>
 <pin name="46" x="22.86" y="22.86" visible="pad" length="middle" rot="R180"/>
-<pin name="47" x="22.86" y="25.4" visible="pad" length="middle" direction="in" rot="R180"/>
+<pin name="47" x="22.86" y="25.4" visible="pad" length="middle" rot="R180"/>
 <pin name="48" x="22.86" y="27.94" visible="pad" length="middle" rot="R180"/>
 <pin name="49" x="22.86" y="30.48" visible="pad" length="middle" direction="pwr" rot="R180"/>
 </symbol>
@@ -9281,7 +9281,7 @@ Resettable Fuse. Spark Fun Electronics SKU : COM-08357</description>
 <wire x1="-5.08" y1="10.16" x2="5.08" y2="10.16" width="0.254" layer="94" curve="-180"/>
 <wire x1="-2.54" y1="10.16" x2="2.54" y2="10.16" width="0.254" layer="94" curve="-180"/>
 <pin name="ANT" x="-5.08" y="0" visible="pad" length="point" direction="in"/>
-<pin name="GPLANE" x="-5.08" y="-2.54" visible="off" length="point" direction="out"/>
+<pin name="GPLANE" x="-5.08" y="-2.54" visible="off" length="point" direction="pwr"/>
 <wire x1="0" y1="0" x2="-5.08" y2="0" width="0.254" layer="94"/>
 </symbol>
 </symbols>
@@ -9331,7 +9331,7 @@ Resettable Fuse. Spark Fun Electronics SKU : COM-08357</description>
 <part name="SUPPLY1" library="supply2" deviceset="GND" device=""/>
 <part name="SUPPLY2" library="supply2" deviceset="GND" device=""/>
 <part name="SUPPLY3" library="supply2" deviceset="GND" device=""/>
-<part name="U$2" library="CR2032-SnapDragon" deviceset="CR2032-SNAPDRAGON" device=""/>
+<part name="U$2" library="CR2032-SnapDragon" deviceset="CR2032-SNAPDRAGON" device="CR2032"/>
 <part name="C1" library="rcl" deviceset="C-EU" device="C0805" value="10uF"/>
 <part name="C2" library="rcl" deviceset="C-EU" device="C0805" value="10uF"/>
 <part name="C3" library="rcl" deviceset="C-EU" device="C0603" value="100nF"/>
@@ -9386,7 +9386,6 @@ Resettable Fuse. Spark Fun Electronics SKU : COM-08357</description>
 <part name="R10" library="QuadResistor" deviceset="R603X4" device="2012" value="10k"/>
 <part name="U$6" library="TVS" deviceset="ESDA6V1-5M6" device=""/>
 <part name="R2" library="QuadResistor" deviceset="R603X4" device="2012" value="3.3k"/>
-<part name="SUPPLY15" library="supply2" deviceset="GND" device=""/>
 <part name="R5" library="rcl" deviceset="R-US_" device="R0603" value="DNI"/>
 <part name="R6" library="rcl" deviceset="R-US_" device="R0603" value="0"/>
 <part name="R7" library="rcl" deviceset="R-US_" device="R0603" value="DNI"/>
@@ -9421,6 +9420,7 @@ Resettable Fuse. Spark Fun Electronics SKU : COM-08357</description>
 <part name="S4" library="SparkFun-Electromechanical" deviceset="SWITCH-MOMENTARY-2" device="12MM" value="SWITCH-MOMENTARY-212MM"/>
 <part name="S1" library="SparkFun-Electromechanical" deviceset="SWITCH-MOMENTARY-2" device="12MM" value="SWITCH-MOMENTARY-212MM"/>
 <part name="Y1" library="SparkFun-FreqCtrl" deviceset="CRYSTAL" device="TXC-7A"/>
+<part name="SUPPLY15" library="supply2" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -9754,9 +9754,6 @@ Resettable Fuse. Spark Fun Electronics SKU : COM-08357</description>
 <instance part="R2" gate="-4" x="111.76" y="83.82" smashed="yes" rot="MR90">
 <attribute name="NAME" x="113.2586" y="80.01" size="1.778" layer="95" font="vector" rot="MR90"/>
 </instance>
-<instance part="SUPPLY15" gate="GND" x="15.24" y="38.1" smashed="yes">
-<attribute name="VALUE" x="13.335" y="34.925" size="1.778" layer="96"/>
-</instance>
 <instance part="R5" gate="G$1" x="15.24" y="48.26" smashed="yes" rot="R270">
 <attribute name="NAME" x="16.7386" y="52.07" size="1.778" layer="95" rot="R270"/>
 <attribute name="VALUE" x="11.938" y="52.07" size="1.778" layer="96" rot="R270"/>
@@ -9866,6 +9863,9 @@ Resettable Fuse. Spark Fun Electronics SKU : COM-08357</description>
 <attribute name="NAME" x="17.78" y="66.04" size="1.778" layer="95" font="vector"/>
 </instance>
 <instance part="Y1" gate="G$1" x="226.06" y="76.2"/>
+<instance part="SUPPLY15" gate="GND" x="15.24" y="38.1" smashed="yes">
+<attribute name="VALUE" x="13.335" y="34.925" size="1.778" layer="96"/>
+</instance>
 </instances>
 <busses>
 <bus name="PJ.0/TDO,PJ.1/TDI/TCLK,PJ.2/TMS,PJ.3/TCK,TEST/SBWTCK,RST/NMI/SBWTDIO">
@@ -10046,11 +10046,6 @@ Resettable Fuse. Spark Fun Electronics SKU : COM-08357</description>
 <pinref part="SUPPLY12" gate="GND" pin="GND"/>
 </segment>
 <segment>
-<pinref part="SUPPLY15" gate="GND" pin="GND"/>
-<pinref part="R5" gate="G$1" pin="2"/>
-<wire x1="15.24" y1="40.64" x2="15.24" y2="43.18" width="0.1524" layer="91"/>
-</segment>
-<segment>
 <pinref part="C30" gate="G$1" pin="2"/>
 <pinref part="SUPPLY18" gate="GND" pin="GND"/>
 <wire x1="93.98" y1="142.24" x2="93.98" y2="144.78" width="0.1524" layer="91"/>
@@ -10128,11 +10123,6 @@ Resettable Fuse. Spark Fun Electronics SKU : COM-08357</description>
 <pinref part="SUPPLY5" gate="GND" pin="GND"/>
 </segment>
 <segment>
-<pinref part="U$7" gate="G$1" pin="GPLANE"/>
-<pinref part="SUPPLY16" gate="GND" pin="GND"/>
-<wire x1="264.16" y1="185.42" x2="261.62" y2="185.42" width="0.1524" layer="91"/>
-</segment>
-<segment>
 <pinref part="L9" gate="G$1" pin="1"/>
 <pinref part="SUPPLY17" gate="GND" pin="GND"/>
 <wire x1="243.84" y1="172.72" x2="243.84" y2="175.26" width="0.1524" layer="91"/>
@@ -10141,6 +10131,16 @@ Resettable Fuse. Spark Fun Electronics SKU : COM-08357</description>
 <pinref part="L8" gate="G$1" pin="1"/>
 <pinref part="SUPPLY19" gate="GND" pin="GND"/>
 <wire x1="256.54" y1="172.72" x2="256.54" y2="175.26" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="SUPPLY16" gate="GND" pin="GND"/>
+<pinref part="U$7" gate="G$1" pin="GPLANE"/>
+<wire x1="261.62" y1="185.42" x2="264.16" y2="185.42" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="R5" gate="G$1" pin="2"/>
+<wire x1="15.24" y1="40.64" x2="15.24" y2="43.18" width="0.1524" layer="91"/>
+<pinref part="SUPPLY15" gate="GND" pin="GND"/>
 </segment>
 </net>
 <net name="VCC" class="0">
@@ -10700,6 +10700,10 @@ Resettable Fuse. Spark Fun Electronics SKU : COM-08357</description>
 </nets>
 </sheet>
 </sheets>
+<errors>
+<approved hash="104,1,104.14,175.26,U$2,V-,GND,,,"/>
+<approved hash="104,1,264.16,185.42,U$7,GPLANE,GND,,,"/>
+</errors>
 </schematic>
 </drawing>
 </eagle>

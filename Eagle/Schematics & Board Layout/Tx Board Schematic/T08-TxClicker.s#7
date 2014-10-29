@@ -5971,7 +5971,7 @@ In this library the device names are the same as the pin names of the symbols, t
 <text x="-0.833" y="0.464" size="0.4064" layer="25">&gt;NAME</text>
 <text x="-0.833" y="-0.87" size="0.4064" layer="27">&gt;VALUE</text>
 </package>
-<package name="C0402">
+<package name="C0402@1">
 <wire x1="-0.508" y1="0.254" x2="-0.381" y2="0.254" width="0.05" layer="21"/>
 <wire x1="-0.381" y1="0.254" x2="0.381" y2="0.254" width="0.05" layer="21"/>
 <wire x1="0.381" y1="0.254" x2="0.508" y2="0.254" width="0.05" layer="21"/>
@@ -6131,7 +6131,7 @@ In this library the device names are the same as the pin names of the symbols, t
 <gate name="G$1" symbol="C" x="0" y="0"/>
 </gates>
 <devices>
-<device name="0402" package="C0402">
+<device name="0402" package="C0402@1">
 <connects>
 <connect gate="G$1" pin="1" pad="P$1"/>
 <connect gate="G$1" pin="2" pad="P$2"/>
@@ -9314,12 +9314,12 @@ Resettable Fuse. Spark Fun Electronics SKU : COM-08357</description>
 </class>
 </classes>
 <parts>
-<part name="C23" library="rcl-amber" deviceset="C" device="0603" value="1pF"/>
-<part name="C25" library="rcl-amber" deviceset="C" device="0603" value="1.5pF"/>
-<part name="C24" library="rcl-amber" deviceset="C" device="0603" value="100pF"/>
-<part name="C27" library="rcl-amber" deviceset="C" device="0603" value="1.5pF"/>
-<part name="C28" library="rcl-amber" deviceset="C" device="0603" value="8.2pF"/>
-<part name="C29" library="rcl-amber" deviceset="C" device="0603" value="1.5pF"/>
+<part name="C23" library="rcl" deviceset="C-EU" device="C0402" value="1pF"/>
+<part name="C25" library="rcl" deviceset="C-EU" device="C0402" value="1.5pF"/>
+<part name="C24" library="rcl" deviceset="C-EU" device="C0402" value="100pF"/>
+<part name="C27" library="rcl" deviceset="C-EU" device="C0402" value="1.5pF"/>
+<part name="C28" library="rcl" deviceset="C-EU" device="C0402" value="8.2pF"/>
+<part name="C29" library="rcl" deviceset="C-EU" device="C0402" value="1.5pF"/>
 <part name="L1" library="rcl-amber" deviceset="L" device="L0603" value="12nH"/>
 <part name="L2" library="rcl-amber" deviceset="L" device="L0603" value="12nH"/>
 <part name="L3" library="rcl-amber" deviceset="L" device="L0603" value="18nH"/>
@@ -9327,7 +9327,7 @@ Resettable Fuse. Spark Fun Electronics SKU : COM-08357</description>
 <part name="L5" library="rcl-amber" deviceset="L" device="L0603" value="15nH"/>
 <part name="L6" library="rcl-amber" deviceset="L" device="L0603" value="2.2nH"/>
 <part name="L7" library="rcl-amber" deviceset="L" device="L0603" value="15nH"/>
-<part name="C26" library="rcl-amber" deviceset="C" device="0603" value="1.5pF"/>
+<part name="C26" library="rcl" deviceset="C-EU" device="C0402" value="1.5pF"/>
 <part name="SUPPLY1" library="supply2" deviceset="GND" device=""/>
 <part name="SUPPLY2" library="supply2" deviceset="GND" device=""/>
 <part name="SUPPLY3" library="supply2" deviceset="GND" device=""/>
@@ -9411,7 +9411,7 @@ Resettable Fuse. Spark Fun Electronics SKU : COM-08357</description>
 <part name="SUPPLY5" library="supply2" deviceset="GND" device=""/>
 <part name="U$7" library="PCB_Antenna_915MHz-halseth" deviceset="PCB_ANTENNA_915MHZ" device="OSHP"/>
 <part name="SUPPLY16" library="supply2" deviceset="GND" device=""/>
-<part name="C35" library="rcl-amber" deviceset="C" device="0603" value="16pF"/>
+<part name="C35" library="rcl" deviceset="C-EU" device="C0402" value="16pF"/>
 <part name="L8" library="rcl-amber" deviceset="L" device="L0603" value="5.6nH"/>
 <part name="L9" library="rcl-amber" deviceset="L" device="L0603" value="DNP"/>
 <part name="SUPPLY17" library="supply2" deviceset="GND" device=""/>
@@ -10702,7 +10702,25 @@ Resettable Fuse. Spark Fun Electronics SKU : COM-08357</description>
 </sheets>
 <errors>
 <approved hash="104,1,104.14,175.26,U$2,V-,GND,,,"/>
+<approved hash="104,1,172.72,121.92,U1,7,VCORE,,,"/>
+<approved hash="104,1,172.72,119.38,U1,8,VCC,,,"/>
+<approved hash="104,1,218.44,83.82,U1,27,VCC,,,"/>
+<approved hash="104,1,172.72,83.82,U1,22,VCC,,,"/>
+<approved hash="104,1,218.44,93.98,U1,31,VCC,,,"/>
+<approved hash="104,1,218.44,96.52,U1,32,VCC,,,"/>
+<approved hash="104,1,218.44,99.06,U1,33,R_BIAS,,,"/>
+<approved hash="104,1,218.44,101.6,U1,34,VCC,,,"/>
+<approved hash="104,1,218.44,119.38,U1,41,VCC,,,"/>
+<approved hash="104,1,218.44,121.92,U1,42,GND,,,"/>
+<approved hash="104,1,218.44,139.7,U1,49,GND,,,"/>
 <approved hash="104,1,264.16,185.42,U$7,GPLANE,GND,,,"/>
+<approved hash="115,1,223.291,17.5514,FRAME2,,,,,"/>
+<approved hash="115,1,48.0229,185.551,JTAG,,,,,"/>
+<approved hash="115,1,141.918,74.93,LED1,,,,,"/>
+<approved hash="115,1,131.758,74.93,LED2,,,,,"/>
+<approved hash="115,1,111.438,74.93,LED3,,,,,"/>
+<approved hash="115,1,121.598,74.93,LED4,,,,,"/>
+<approved hash="115,1,226.06,76.9408,Y1,,,,,"/>
 </errors>
 </schematic>
 </drawing>
