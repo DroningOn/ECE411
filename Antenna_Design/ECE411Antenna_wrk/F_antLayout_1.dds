@@ -10,7 +10,7 @@ ddoId = get_new(ddsId, "Object");
 // DataDisplay Object:
 	set(ddoId, "Path", dds_get_exec_path(what_file(0)));
 	set(ddoId, "Name", dds_get_exec_file(what_file(0)));
-	decl dssId;
+	set(ddoId, "FileModifiedDateAndTime", "2014-10-28T15:54:49Z");
 	dssId = get(ddoId, "DatasetServer");
 // Default Dataset
 	set(ddoId, "DefaultDataset", "F_antLayout_1_MomUW_a");
@@ -25,12 +25,10 @@ ddoId = get_new(ddsId, "Object");
 	set(ddoId, "SnapGridPerDisplayGridY", 2);
 	set(ddoId, "SnapEnabled", 1);
 	set(ddoId, "SnapAutoSetXY", 1);
-decl pageId;
 	set(ddoId, "EnableExpressionUpdates", FALSE);
 pageId = get(ddoId, "CurrentPage");
 if (pageId == NULL) pageId = get_first(ddoId, "Page");
 if (pageId == NULL) pageId = get_new(ddoId, "Page");
-decl goId0;
 goId0 = get_new(pageId, "Plot");
 // Base Class Object:
 	set(goId0, "Name", "");
@@ -38,7 +36,7 @@ goId0 = get_new(pageId, "Plot");
 // Graphical Object:
 	set(goId0, "Right", 4742);
 	set(goId0, "Bottom", 5461);
-	set(goId0, "Left", 63);
+	set(goId0, "Left", 156);
 	set(goId0, "Top", 2208);
 	set(goId0, "Zrot", 0.000000);
 	set(goId0, "Yrot", 0.000000);
@@ -52,7 +50,7 @@ goId0 = get_new(pageId, "Plot");
 	set(goId0, "FillColor", 0);
 // Plot base...
 	set(goId0, "LegendOnOff", TRUE);
-	set(goId0, "LeftMargin", 812);
+	set(goId0, "LeftMargin", 719);
 	set(goId0, "RightMargin", 117);
 	set(goId0, "TopMargin", 292);
 	set(goId0, "BottomMargin", 586);
@@ -61,7 +59,6 @@ goId0 = get_new(pageId, "Plot");
 	set(goId0, "TitleFont", "Arial For CAE");
 	set(goId0, "TitleFontSize", 167);
 	set(goId0, "TitleColor", 0);
-decl axisID;
 axisID = get_new(goId0, "Axis", ddsXaxis, "X Axis");
 // Axis...
 	if (axisID != NULL) {
@@ -77,15 +74,14 @@ axisID = get_new(goId0, "Axis", ddsXaxis, "X Axis");
 		 set(axisID, "LineType", 0);
 		 set(axisID, "TickFontSize", 167);
 		 set(axisID, "AutoscaleOnOff", TRUE);
-		 set(axisID, "MinValue", 400000000);
-		 set(axisID, "MaxValue", 2400000000);
-		 set(axisID, "StepSize", 200000000);
+		 set(axisID, "MinValue", 500000000);
+		 set(axisID, "MaxValue", 1200000000);
+		 set(axisID, "StepSize", 100000000);
 		 set(axisID, "Logarithmic", FALSE);
 		 set(axisID, "Font", "Arial For CAE");
 		 set(axisID, "Format", ddsFormatAutomatic);
 		 set(axisID, "NumDigits", 3);
 	}
-decl axisID;
 axisID = get_new(goId0, "Axis", ddsYaxis, "Y Axis");
 // Axis...
 	if (axisID != NULL) {
@@ -101,15 +97,14 @@ axisID = get_new(goId0, "Axis", ddsYaxis, "Y Axis");
 		 set(axisID, "LineType", 0);
 		 set(axisID, "TickFontSize", 167);
 		 set(axisID, "AutoscaleOnOff", TRUE);
-		 set(axisID, "MinValue", -20);
+		 set(axisID, "MinValue", -6);
 		 set(axisID, "MaxValue", 0);
-		 set(axisID, "StepSize", 5);
+		 set(axisID, "StepSize", 1);
 		 set(axisID, "Logarithmic", FALSE);
 		 set(axisID, "Font", "Arial For CAE");
 		 set(axisID, "Format", ddsFormatAutomatic);
 		 set(axisID, "NumDigits", 3);
 	}
-decl axisID;
 axisID = get_new(goId0, "Axis", ddsRightYaxis, "Right Y Axis");
 // Axis...
 	if (axisID != NULL) {
@@ -133,7 +128,6 @@ axisID = get_new(goId0, "Axis", ddsRightYaxis, "Right Y Axis");
 		 set(axisID, "Format", ddsFormatAutomatic);
 		 set(axisID, "NumDigits", 3);
 	}
-decl axisID;
 axisID = get_new(goId0, "Axis", ddsXaxis, "Bottom X Axis");
 // Axis...
 	if (axisID != NULL) {
@@ -157,13 +151,9 @@ axisID = get_new(goId0, "Axis", ddsXaxis, "Bottom X Axis");
 		 set(axisID, "Format", ddsFormatAutomatic);
 		 set(axisID, "NumDigits", 3);
 	}
-decl traceID;
 traceID = get_new(goId0, "Trace", "dB(S11_discrete)", "X Axis", "Y Axis");
 // Trace:
 	if (traceID != NULL) {
-		set(traceID, "Expression", "dB(S11_discrete)");
-		set(traceID, "XaxisName", "X Axis");
-		set(traceID, "YaxisName", "Y Axis");
 		set(traceID, "TraceType", ddsScatterTraceType);
 		set(traceID, "Color", 1);
 		set(traceID, "Uid", 2078992688);
@@ -200,13 +190,9 @@ traceID = get_new(goId0, "Trace", "dB(S11_discrete)", "X Axis", "Y Axis");
 			set(traceID, "DensitySymbolType", ddsStarSymbol);
 		}
 	}
-decl traceID;
 traceID = get_new(goId0, "Trace", "dB(S11_fitted)", "X Axis", "Y Axis");
 // Trace:
 	if (traceID != NULL) {
-		set(traceID, "Expression", "dB(S11_fitted)");
-		set(traceID, "XaxisName", "X Axis");
-		set(traceID, "YaxisName", "Y Axis");
 		set(traceID, "TraceType", ddsAutomaticTraceType);
 		set(traceID, "Color", 5);
 		set(traceID, "Uid", 1338104208);
@@ -243,7 +229,6 @@ traceID = get_new(goId0, "Trace", "dB(S11_fitted)", "X Axis", "Y Axis");
 			set(traceID, "DensitySymbolType", ddsStarSymbol);
 		}
 	}
-decl markerID;
 markerID = get_new(traceID, "MarkerNew", "m1", "915MHz", 0, "", "", 1, "");
 // Base Class Object:
 	set(markerID, "Name", "");
@@ -295,8 +280,8 @@ markerID = get_new(traceID, "MarkerNew", "m1", "915MHz", 0, "", "", 1, "");
 		set(markerID, "MkrReadoutFontSize", 167);
 		set(markerID, "MkrReadoutColor", 0);
 		set(markerID, "MkrReadoutLeft", 375);
-		set(markerID, "MkrReadoutRight", 2064);
-		set(markerID, "MkrReadoutBottom", 5928);
+		set(markerID, "MkrReadoutRight", 2052);
+		set(markerID, "MkrReadoutBottom", 5916);
 		set(markerID, "MkrReadoutTop", 5375);
 		set(markerID, "MkrIndicatorColor", 0);
 		set(markerID, "MkrIndicatorSize", 6);
@@ -312,7 +297,6 @@ markerID = get_new(traceID, "MarkerNew", "m1", "915MHz", 0, "", "", 1, "");
 	set(goId0, "PlotLogoHideOnOff", FALSE);
 // Initialize plot
 	set(goId0, "InitPlot", 0);
-decl goId0;
 goId0 = get_new(pageId, "Plot");
 // Base Class Object:
 	set(goId0, "Name", "");
@@ -343,7 +327,6 @@ goId0 = get_new(pageId, "Plot");
 	set(goId0, "TitleFont", "Arial For CAE");
 	set(goId0, "TitleFontSize", 167);
 	set(goId0, "TitleColor", 0);
-decl axisID;
 axisID = get_new(goId0, "Axis", ddsXaxis, "X Axis");
 // Axis...
 	if (axisID != NULL) {
@@ -359,15 +342,14 @@ axisID = get_new(goId0, "Axis", ddsXaxis, "X Axis");
 		 set(axisID, "LineType", 0);
 		 set(axisID, "TickFontSize", 167);
 		 set(axisID, "AutoscaleOnOff", TRUE);
-		 set(axisID, "MinValue", 400000000);
-		 set(axisID, "MaxValue", 2400000000);
-		 set(axisID, "StepSize", 200000000);
+		 set(axisID, "MinValue", 500000000);
+		 set(axisID, "MaxValue", 1200000000);
+		 set(axisID, "StepSize", 100000000);
 		 set(axisID, "Logarithmic", FALSE);
 		 set(axisID, "Font", "Arial For CAE");
 		 set(axisID, "Format", ddsFormatAutomatic);
 		 set(axisID, "NumDigits", 3);
 	}
-decl axisID;
 axisID = get_new(goId0, "Axis", ddsYaxis, "Y Axis");
 // Axis...
 	if (axisID != NULL) {
@@ -391,7 +373,6 @@ axisID = get_new(goId0, "Axis", ddsYaxis, "Y Axis");
 		 set(axisID, "Format", ddsFormatAutomatic);
 		 set(axisID, "NumDigits", 3);
 	}
-decl axisID;
 axisID = get_new(goId0, "Axis", ddsRightYaxis, "Right Y Axis");
 // Axis...
 	if (axisID != NULL) {
@@ -415,7 +396,6 @@ axisID = get_new(goId0, "Axis", ddsRightYaxis, "Right Y Axis");
 		 set(axisID, "Format", ddsFormatAutomatic);
 		 set(axisID, "NumDigits", 3);
 	}
-decl axisID;
 axisID = get_new(goId0, "Axis", ddsXaxis, "Bottom X Axis");
 // Axis...
 	if (axisID != NULL) {
@@ -439,13 +419,9 @@ axisID = get_new(goId0, "Axis", ddsXaxis, "Bottom X Axis");
 		 set(axisID, "Format", ddsFormatAutomatic);
 		 set(axisID, "NumDigits", 3);
 	}
-decl traceID;
 traceID = get_new(goId0, "Trace", "phase(S11_discrete)", "X Axis", "Y Axis");
 // Trace:
 	if (traceID != NULL) {
-		set(traceID, "Expression", "phase(S11_discrete)");
-		set(traceID, "XaxisName", "X Axis");
-		set(traceID, "YaxisName", "Y Axis");
 		set(traceID, "TraceType", ddsScatterTraceType);
 		set(traceID, "Color", 1);
 		set(traceID, "Uid", 1752375960);
@@ -482,13 +458,9 @@ traceID = get_new(goId0, "Trace", "phase(S11_discrete)", "X Axis", "Y Axis");
 			set(traceID, "DensitySymbolType", ddsStarSymbol);
 		}
 	}
-decl traceID;
 traceID = get_new(goId0, "Trace", "phase(S11_fitted)", "X Axis", "Y Axis");
 // Trace:
 	if (traceID != NULL) {
-		set(traceID, "Expression", "phase(S11_fitted)");
-		set(traceID, "XaxisName", "X Axis");
-		set(traceID, "YaxisName", "Y Axis");
 		set(traceID, "TraceType", ddsAutomaticTraceType);
 		set(traceID, "Color", 5);
 		set(traceID, "Uid", 598207369);
@@ -528,7 +500,6 @@ traceID = get_new(goId0, "Trace", "phase(S11_fitted)", "X Axis", "Y Axis");
 	set(goId0, "PlotLogoHideOnOff", FALSE);
 // Initialize plot
 	set(goId0, "InitPlot", 0);
-decl goId0;
 goId0 = get_new(pageId, "Text");
 // Text:
 	set(goId0, "String", "Discrete Frequency Points");
@@ -553,7 +524,6 @@ goId0 = get_new(pageId, "Text");
 	set(goId0, "LineColor", 0);
 	set(goId0, "LineType", 0);
 	set(goId0, "LineWidth", 7);
-decl goId0;
 goId0 = get_new(pageId, "Text");
 // Text:
 	set(goId0, "String", "@interpolatedLabel Fitted Points");
@@ -584,7 +554,6 @@ goId0 = get_new(pageId, "Text");
 	set(goId0, "LineColor", 0);
 	set(goId0, "LineType", 0);
 	set(goId0, "LineWidth", 7);
-decl goId0;
 goId0 = get_new(pageId, "Text");
 // Text:
 	set(goId0, "String", "Dataset: @Default_Dataset_Name - @Default_Dataset_Modified_Date");
@@ -615,7 +584,6 @@ goId0 = get_new(pageId, "Text");
 	set(goId0, "LineColor", 0);
 	set(goId0, "LineType", 0);
 	set(goId0, "LineWidth", 7);
-decl goId0;
 goId0 = get_new(pageId, "Text");
 // Text:
 	set(goId0, "String", "Discrete Frequencies vs. Fitted (AFS or Linear)");
@@ -640,7 +608,6 @@ goId0 = get_new(pageId, "Text");
 	set(goId0, "LineColor", 0);
 	set(goId0, "LineType", 0);
 	set(goId0, "LineWidth", 7);
-decl goId0;
 goId0 = get_new(pageId, "SmithChart");
 // Base Class Object:
 	set(goId0, "Name", "");
@@ -671,7 +638,6 @@ goId0 = get_new(pageId, "SmithChart");
 	set(goId0, "TitleFont", "Arial For CAE");
 	set(goId0, "TitleFontSize", 140);
 	set(goId0, "TitleColor", 0);
-decl axisID;
 axisID = get_new(goId0, "Axis", ddsXaxis, "X Axis");
 // Axis...
 	if (axisID != NULL) {
@@ -699,7 +665,7 @@ axisID = get_new(goId0, "Axis", ddsXaxis, "X Axis");
 	if (axisID != NULL) {
 		set(axisID, "DisplayAllIndependentData", TRUE);
 		set(axisID, "IndepStart", 5e+008);
-		set(axisID, "IndepStop", 2.4e+009);
+		set(axisID, "IndepStop", 1.2e+009);
 	}
 //Smith chart axis...
 	if (axisID != NULL) {
@@ -710,7 +676,6 @@ axisID = get_new(goId0, "Axis", ddsXaxis, "X Axis");
 		set(axisID, "AdmittanceLineType", 0);
 		set(axisID, "TickFont", "Arial Narrow For CAE");
 	}
-decl axisID;
 axisID = get_new(goId0, "Axis", ddsYaxis, "Y Axis");
 // Axis...
 	if (axisID != NULL) {
@@ -738,7 +703,7 @@ axisID = get_new(goId0, "Axis", ddsYaxis, "Y Axis");
 	if (axisID != NULL) {
 		set(axisID, "DisplayAllIndependentData", TRUE);
 		set(axisID, "IndepStart", 5e+008);
-		set(axisID, "IndepStop", 2.4e+009);
+		set(axisID, "IndepStop", 1.2e+009);
 	}
 //Smith chart axis...
 	if (axisID != NULL) {
@@ -749,13 +714,9 @@ axisID = get_new(goId0, "Axis", ddsYaxis, "Y Axis");
 		set(axisID, "AdmittanceLineType", 0);
 		set(axisID, "TickFont", "Arial Narrow For CAE");
 	}
-decl traceID;
 traceID = get_new(goId0, "Trace", "S(1,1)", "X Axis", "Y Axis");
 // Trace:
 	if (traceID != NULL) {
-		set(traceID, "Expression", "S(1,1)");
-		set(traceID, "XaxisName", "X Axis");
-		set(traceID, "YaxisName", "Y Axis");
 		set(traceID, "TraceType", ddsAutomaticTraceType);
 		set(traceID, "Color", 1);
 		set(traceID, "Uid", 1222872741);
@@ -792,7 +753,6 @@ traceID = get_new(goId0, "Trace", "S(1,1)", "X Axis", "Y Axis");
 			set(traceID, "DensitySymbolType", ddsDotSymbol);
 		}
 	}
-decl markerID;
 markerID = get_new(traceID, "MarkerNew", "m2", "915MHz", 0, "", "", 1, "");
 // Base Class Object:
 	set(markerID, "Name", "");
@@ -844,8 +804,8 @@ markerID = get_new(traceID, "MarkerNew", "m2", "915MHz", 0, "", "", 1, "");
 		set(markerID, "MkrReadoutFontSize", 167);
 		set(markerID, "MkrReadoutColor", 0);
 		set(markerID, "MkrReadoutLeft", 4625);
-		set(markerID, "MkrReadoutRight", 7242);
-		set(markerID, "MkrReadoutBottom", 8470);
+		set(markerID, "MkrReadoutRight", 7183);
+		set(markerID, "MkrReadoutBottom", 8458);
 		set(markerID, "MkrReadoutTop", 7750);
 		set(markerID, "MkrIndicatorColor", 0);
 		set(markerID, "MkrIndicatorSize", 6);
@@ -866,7 +826,6 @@ markerID = get_new(traceID, "MarkerNew", "m2", "915MHz", 0, "", "", 1, "");
 	set(pageId, "Uid", 99291588);
 	set(pageId, "Invisible", FALSE);
 pageId = get_new(ddoId, "Page");
-decl goId0;
 goId0 = get_new(pageId, "SmithChart");
 // Base Class Object:
 	set(goId0, "Name", "");
@@ -897,7 +856,6 @@ goId0 = get_new(pageId, "SmithChart");
 	set(goId0, "TitleFont", "Arial For CAE");
 	set(goId0, "TitleFontSize", 167);
 	set(goId0, "TitleColor", 0);
-decl axisID;
 axisID = get_new(goId0, "Axis", ddsXaxis, "X Axis");
 // Axis...
 	if (axisID != NULL) {
@@ -936,7 +894,6 @@ axisID = get_new(goId0, "Axis", ddsXaxis, "X Axis");
 		set(axisID, "AdmittanceLineType", 0);
 		set(axisID, "TickFont", "Arial Narrow For CAE");
 	}
-decl axisID;
 axisID = get_new(goId0, "Axis", ddsYaxis, "Y Axis");
 // Axis...
 	if (axisID != NULL) {
@@ -975,13 +932,9 @@ axisID = get_new(goId0, "Axis", ddsYaxis, "Y Axis");
 		set(axisID, "AdmittanceLineType", 0);
 		set(axisID, "TickFont", "Arial Narrow For CAE");
 	}
-decl traceID;
 traceID = get_new(goId0, "Trace", "S11_discrete", "X Axis", "Y Axis");
 // Trace:
 	if (traceID != NULL) {
-		set(traceID, "Expression", "S11_discrete");
-		set(traceID, "XaxisName", "X Axis");
-		set(traceID, "YaxisName", "Y Axis");
 		set(traceID, "TraceType", ddsScatterTraceType);
 		set(traceID, "Color", 1);
 		set(traceID, "Uid", 17693585);
@@ -1018,13 +971,9 @@ traceID = get_new(goId0, "Trace", "S11_discrete", "X Axis", "Y Axis");
 			set(traceID, "DensitySymbolType", ddsDotSymbol);
 		}
 	}
-decl traceID;
 traceID = get_new(goId0, "Trace", "S11_fitted", "X Axis", "Y Axis");
 // Trace:
 	if (traceID != NULL) {
-		set(traceID, "Expression", "S11_fitted");
-		set(traceID, "XaxisName", "X Axis");
-		set(traceID, "YaxisName", "Y Axis");
 		set(traceID, "TraceType", ddsAutomaticTraceType);
 		set(traceID, "Color", 5);
 		set(traceID, "Uid", 210160082);
@@ -1069,7 +1018,6 @@ traceID = get_new(goId0, "Trace", "S11_fitted", "X Axis", "Y Axis");
 	set(pageId, "Uid", 228509786);
 	set(pageId, "Invisible", FALSE);
 pageId = get_new(ddoId, "Page");
-decl goId0;
 goId0 = get_new(pageId, "Equation");
 // Expression...
 	set(goId0, "Expression", "S11_discrete = $discreteData..S(1,1)");
@@ -1094,7 +1042,6 @@ goId0 = get_new(pageId, "Equation");
 	set(goId0, "LineColor", 0);
 	set(goId0, "LineType", 0);
 	set(goId0, "LineWidth", 7);
-decl goId0;
 goId0 = get_new(pageId, "Equation");
 // Expression...
 	set(goId0, "Expression", "S11_fitted=S(1,1)");
@@ -1119,7 +1066,6 @@ goId0 = get_new(pageId, "Equation");
 	set(goId0, "LineColor", 0);
 	set(goId0, "LineType", 0);
 	set(goId0, "LineWidth", 7);
-decl goId0;
 goId0 = get_new(pageId, "Equation");
 // Expression...
 	set(goId0, "Expression", "discreteData=if (strcmp(rightstr(Default_Dataset_Name, 2), \"_a\")) then Default_Dataset_Name else leftstr(Default_Dataset_Name, strlen(Default_Dataset_Name) - 2)");
@@ -1144,7 +1090,6 @@ goId0 = get_new(pageId, "Equation");
 	set(goId0, "LineColor", 0);
 	set(goId0, "LineType", 0);
 	set(goId0, "LineWidth", 7);
-decl goId0;
 goId0 = get_new(pageId, "Equation");
 // Expression...
 	set(goId0, "Expression", "interpolatedLabel=if (strcmp(rightstr(Default_Dataset_Name, 2), \"_a\")) then \"Linearly\" else \"Adaptively\"");
