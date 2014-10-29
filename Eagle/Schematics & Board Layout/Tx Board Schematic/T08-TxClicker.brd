@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="7.1.0">
+<eagle version="6.4">
 <drawing>
 <settings>
 <setting alwaysvectorfont="yes"/>
@@ -1737,9 +1737,6 @@ design rules under a new name.</description>
 <autorouter>
 <pass name="Default">
 <param name="RoutingGrid" value="50mil"/>
-<param name="AutoGrid" value="1"/>
-<param name="Efforts" value="0"/>
-<param name="TopRouterVariant" value="1"/>
 <param name="tpViaShape" value="round"/>
 <param name="PrefDir.1" value="|"/>
 <param name="PrefDir.2" value="0"/>
@@ -1915,6 +1912,16 @@ design rules under a new name.</description>
 <element name="L10" library="rcl-amber" package="L0402" value="~200nH" x="-66.04" y="-40.64"/>
 <element name="TP8" library="SparkFun-Passives" package="PAD.03X.03" value="TEST-POINT3" x="-68.58" y="-43.18"/>
 <element name="D1" library="TVS" package="5X-TVS" value="ESDA6V1-5M6" x="-71.12" y="-43.18"/>
+<element name="TP9" library="SparkFun-Passives" package="PAD.03X.03" value="TEST-POINT3" x="-71.12" y="-45.72"/>
+<element name="TP10" library="SparkFun-Passives" package="PAD.03X.03" value="TEST-POINT3" x="-71.12" y="-48.26"/>
+<element name="TP11" library="SparkFun-Passives" package="PAD.03X.03" value="TEST-POINT3" x="-71.12" y="-50.8"/>
+<element name="TP12" library="SparkFun-Passives" package="PAD.03X.03" value="TEST-POINT3" x="-71.12" y="-53.34"/>
+<element name="TP13" library="SparkFun-Passives" package="PAD.03X.03" value="TEST-POINT3" x="-71.12" y="-55.88"/>
+<element name="TP14" library="SparkFun-Passives" package="PAD.03X.03" value="TEST-POINT3" x="-71.12" y="-58.42"/>
+<element name="TP15" library="SparkFun-Passives" package="PAD.03X.03" value="TEST-POINT3" x="-71.12" y="-60.96"/>
+<element name="TP16" library="SparkFun-Passives" package="PAD.03X.03" value="TEST-POINT3" x="-71.12" y="-63.5"/>
+<element name="TP17" library="SparkFun-Passives" package="PAD.03X.03" value="TEST-POINT3" x="-71.12" y="-66.04"/>
+<element name="TP18" library="SparkFun-Passives" package="PAD.03X.03" value="TEST-POINT3" x="-71.12" y="-68.58"/>
 </elements>
 <signals>
 <signal name="N$1">
@@ -2533,6 +2540,78 @@ design rules under a new name.</description>
 <wire x1="50.34" y1="32.508" x2="50.34" y2="33.008" width="0" layer="19" extent="1-1"/>
 <wire x1="50.34" y1="31.008" x2="50.34" y2="32.508" width="0" layer="19" extent="1-1"/>
 <wire x1="50.34" y1="30.508" x2="50.34" y2="31.008" width="0" layer="19" extent="1-1"/>
+</signal>
+<signal name="P1.6">
+<contactref element="U1" pad="5"/>
+<contactref element="TP18" pad="P$1"/>
+<wire x1="43.64" y1="33.008" x2="-71.12" y2="-68.58" width="0" layer="19" extent="1-1"/>
+</signal>
+<signal name="P1.5">
+<contactref element="U1" pad="6"/>
+<contactref element="TP17" pad="P$1"/>
+<wire x1="43.64" y1="32.508" x2="-71.12" y2="-66.04" width="0" layer="19" extent="1-1"/>
+</signal>
+<signal name="P1.4">
+<contactref element="U1" pad="9"/>
+<contactref element="TP15" pad="P$1"/>
+<wire x1="43.64" y1="31.008" x2="-71.12" y2="-60.96" width="0" layer="19" extent="1-1"/>
+</signal>
+<signal name="P1.3">
+<contactref element="U1" pad="10"/>
+<contactref element="TP16" pad="P$1"/>
+<wire x1="43.64" y1="30.508" x2="-71.12" y2="-63.5" width="0" layer="19" extent="1-1"/>
+</signal>
+<signal name="P1.2">
+<contactref element="U1" pad="11"/>
+<contactref element="TP14" pad="P$1"/>
+<wire x1="43.64" y1="30.008" x2="-71.12" y2="-58.42" width="0" layer="19" extent="1-1"/>
+</signal>
+<signal name="P1.1">
+<contactref element="U1" pad="12"/>
+<contactref element="TP13" pad="P$1"/>
+<wire x1="43.64" y1="29.508" x2="-71.12" y2="-55.88" width="0" layer="19" extent="1-1"/>
+</signal>
+<signal name="P1.0">
+<contactref element="U1" pad="13"/>
+<contactref element="TP12" pad="P$1"/>
+<wire x1="44.24" y1="28.908" x2="-71.12" y2="-53.34" width="0" layer="19" extent="1-1"/>
+</signal>
+<signal name="P3.7">
+<contactref element="U1" pad="14"/>
+</signal>
+<signal name="P3.6">
+<contactref element="U1" pad="15"/>
+</signal>
+<signal name="P3.1">
+<contactref element="U1" pad="20"/>
+</signal>
+<signal name="P3.0">
+<contactref element="U1" pad="21"/>
+</signal>
+<signal name="P2.7">
+<contactref element="U1" pad="23"/>
+<contactref element="TP11" pad="P$1"/>
+<wire x1="49.24" y1="28.908" x2="-71.12" y2="-50.8" width="0" layer="19" extent="1-1"/>
+</signal>
+<signal name="P2.6">
+<contactref element="U1" pad="24"/>
+<contactref element="TP10" pad="P$1"/>
+<wire x1="49.74" y1="28.908" x2="-71.12" y2="-48.26" width="0" layer="19" extent="1-1"/>
+</signal>
+<signal name="P2.3">
+<contactref element="U1" pad="48"/>
+</signal>
+<signal name="P2.4">
+<contactref element="U1" pad="47"/>
+</signal>
+<signal name="P2.5">
+<contactref element="U1" pad="46"/>
+</signal>
+<signal name="N$33">
+<contactref element="U1" pad="43"/>
+</signal>
+<signal name="N$12">
+<contactref element="TP9" pad="P$1"/>
 </signal>
 </signals>
 </board>
