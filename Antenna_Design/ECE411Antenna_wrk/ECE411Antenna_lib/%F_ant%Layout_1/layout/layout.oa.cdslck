@@ -6,11 +6,11 @@
 LockStakeVersion               1.1
 LoginName                      Seth
 HostName                       Seth-PC
-ProcessIdentifier              379016
-ProcessCreationTime_UTC        1413660909
-ProcessCreationTime_Readable   10/18/14 12:35:09 Pacific Daylight Time
+ProcessIdentifier              11192
+ProcessCreationTime_UTC        1415215394
+ProcessCreationTime_Readable   11/05/14 11:23:14 Pacific Standard Time
 AppIdentifier                  OA File System Design Manager
 OSType                         win32
 ReasonForPlacingEditLock       OpenAccess edit lock
-FilePathUsedToEditLock         C:\Users\Seth\Desktop\ECE411\GitHub\ECE411\Antenna_Design\ECE411Antenna_wrk\ECE411Antenna_lib\%F_ant%Layout_1\layout\layout.oa.cdslck
-TimeEditLocked                 10/20/14 11:20:43 Pacific Daylight Time
+FilePathUsedToEditLock         C:\Users\Seth\Desktop\ECE411\GitHub\ECE411\Antenna_Design\ECE411Antenna_wrk\ECE411Antenna_lib\%F_ant%Layout_1\layout\layout.oa.cdslck.dirlck
+TimeEditLocked                 11/05/14 11:25:01 Pacific Standard Time
