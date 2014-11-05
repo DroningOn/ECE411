@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="7.1.0">
+<eagle version="6.4">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -58,9 +58,9 @@
 <library>
 <packages>
 <package name="PCB_ANTENNA_915MHZ">
-<smd name="ANT" x="0" y="0.37" dx="1" dy="0.5" layer="1" rot="R90" stop="no" cream="no"/>
-<smd name="GPLANE" x="6.51" y="-0.23" dx="2" dy="1" layer="1" rot="R180" stop="no" cream="no"/>
-<rectangle x1="-1" y1="1.27" x2="1" y2="21.27" layer="1" rot="R180"/>
+<smd name="ANT" x="0" y="-0.9" dx="1" dy="0.5" layer="1" rot="R90" stop="no" cream="no"/>
+<smd name="GPLANE" x="6.51" y="-1.5" dx="2" dy="1" layer="1" rot="R180" stop="no" cream="no"/>
+<rectangle x1="-1" y1="0" x2="1" y2="20" layer="1" rot="R180"/>
 <rectangle x1="1" y1="20.27" x2="6" y2="21.27" layer="1" rot="R180"/>
 <rectangle x1="6" y1="0.27" x2="7" y2="21.27" layer="1" rot="R180"/>
 <rectangle x1="-5" y1="20.27" x2="-1" y2="21.27" layer="1"/>
@@ -75,11 +75,6 @@
 <rectangle x1="-26" y1="11.27" x2="-25" y2="21.27" layer="1"/>
 <rectangle x1="-31" y1="10.27" x2="-25" y2="11.27" layer="1"/>
 <rectangle x1="-31" y1="11.27" x2="-30" y2="21.27" layer="1"/>
-<polygon width="0.01" layer="1">
-<vertex x="1" y="1.27"/>
-<vertex x="0" y="0.27"/>
-<vertex x="-1" y="1.27"/>
-</polygon>
 </package>
 </packages>
 <symbols>

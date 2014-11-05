@@ -7148,7 +7148,8 @@ This is the mechanical footprint for a #4 phillips button head screw. Use the ke
 <pad name="2" x="-6.25" y="-2.5" drill="1.2" diameter="2.159"/>
 <pad name="1" x="6.25" y="-2.5" drill="1.2" diameter="2.159"/>
 <pad name="3" x="6.25" y="2.5" drill="1.2" diameter="2.159"/>
-<wire x1="4.826" y1="5.588" x2="4.318" y2="5.588" width="0.254" layer="1"/>
+<wire x1="6.096" y1="4.572" x2="6.096" y2="5.588" width="0.254" layer="1"/>
+<wire x1="6.096" y1="5.588" x2="4.318" y2="5.588" width="0.254" layer="1"/>
 <wire x1="4.318" y1="5.588" x2="3.302" y2="5.588" width="0.254" layer="1"/>
 <wire x1="3.302" y1="5.588" x2="2.286" y2="5.588" width="0.254" layer="1"/>
 <wire x1="2.286" y1="5.588" x2="1.27" y2="5.588" width="0.254" layer="1"/>
@@ -7159,7 +7160,8 @@ This is the mechanical footprint for a #4 phillips button head screw. Use the ke
 <wire x1="-2.794" y1="5.588" x2="-3.81" y2="5.588" width="0.254" layer="1"/>
 <wire x1="-3.81" y1="5.588" x2="-4.826" y2="5.588" width="0.254" layer="1"/>
 <wire x1="-4.826" y1="5.588" x2="-4.826" y2="-5.588" width="0.254" layer="1"/>
-<wire x1="5.08" y1="-5.588" x2="4.826" y2="-5.588" width="0.254" layer="1"/>
+<wire x1="6.35" y1="-4.318" x2="6.35" y2="-5.588" width="0.254" layer="1"/>
+<wire x1="6.35" y1="-5.588" x2="4.826" y2="-5.588" width="0.254" layer="1"/>
 <wire x1="4.826" y1="-5.588" x2="3.81" y2="-5.588" width="0.254" layer="1"/>
 <wire x1="3.81" y1="-5.588" x2="2.794" y2="-5.588" width="0.254" layer="1"/>
 <wire x1="2.794" y1="-5.588" x2="1.778" y2="-5.588" width="0.254" layer="1"/>
@@ -7189,6 +7191,8 @@ This is the mechanical footprint for a #4 phillips button head screw. Use the ke
 <wire x1="4.318" y1="5.588" x2="4.318" y2="-5.08" width="0.254" layer="1"/>
 <wire x1="4.826" y1="-5.588" x2="4.826" y2="5.08" width="0.254" layer="1"/>
 <rectangle x1="-5.08" y1="-5.842" x2="5.08" y2="5.842" layer="29"/>
+<smd name="P$1" x="6.35" y="5.08" dx="1.27" dy="0.635" layer="1" rot="R90"/>
+<smd name="P$2" x="6.35" y="-4.826" dx="1.27" dy="0.635" layer="1" rot="R90"/>
 </package>
 <package name="TACTILE-SWITCH-1101NE">
 <description>Sparkfun SKU# COM-08229</description>
@@ -10709,6 +10713,8 @@ No illumination</description>
 <wire x1="2.54" y1="-1.524" x2="-2.032" y2="-1.524" width="0.254" layer="94"/>
 <wire x1="-2.54" y1="-1.016" x2="2.032" y2="-1.016" width="0.254" layer="94"/>
 <wire x1="2.54" y1="-0.508" x2="-2.032" y2="-0.508" width="0.254" layer="94"/>
+<pin name="3" x="-5.08" y="-2.54" visible="off" length="short" direction="pas" swaplevel="2"/>
+<pin name="4" x="5.08" y="-2.54" visible="off" length="short" direction="pas" swaplevel="1" rot="R180"/>
 </symbol>
 <symbol name="4-POS-DIP">
 <pin name="1B" x="2.54" y="-2.54" visible="pad" length="short" rot="R90"/>
