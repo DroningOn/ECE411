@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="6.4">
+<eagle version="7.1.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="yes"/>
@@ -54,7 +54,7 @@
 <layer number="44" name="Drills" color="7" fill="1" visible="no" active="yes"/>
 <layer number="45" name="Holes" color="7" fill="1" visible="no" active="yes"/>
 <layer number="46" name="Milling" color="3" fill="1" visible="no" active="yes"/>
-<layer number="47" name="Measures" color="7" fill="1" visible="no" active="yes"/>
+<layer number="47" name="Measures" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="48" name="Document" color="7" fill="1" visible="no" active="yes"/>
 <layer number="49" name="Reference" color="7" fill="1" visible="no" active="yes"/>
 <layer number="50" name="dxf" color="7" fill="1" visible="no" active="no"/>
@@ -1730,6 +1730,9 @@ Please make sure your boards conform to these design rules.</description>
 <autorouter>
 <pass name="Default">
 <param name="RoutingGrid" value="50mil"/>
+<param name="AutoGrid" value="1"/>
+<param name="Efforts" value="0"/>
+<param name="TopRouterVariant" value="1"/>
 <param name="tpViaShape" value="round"/>
 <param name="PrefDir.1" value="|"/>
 <param name="PrefDir.2" value="0"/>
@@ -2477,10 +2480,9 @@ Please make sure your boards conform to these design rules.</description>
 <contactref element="X1-DNI" pad="1"/>
 <wire x1="63.754" y1="12.359" x2="61.722" y2="14.478" width="0.6096" layer="1"/>
 <wire x1="61.722" y1="18.034" x2="61.722" y2="18.288" width="0.6096" layer="1"/>
-<wire x1="61.722" y1="14.478" x2="61.722" y2="17.272" width="1.5494" layer="1"/>
-<wire x1="61.722" y1="17.272" x2="61.722" y2="18.034" width="1.5494" layer="1"/>
-<wire x1="61.722" y1="14.224" x2="63.246" y2="12.7" width="1.5494" layer="1"/>
-<wire x1="61.722" y1="14.224" x2="61.722" y2="14.478" width="1.5494" layer="1"/>
+<wire x1="61.722" y1="14.478" x2="61.722" y2="18.034" width="1.1938" layer="1"/>
+<wire x1="62.103" y1="14.1224" x2="63.627" y2="12.5984" width="1.1938" layer="1"/>
+<wire x1="62.103" y1="14.1224" x2="61.722" y2="14.478" width="1.1938" layer="1"/>
 </signal>
 <signal name="N$12">
 <contactref element="C29" pad="P$2"/>
