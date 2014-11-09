@@ -5854,7 +5854,7 @@ We've spent an enormous amount of time creating and checking these footprints an
 <package name="PCB_ANTENNA_915MHZ">
 <smd name="ANT" x="0" y="-1.17" dx="1" dy="0.5" layer="1" rot="R90" stop="no" cream="no"/>
 <smd name="GPLANE" x="6.51" y="-1.5" dx="2" dy="1" layer="1" rot="R180" stop="no" cream="no"/>
-<polygon width="0" layer="1">
+<polygon width="0.0254" layer="1">
 <vertex x="7" y="-1"/>
 <vertex x="7.5" y="-1"/>
 <vertex x="7.5" y="-2"/>
@@ -5866,7 +5866,7 @@ We've spent an enormous amount of time creating and checking these footprints an
 <vertex x="1" y="20"/>
 <vertex x="7" y="20"/>
 </polygon>
-<polygon width="0" layer="1">
+<polygon width="0.0254" layer="1">
 <vertex x="-1" y="19"/>
 <vertex x="-1" y="0"/>
 <vertex x="-0.25" y="-0.75"/>
