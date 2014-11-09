@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.01" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
@@ -174,6 +174,11 @@ Team: T08   Nov2014
 <text x="5.08" y="43.18" size="2.54" layer="16">BOTTOM</text>
 <dimension x1="0" y1="0" x2="83.82" y2="0" x3="41.91" y3="-5.08" textsize="1.778" layer="47" unit="inch" visible="yes"/>
 <dimension x1="0" y1="0" x2="0" y2="42.164" x3="-5.08" y3="21.082" textsize="1.778" layer="47" unit="inch" visible="yes"/>
+<hole x="55.88" y="35.56" drill="2"/>
+<hole x="55.88" y="5.08" drill="2"/>
+<hole x="5.08" y="5.08" drill="2"/>
+<dimension x1="5.08" y1="5.08" x2="55.88" y2="5.08" x3="30.48" y3="-2.54" textsize="1.778" layer="47" unit="inch" visible="yes"/>
+<dimension x1="55.88" y1="5.08" x2="55.88" y2="35.56" x3="88.9" y3="20.32" textsize="1.778" layer="47" unit="inch" visible="yes"/>
 </plain>
 <libraries>
 <library name="rcl">
@@ -3127,11 +3132,6 @@ Please make sure your boards conform to these design rules.</description>
 <wire x1="40.3284" y1="14.18" x2="39.8272" y2="14.6812" width="0.254" layer="1"/>
 </signal>
 </signals>
-<errors>
-<approved hash="3,1,3a43384138413a43"/>
-<approved hash="3,1,7b73797179717b73"/>
-<approved hash="19,1,dddab39a3b416247"/>
-</errors>
 </board>
 </drawing>
 <compatibility>
