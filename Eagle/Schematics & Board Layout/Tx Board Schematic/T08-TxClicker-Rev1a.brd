@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="7.1.0">
+<eagle version="6.4">
 <drawing>
 <settings>
 <setting alwaysvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.005" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
@@ -24,8 +24,8 @@
 <layer number="14" name="Route14" color="1" fill="6" visible="no" active="no"/>
 <layer number="15" name="Route15" color="4" fill="6" visible="no" active="no"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
-<layer number="17" name="Pads" color="2" fill="1" visible="yes" active="yes"/>
-<layer number="18" name="Vias" color="2" fill="1" visible="yes" active="yes"/>
+<layer number="17" name="Pads" color="2" fill="1" visible="no" active="yes"/>
+<layer number="18" name="Vias" color="2" fill="1" visible="no" active="yes"/>
 <layer number="19" name="Unrouted" color="6" fill="1" visible="yes" active="yes"/>
 <layer number="20" name="Dimension" color="15" fill="1" visible="yes" active="yes"/>
 <layer number="21" name="tPlace" color="7" fill="1" visible="yes" active="yes"/>
@@ -54,7 +54,7 @@
 <layer number="44" name="Drills" color="7" fill="1" visible="no" active="yes"/>
 <layer number="45" name="Holes" color="7" fill="1" visible="no" active="yes"/>
 <layer number="46" name="Milling" color="3" fill="1" visible="no" active="yes"/>
-<layer number="47" name="Measures" color="7" fill="1" visible="no" active="yes"/>
+<layer number="47" name="Measures" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="48" name="Document" color="7" fill="1" visible="no" active="yes"/>
 <layer number="49" name="Reference" color="7" fill="1" visible="no" active="yes"/>
 <layer number="50" name="dxf" color="7" fill="1" visible="no" active="no"/>
@@ -148,7 +148,6 @@
 <plain>
 <wire x1="8.636" y1="0" x2="81.28" y2="0" width="0" layer="20"/>
 <wire x1="83.82" y1="2.54" x2="83.82" y2="39.624" width="0" layer="20"/>
-<dimension x1="88.88" y1="0" x2="88.88" y2="44.45" x3="91.44" y3="22.225" textsize="1.778" layer="47" dtype="horizontal" unit="inch"/>
 <text x="60.2234" y="41.5036" size="1.524" layer="21" font="vector" rot="SR270">Portland State University
 Team: T08   Nov2014
 </text>
@@ -171,6 +170,10 @@ Team: T08   Nov2014
 <vertex x="22.098" y="17.653"/>
 <vertex x="19.431" y="17.653"/>
 </polygon>
+<text x="5.08" y="45.72" size="1.778" layer="1">TOP</text>
+<text x="5.08" y="43.18" size="1.778" layer="16">BOTTOM</text>
+<dimension x1="0" y1="0" x2="83.82" y2="0" x3="41.91" y3="-5.08" textsize="1.778" layer="47" unit="inch" visible="yes"/>
+<dimension x1="0" y1="0" x2="0" y2="42.164" x3="-5.08" y3="21.082" textsize="1.778" layer="47" unit="inch" visible="yes"/>
 </plain>
 <libraries>
 <library name="rcl">
@@ -1764,9 +1767,6 @@ Please make sure your boards conform to these design rules.</description>
 <autorouter>
 <pass name="Default">
 <param name="RoutingGrid" value="50mil"/>
-<param name="AutoGrid" value="1"/>
-<param name="Efforts" value="0"/>
-<param name="TopRouterVariant" value="1"/>
 <param name="tpViaShape" value="round"/>
 <param name="PrefDir.1" value="|"/>
 <param name="PrefDir.2" value="0"/>
@@ -2068,7 +2068,7 @@ Please make sure your boards conform to these design rules.</description>
 <attribute name="VALUE" x="50.0824" y="21.0006" size="0.508" layer="27" rot="R270"/>
 </element>
 <element name="TP8" library="SparkFun-Passives" package="PAD.03X.03" value="" x="27.9654" y="17.7546" smashed="yes" rot="R270">
-<attribute name="NAME" x="26.1874" y="17.5514" size="0.508" layer="25" font="vector"/>
+<attribute name="NAME" x="26.162" y="17.526" size="0.508" layer="25" font="vector"/>
 </element>
 <element name="X1-DNI" library="con-coax" package="SMA-SMD" value="SMA-SMD" x="57.5564" y="18.0086" smashed="yes">
 <attribute name="OC_NEWARK" value="unknown" x="57.5564" y="18.0086" size="1.778" layer="27" display="off"/>
@@ -3127,11 +3127,6 @@ Please make sure your boards conform to these design rules.</description>
 <wire x1="40.3284" y1="14.18" x2="39.8272" y2="14.6812" width="0.254" layer="1"/>
 </signal>
 </signals>
-<errors>
-<approved hash="3,1,3a43384138413a43"/>
-<approved hash="3,1,7b73797179717b73"/>
-<approved hash="19,1,dddab39a3b416247"/>
-</errors>
 </board>
 </drawing>
 <compatibility>
