@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="7.1.0">
+<eagle version="6.4">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -5799,6 +5799,7 @@ We've spent an enormous amount of time creating and checking these footprints an
 </package>
 <package name="PAD.03X.03">
 <smd name="P$1" x="0" y="0" dx="0.762" dy="0.762" layer="1" roundness="100" cream="no"/>
+<text x="0" y="1.27" size="0.508" layer="25" font="vector">&gt;NAME</text>
 </package>
 <package name="PAD.03X.05">
 <smd name="P$1" x="0" y="0" dx="1.27" dy="1.27" layer="1" roundness="100" cream="no"/>
@@ -5814,15 +5815,15 @@ We've spent an enormous amount of time creating and checking these footprints an
 </symbol>
 </symbols>
 <devicesets>
-<deviceset name="TEST-POINT" prefix="TP">
+<deviceset name="TEST-POINT" prefix="TP" uservalue="yes">
 <description>Bare copper test points for troubleshooting or ICT</description>
 <gates>
-<gate name="G$1" symbol="TEST-POINT" x="0" y="0"/>
+<gate name="&gt;NAME" symbol="TEST-POINT" x="0" y="0"/>
 </gates>
 <devices>
 <device name="2" package="PAD.02X.02">
 <connects>
-<connect gate="G$1" pin="1" pad="P$1"/>
+<connect gate="&gt;NAME" pin="1" pad="P$1"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -5830,7 +5831,7 @@ We've spent an enormous amount of time creating and checking these footprints an
 </device>
 <device name="3" package="PAD.03X.03">
 <connects>
-<connect gate="G$1" pin="1" pad="P$1"/>
+<connect gate="&gt;NAME" pin="1" pad="P$1"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -5838,7 +5839,7 @@ We've spent an enormous amount of time creating and checking these footprints an
 </device>
 <device name="3X5" package="PAD.03X.05">
 <connects>
-<connect gate="G$1" pin="1" pad="P$1"/>
+<connect gate="&gt;NAME" pin="1" pad="P$1"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -6848,7 +6849,7 @@ The ordinary SWITCH-MOMENTARY-2 is likely to be more useful for regular schemati
 <part name="SUPPLY17" library="supply2" deviceset="GND" device=""/>
 <part name="SUPPLY19" library="supply2" deviceset="GND" device=""/>
 <part name="Y1" library="SparkFun-FreqCtrl" deviceset="CRYSTAL" device="TXC-7A" value="26MHz"/>
-<part name="TP4" library="SparkFun-Passives" deviceset="TEST-POINT" device="3"/>
+<part name="TP4" library="SparkFun-Passives" deviceset="TEST-POINT" device="3" value="TEST-POINT3"/>
 <part name="TP5" library="SparkFun-Passives" deviceset="TEST-POINT" device="3"/>
 <part name="TP6" library="SparkFun-Passives" deviceset="TEST-POINT" device="3"/>
 <part name="TP7" library="SparkFun-Passives" deviceset="TEST-POINT" device="3"/>
@@ -6872,7 +6873,7 @@ The ordinary SWITCH-MOMENTARY-2 is likely to be more useful for regular schemati
 <part name="R4" library="rcl-amber" deviceset="R" device="0603" value="10M"/>
 <part name="R5" library="rcl-amber" deviceset="R" device="0603" value="10M"/>
 <part name="TP13" library="SparkFun-Passives" deviceset="TEST-POINT" device="3"/>
-<part name="TP9" library="SparkFun-Passives" deviceset="TEST-POINT" device="3"/>
+<part name="TP9" library="SparkFun-Passives" deviceset="TEST-POINT" device="3" value="TP9"/>
 <part name="TP10" library="SparkFun-Passives" deviceset="TEST-POINT" device="3"/>
 <part name="TP11" library="SparkFun-Passives" deviceset="TEST-POINT" device="3"/>
 <part name="TP12" library="SparkFun-Passives" deviceset="TEST-POINT" device="3"/>
@@ -7200,13 +7201,13 @@ Resistive touch switch footprint will be incorperated into switch footprint**</t
 <instance part="SUPPLY14" gate="GND" x="127" y="13.97" smashed="yes" rot="MR0">
 <attribute name="VALUE" x="128.905" y="10.795" size="1.778" layer="96" rot="MR0"/>
 </instance>
-<instance part="TP1" gate="G$1" x="121.92" y="19.05" smashed="yes" rot="R90">
+<instance part="TP1" gate="&gt;NAME" x="121.92" y="19.05" smashed="yes" rot="R90">
 <attribute name="NAME" x="124.46" y="24.13" size="1.778" layer="95" font="vector" rot="R180"/>
 </instance>
-<instance part="TP2" gate="G$1" x="127" y="19.05" smashed="yes" rot="R90">
+<instance part="TP2" gate="&gt;NAME" x="127" y="19.05" smashed="yes" rot="R90">
 <attribute name="NAME" x="129.54" y="26.67" size="1.778" layer="95" font="vector" rot="R180"/>
 </instance>
-<instance part="TP3" gate="G$1" x="132.08" y="19.05" smashed="yes" rot="R90">
+<instance part="TP3" gate="&gt;NAME" x="132.08" y="19.05" smashed="yes" rot="R90">
 <attribute name="NAME" x="134.62" y="24.13" size="1.778" layer="95" font="vector" rot="R180"/>
 </instance>
 <instance part="SUPPLY5" gate="GND" x="132.08" y="104.14" smashed="yes">
@@ -7235,20 +7236,20 @@ Resistive touch switch footprint will be incorperated into switch footprint**</t
 <attribute name="VALUE" x="254.635" y="167.005" size="1.778" layer="96"/>
 </instance>
 <instance part="Y1" gate="G$1" x="226.06" y="76.2"/>
-<instance part="TP4" gate="G$1" x="88.9" y="139.7" smashed="yes" rot="R90">
+<instance part="TP4" gate="&gt;NAME" x="88.9" y="139.7" smashed="yes" rot="R90">
 <attribute name="NAME" x="91.44" y="144.78" size="1.778" layer="95" font="vector" rot="R180"/>
 </instance>
-<instance part="TP5" gate="G$1" x="96.52" y="139.7" smashed="yes" rot="R90">
+<instance part="TP5" gate="&gt;NAME" x="96.52" y="139.7" smashed="yes" rot="R90">
 <attribute name="NAME" x="99.06" y="144.78" size="1.778" layer="95" font="vector" rot="R180"/>
 </instance>
-<instance part="TP6" gate="G$1" x="104.14" y="139.7" smashed="yes" rot="R90">
+<instance part="TP6" gate="&gt;NAME" x="104.14" y="139.7" smashed="yes" rot="R90">
 <attribute name="NAME" x="106.68" y="144.78" size="1.778" layer="95" font="vector" rot="R180"/>
 </instance>
-<instance part="TP7" gate="G$1" x="111.76" y="139.7" smashed="yes" rot="R90">
+<instance part="TP7" gate="&gt;NAME" x="111.76" y="139.7" smashed="yes" rot="R90">
 <attribute name="NAME" x="114.3" y="144.78" size="1.778" layer="95" font="vector" rot="R180"/>
 </instance>
 <instance part="L10" gate="G$1" x="259.08" y="81.28"/>
-<instance part="TP8" gate="G$1" x="142.24" y="19.05" smashed="yes" rot="R90">
+<instance part="TP8" gate="&gt;NAME" x="142.24" y="19.05" smashed="yes" rot="R90">
 <attribute name="NAME" x="144.78" y="24.13" size="1.778" layer="95" font="vector" rot="R180"/>
 </instance>
 <instance part="P+1" gate="VCC" x="149.86" y="22.86" smashed="yes">
@@ -7307,52 +7308,52 @@ Resistive touch switch footprint will be incorperated into switch footprint**</t
 <attribute name="NAME" x="52.2986" y="115.57" size="1.778" layer="95" rot="R270"/>
 <attribute name="VALUE" x="52.578" y="123.19" size="1.778" layer="96" rot="R270"/>
 </instance>
-<instance part="TP13" gate="G$1" x="172.72" y="96.52" smashed="yes" rot="R180">
+<instance part="TP13" gate="&gt;NAME" x="172.72" y="96.52" smashed="yes" rot="R180">
 <attribute name="NAME" x="161.29" y="96.52" size="1.778" layer="95" font="vector"/>
 </instance>
-<instance part="TP9" gate="G$1" x="172.72" y="106.68" smashed="yes" rot="R180">
+<instance part="TP9" gate="&gt;NAME" x="172.72" y="106.68" smashed="yes" rot="R180">
 <attribute name="NAME" x="161.29" y="106.68" size="1.778" layer="95" font="vector"/>
 </instance>
-<instance part="TP10" gate="G$1" x="172.72" y="104.14" smashed="yes" rot="R180">
+<instance part="TP10" gate="&gt;NAME" x="172.72" y="104.14" smashed="yes" rot="R180">
 <attribute name="NAME" x="161.29" y="104.14" size="1.778" layer="95" font="vector"/>
 </instance>
-<instance part="TP11" gate="G$1" x="172.72" y="101.6" smashed="yes" rot="R180">
+<instance part="TP11" gate="&gt;NAME" x="172.72" y="101.6" smashed="yes" rot="R180">
 <attribute name="NAME" x="161.29" y="101.6" size="1.778" layer="95" font="vector"/>
 </instance>
-<instance part="TP12" gate="G$1" x="172.72" y="99.06" smashed="yes" rot="R180">
+<instance part="TP12" gate="&gt;NAME" x="172.72" y="99.06" smashed="yes" rot="R180">
 <attribute name="NAME" x="161.29" y="99.06" size="1.778" layer="95" font="vector"/>
 </instance>
-<instance part="TP14" gate="G$1" x="172.72" y="93.98" smashed="yes" rot="R180">
+<instance part="TP14" gate="&gt;NAME" x="172.72" y="93.98" smashed="yes" rot="R180">
 <attribute name="NAME" x="161.29" y="93.98" size="1.778" layer="95" font="vector"/>
 </instance>
-<instance part="TP15" gate="G$1" x="172.72" y="91.44" smashed="yes" rot="R180">
+<instance part="TP15" gate="&gt;NAME" x="172.72" y="91.44" smashed="yes" rot="R180">
 <attribute name="NAME" x="161.29" y="91.44" size="1.778" layer="95" font="vector"/>
 </instance>
-<instance part="TP16" gate="G$1" x="172.72" y="88.9" smashed="yes" rot="R180">
+<instance part="TP16" gate="&gt;NAME" x="172.72" y="88.9" smashed="yes" rot="R180">
 <attribute name="NAME" x="161.29" y="88.9" size="1.778" layer="95" font="vector"/>
 </instance>
-<instance part="TP18" gate="G$1" x="172.72" y="81.28" smashed="yes" rot="R180">
+<instance part="TP18" gate="&gt;NAME" x="172.72" y="81.28" smashed="yes" rot="R180">
 <attribute name="NAME" x="161.29" y="81.28" size="1.778" layer="95" font="vector"/>
 </instance>
-<instance part="TP19" gate="G$1" x="172.72" y="78.74" smashed="yes" rot="R180">
+<instance part="TP19" gate="&gt;NAME" x="172.72" y="78.74" smashed="yes" rot="R180">
 <attribute name="NAME" x="161.29" y="78.74" size="1.778" layer="95" font="vector"/>
 </instance>
-<instance part="TP20" gate="G$1" x="220.98" y="111.76" smashed="yes">
+<instance part="TP20" gate="&gt;NAME" x="220.98" y="111.76" smashed="yes">
 <attribute name="NAME" x="232.41" y="113.03" size="1.778" layer="95" font="vector" rot="R180"/>
 </instance>
-<instance part="TP21" gate="G$1" x="220.98" y="109.22" smashed="yes">
+<instance part="TP21" gate="&gt;NAME" x="220.98" y="109.22" smashed="yes">
 <attribute name="NAME" x="232.41" y="110.49" size="1.778" layer="95" font="vector" rot="R180"/>
 </instance>
-<instance part="TP22" gate="G$1" x="220.98" y="106.68" smashed="yes">
+<instance part="TP22" gate="&gt;NAME" x="220.98" y="106.68" smashed="yes">
 <attribute name="NAME" x="232.41" y="107.95" size="1.778" layer="95" font="vector" rot="R180"/>
 </instance>
-<instance part="TP23" gate="G$1" x="220.98" y="104.14" smashed="yes">
+<instance part="TP23" gate="&gt;NAME" x="220.98" y="104.14" smashed="yes">
 <attribute name="NAME" x="232.41" y="105.41" size="1.778" layer="95" font="vector" rot="R180"/>
 </instance>
-<instance part="TP27" gate="G$1" x="218.44" y="134.62" smashed="yes">
+<instance part="TP27" gate="&gt;NAME" x="218.44" y="134.62" smashed="yes">
 <attribute name="NAME" x="229.87" y="135.89" size="1.778" layer="95" font="vector" rot="R180"/>
 </instance>
-<instance part="TP28" gate="G$1" x="218.44" y="137.16" smashed="yes">
+<instance part="TP28" gate="&gt;NAME" x="218.44" y="137.16" smashed="yes">
 <attribute name="NAME" x="229.87" y="138.43" size="1.778" layer="95" font="vector" rot="R180"/>
 </instance>
 <instance part="R13" gate="G$1" x="121.92" y="137.16" smashed="yes">
@@ -7384,16 +7385,16 @@ Resistive touch switch footprint will be incorperated into switch footprint**</t
 <instance part="D1" gate="G2" x="71.12" y="114.3" smashed="yes">
 <attribute name="NAME" x="68.58" y="118.11" size="1.778" layer="95" rot="R90"/>
 </instance>
-<instance part="TP17" gate="G$1" x="76.2" y="172.72" smashed="yes" rot="R90">
+<instance part="TP17" gate="&gt;NAME" x="76.2" y="172.72" smashed="yes" rot="R90">
 <attribute name="NAME" x="83.82" y="175.26" size="1.778" layer="95" font="vector" rot="R180"/>
 </instance>
-<instance part="TP24" gate="G$1" x="78.74" y="177.8" smashed="yes" rot="R90">
+<instance part="TP24" gate="&gt;NAME" x="78.74" y="177.8" smashed="yes" rot="R90">
 <attribute name="NAME" x="81.28" y="182.88" size="1.778" layer="95" font="vector" rot="R180"/>
 </instance>
-<instance part="TP25" gate="G$1" x="83.82" y="180.34" smashed="yes" rot="R90">
+<instance part="TP25" gate="&gt;NAME" x="83.82" y="180.34" smashed="yes" rot="R90">
 <attribute name="NAME" x="86.36" y="185.42" size="1.778" layer="95" font="vector" rot="R180"/>
 </instance>
-<instance part="TP26" gate="G$1" x="78.74" y="185.42" smashed="yes" rot="R90">
+<instance part="TP26" gate="&gt;NAME" x="78.74" y="185.42" smashed="yes" rot="R90">
 <attribute name="NAME" x="86.36" y="190.5" size="1.778" layer="95" font="vector" rot="R180"/>
 </instance>
 </instances>
@@ -7570,10 +7571,10 @@ Resistive touch switch footprint will be incorperated into switch footprint**</t
 <pinref part="SUPPLY12" gate="GND" pin="GND"/>
 </segment>
 <segment>
-<pinref part="TP1" gate="G$1" pin="1"/>
-<pinref part="TP2" gate="G$1" pin="1"/>
+<pinref part="TP1" gate="&gt;NAME" pin="1"/>
+<pinref part="TP2" gate="&gt;NAME" pin="1"/>
 <wire x1="121.92" y1="19.05" x2="127" y2="19.05" width="0.1524" layer="91"/>
-<pinref part="TP3" gate="G$1" pin="1"/>
+<pinref part="TP3" gate="&gt;NAME" pin="1"/>
 <wire x1="127" y1="19.05" x2="132.08" y2="19.05" width="0.1524" layer="91"/>
 <junction x="127" y="19.05"/>
 <pinref part="SUPPLY14" gate="GND" pin="GND"/>
@@ -7736,7 +7737,7 @@ Resistive touch switch footprint will be incorperated into switch footprint**</t
 <pinref part="P+1" gate="VCC" pin="VCC"/>
 <wire x1="149.86" y1="20.32" x2="149.86" y2="17.78" width="0.1524" layer="91"/>
 <wire x1="149.86" y1="17.78" x2="142.24" y2="17.78" width="0.1524" layer="91"/>
-<pinref part="TP8" gate="G$1" pin="1"/>
+<pinref part="TP8" gate="&gt;NAME" pin="1"/>
 <wire x1="142.24" y1="17.78" x2="142.24" y2="19.05" width="0.1524" layer="91"/>
 </segment>
 <segment>
@@ -7760,28 +7761,28 @@ Resistive touch switch footprint will be incorperated into switch footprint**</t
 <segment>
 <pinref part="U1" gate="G$1" pin="35"/>
 <wire x1="218.44" y1="104.14" x2="220.98" y2="104.14" width="0.1524" layer="91"/>
-<pinref part="TP23" gate="G$1" pin="1"/>
+<pinref part="TP23" gate="&gt;NAME" pin="1"/>
 </segment>
 </net>
 <net name="PJ.1/TDI/TCLK" class="0">
 <segment>
 <pinref part="U1" gate="G$1" pin="36"/>
 <wire x1="218.44" y1="106.68" x2="220.98" y2="106.68" width="0.1524" layer="91"/>
-<pinref part="TP22" gate="G$1" pin="1"/>
+<pinref part="TP22" gate="&gt;NAME" pin="1"/>
 </segment>
 </net>
 <net name="PJ.2/TMS" class="0">
 <segment>
 <pinref part="U1" gate="G$1" pin="37"/>
 <wire x1="218.44" y1="109.22" x2="220.98" y2="109.22" width="0.1524" layer="91"/>
-<pinref part="TP21" gate="G$1" pin="1"/>
+<pinref part="TP21" gate="&gt;NAME" pin="1"/>
 </segment>
 </net>
 <net name="PJ.3/TCK" class="0">
 <segment>
 <pinref part="U1" gate="G$1" pin="38"/>
 <wire x1="218.44" y1="111.76" x2="220.98" y2="111.76" width="0.1524" layer="91"/>
-<pinref part="TP20" gate="G$1" pin="1"/>
+<pinref part="TP20" gate="&gt;NAME" pin="1"/>
 </segment>
 </net>
 <net name="RST/NMI/SBWTDIO" class="0">
@@ -7801,7 +7802,7 @@ Resistive touch switch footprint will be incorperated into switch footprint**</t
 <wire x1="73.66" y1="187.96" x2="73.66" y2="177.8" width="0.1524" layer="91"/>
 <junction x="73.66" y="177.8"/>
 <wire x1="73.66" y1="177.8" x2="73.66" y2="170.18" width="0.1524" layer="91"/>
-<pinref part="TP24" gate="G$1" pin="1"/>
+<pinref part="TP24" gate="&gt;NAME" pin="1"/>
 <junction x="78.74" y="177.8"/>
 </segment>
 </net>
@@ -7809,7 +7810,7 @@ Resistive touch switch footprint will be incorperated into switch footprint**</t
 <segment>
 <pinref part="U$1" gate="G$1" pin="TEST/SBWTCK"/>
 <wire x1="86.36" y1="180.34" x2="83.82" y2="180.34" width="0.1524" layer="91"/>
-<pinref part="TP25" gate="G$1" pin="1"/>
+<pinref part="TP25" gate="&gt;NAME" pin="1"/>
 <wire x1="83.82" y1="180.34" x2="66.04" y2="180.34" width="0.1524" layer="91"/>
 <junction x="83.82" y="180.34"/>
 </segment>
@@ -7894,7 +7895,7 @@ Resistive touch switch footprint will be incorperated into switch footprint**</t
 <pinref part="R4" gate="G$1" pin="2"/>
 <wire x1="116.84" y1="132.08" x2="104.14" y2="132.08" width="0.1524" layer="91"/>
 <junction x="104.14" y="132.08"/>
-<pinref part="TP6" gate="G$1" pin="1"/>
+<pinref part="TP6" gate="&gt;NAME" pin="1"/>
 <wire x1="104.14" y1="132.08" x2="104.14" y2="139.7" width="0.1524" layer="91"/>
 <pinref part="S3" gate="G$1" pin="TOP@2"/>
 <wire x1="25.4" y1="114.3" x2="25.4" y2="116.84" width="0.1524" layer="91"/>
@@ -7919,7 +7920,7 @@ Resistive touch switch footprint will be incorperated into switch footprint**</t
 <pinref part="R2" gate="G$1" pin="2"/>
 <wire x1="88.9" y1="137.16" x2="116.84" y2="137.16" width="0.1524" layer="91"/>
 <junction x="88.9" y="137.16"/>
-<pinref part="TP4" gate="G$1" pin="1"/>
+<pinref part="TP4" gate="&gt;NAME" pin="1"/>
 <wire x1="88.9" y1="137.16" x2="88.9" y2="139.7" width="0.1524" layer="91"/>
 <pinref part="S1" gate="G$1" pin="TOP@2"/>
 <wire x1="25.4" y1="139.7" x2="25.4" y2="142.24" width="0.1524" layer="91"/>
@@ -7945,7 +7946,7 @@ Resistive touch switch footprint will be incorperated into switch footprint**</t
 <pinref part="R5" gate="G$1" pin="2"/>
 <wire x1="116.84" y1="129.54" x2="111.76" y2="129.54" width="0.1524" layer="91"/>
 <junction x="111.76" y="129.54"/>
-<pinref part="TP7" gate="G$1" pin="1"/>
+<pinref part="TP7" gate="&gt;NAME" pin="1"/>
 <wire x1="111.76" y1="129.54" x2="111.76" y2="139.7" width="0.1524" layer="91"/>
 <pinref part="S4" gate="G$1" pin="TOP@2"/>
 <wire x1="25.4" y1="104.14" x2="25.4" y2="106.68" width="0.1524" layer="91"/>
@@ -7970,7 +7971,7 @@ Resistive touch switch footprint will be incorperated into switch footprint**</t
 <pinref part="R3" gate="G$1" pin="2"/>
 <wire x1="116.84" y1="134.62" x2="96.52" y2="134.62" width="0.1524" layer="91"/>
 <junction x="96.52" y="134.62"/>
-<pinref part="TP5" gate="G$1" pin="1"/>
+<pinref part="TP5" gate="&gt;NAME" pin="1"/>
 <wire x1="96.52" y1="134.62" x2="96.52" y2="139.7" width="0.1524" layer="91"/>
 <pinref part="S2" gate="G$1" pin="TOP@2"/>
 <wire x1="25.4" y1="124.46" x2="25.4" y2="127" width="0.1524" layer="91"/>
@@ -8142,7 +8143,7 @@ Resistive touch switch footprint will be incorperated into switch footprint**</t
 <segment>
 <pinref part="U$1" gate="G$1" pin="P1.5/RX"/>
 <wire x1="86.36" y1="185.42" x2="78.74" y2="185.42" width="0.1524" layer="91"/>
-<pinref part="TP26" gate="G$1" pin="1"/>
+<pinref part="TP26" gate="&gt;NAME" pin="1"/>
 <wire x1="78.74" y1="185.42" x2="66.04" y2="185.42" width="0.1524" layer="91"/>
 <junction x="78.74" y="185.42"/>
 </segment>
@@ -8156,7 +8157,7 @@ Resistive touch switch footprint will be incorperated into switch footprint**</t
 <segment>
 <pinref part="U$1" gate="G$1" pin="P1.6/TX"/>
 <wire x1="86.36" y1="172.72" x2="76.2" y2="172.72" width="0.1524" layer="91"/>
-<pinref part="TP17" gate="G$1" pin="1"/>
+<pinref part="TP17" gate="&gt;NAME" pin="1"/>
 <wire x1="76.2" y1="172.72" x2="66.04" y2="172.72" width="0.1524" layer="91"/>
 <junction x="76.2" y="172.72"/>
 </segment>
@@ -8236,73 +8237,73 @@ Resistive touch switch footprint will be incorperated into switch footprint**</t
 <net name="N$21" class="0">
 <segment>
 <pinref part="U1" gate="G$1" pin="17"/>
-<pinref part="TP13" gate="G$1" pin="1"/>
+<pinref part="TP13" gate="&gt;NAME" pin="1"/>
 </segment>
 </net>
 <net name="N$22" class="0">
 <segment>
 <pinref part="U1" gate="G$1" pin="13"/>
-<pinref part="TP9" gate="G$1" pin="1"/>
+<pinref part="TP9" gate="&gt;NAME" pin="1"/>
 </segment>
 </net>
 <net name="N$23" class="0">
 <segment>
 <pinref part="U1" gate="G$1" pin="14"/>
-<pinref part="TP10" gate="G$1" pin="1"/>
+<pinref part="TP10" gate="&gt;NAME" pin="1"/>
 </segment>
 </net>
 <net name="N$24" class="0">
 <segment>
 <pinref part="U1" gate="G$1" pin="15"/>
-<pinref part="TP11" gate="G$1" pin="1"/>
+<pinref part="TP11" gate="&gt;NAME" pin="1"/>
 </segment>
 </net>
 <net name="N$25" class="0">
 <segment>
 <pinref part="U1" gate="G$1" pin="16"/>
-<pinref part="TP12" gate="G$1" pin="1"/>
+<pinref part="TP12" gate="&gt;NAME" pin="1"/>
 </segment>
 </net>
 <net name="N$26" class="0">
 <segment>
 <pinref part="U1" gate="G$1" pin="18"/>
-<pinref part="TP14" gate="G$1" pin="1"/>
+<pinref part="TP14" gate="&gt;NAME" pin="1"/>
 </segment>
 </net>
 <net name="N$27" class="0">
 <segment>
 <pinref part="U1" gate="G$1" pin="19"/>
-<pinref part="TP15" gate="G$1" pin="1"/>
+<pinref part="TP15" gate="&gt;NAME" pin="1"/>
 </segment>
 </net>
 <net name="N$28" class="0">
 <segment>
 <pinref part="U1" gate="G$1" pin="20"/>
-<pinref part="TP16" gate="G$1" pin="1"/>
+<pinref part="TP16" gate="&gt;NAME" pin="1"/>
 </segment>
 </net>
 <net name="N$30" class="0">
 <segment>
 <pinref part="U1" gate="G$1" pin="23"/>
-<pinref part="TP18" gate="G$1" pin="1"/>
+<pinref part="TP18" gate="&gt;NAME" pin="1"/>
 </segment>
 </net>
 <net name="N$31" class="0">
 <segment>
 <pinref part="U1" gate="G$1" pin="24"/>
-<pinref part="TP19" gate="G$1" pin="1"/>
+<pinref part="TP19" gate="&gt;NAME" pin="1"/>
 </segment>
 </net>
 <net name="N$35" class="0">
 <segment>
 <pinref part="U1" gate="G$1" pin="47"/>
-<pinref part="TP27" gate="G$1" pin="1"/>
+<pinref part="TP27" gate="&gt;NAME" pin="1"/>
 </segment>
 </net>
 <net name="N$36" class="0">
 <segment>
 <pinref part="U1" gate="G$1" pin="48"/>
-<pinref part="TP28" gate="G$1" pin="1"/>
+<pinref part="TP28" gate="&gt;NAME" pin="1"/>
 </segment>
 </net>
 </nets>
