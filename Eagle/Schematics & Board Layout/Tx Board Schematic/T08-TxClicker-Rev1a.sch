@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="6.4">
+<eagle version="7.1.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -6625,8 +6625,8 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <rectangle x1="-5.08" y1="-5.842" x2="5.08" y2="5.842" layer="29"/>
 <wire x1="5.588" y1="-5.588" x2="4.826" y2="-5.588" width="0.254" layer="1"/>
 <wire x1="4.318" y1="5.588" x2="5.588" y2="5.588" width="0.254" layer="1"/>
-<smd name="P$1" x="5.588" y="-4.191" dx="0.3048" dy="0.1524" layer="1" rot="R90"/>
-<smd name="P$2" x="5.588" y="4.064" dx="0.3048" dy="0.1524" layer="1" rot="R90"/>
+<smd name="P$1" x="5.588" y="-4.191" dx="0.3048" dy="0.1524" layer="1" rot="R90" stop="no" cream="no"/>
+<smd name="P$2" x="5.588" y="4.064" dx="0.3048" dy="0.1524" layer="1" rot="R90" stop="no" cream="no"/>
 <wire x1="5.588" y1="5.588" x2="5.588" y2="4.064" width="0.254" layer="1"/>
 <wire x1="5.588" y1="-5.588" x2="5.588" y2="-4.191" width="0.254" layer="1"/>
 </package>
