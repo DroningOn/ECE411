@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.001" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.025" altunitdist="inch" altunit="inch"/>
+<grid distance="0.05" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.025" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="yes" active="yes"/>
@@ -7188,16 +7188,6 @@ This is the mechanical footprint for a #4 phillips button head screw. Use the ke
 <rectangle x1="-5.08" y1="-5.842" x2="5.08" y2="5.842" layer="29"/>
 <wire x1="5.588" y1="-5.588" x2="4.826" y2="-5.588" width="0.254" layer="1"/>
 <wire x1="4.318" y1="5.588" x2="5.588" y2="5.588" width="0.254" layer="1"/>
-<wire x1="5.588" y1="5.588" x2="5.588" y2="2.794" width="0.254" layer="1"/>
-<wire x1="5.588" y1="2.794" x2="5.842" y2="2.54" width="0.254" layer="1"/>
-<wire x1="5.842" y1="2.54" x2="5.969" y2="2.54" width="0.4064" layer="1"/>
-<wire x1="5.969" y1="2.54" x2="6.096" y2="2.54" width="0.4064" layer="1"/>
-<wire x1="5.588" y1="-5.588" x2="5.588" y2="-2.794" width="0.254" layer="1"/>
-<wire x1="5.588" y1="-2.794" x2="5.842" y2="-2.54" width="0.254" layer="1"/>
-<wire x1="5.842" y1="-2.54" x2="5.9944" y2="-2.54" width="0.4064" layer="1"/>
-<wire x1="5.9944" y1="-2.54" x2="6.096" y2="-2.54" width="0.254" layer="1"/>
-<wire x1="6.096" y1="2.54" x2="6.5278" y2="2.54" width="0.4064" layer="1"/>
-<wire x1="6.096" y1="-2.54" x2="6.477" y2="-2.54" width="0.4064" layer="1"/>
 </package>
 <package name="TACTILE-SWITCH-1101NE">
 <description>Sparkfun SKU# COM-08229</description>
