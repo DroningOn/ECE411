@@ -5876,28 +5876,28 @@ We've spent an enormous amount of time creating and checking these footprints an
 <vertex x="1" y="0"/>
 <vertex x="1" y="20"/>
 <vertex x="-6" y="20"/>
-<vertex x="-6" y="10"/>
-<vertex x="-10" y="10"/>
+<vertex x="-6" y="9"/>
+<vertex x="-10" y="9"/>
 <vertex x="-10" y="20"/>
 <vertex x="-16" y="20"/>
-<vertex x="-16" y="10"/>
-<vertex x="-20" y="10"/>
+<vertex x="-16" y="9"/>
+<vertex x="-20" y="9"/>
 <vertex x="-20" y="20"/>
 <vertex x="-26" y="20"/>
-<vertex x="-26" y="10"/>
-<vertex x="-30" y="10"/>
+<vertex x="-26" y="9"/>
+<vertex x="-30" y="9"/>
 <vertex x="-30" y="20"/>
 <vertex x="-31" y="20"/>
-<vertex x="-31" y="9"/>
-<vertex x="-25" y="9"/>
+<vertex x="-31" y="8"/>
+<vertex x="-25" y="8"/>
 <vertex x="-25" y="19"/>
 <vertex x="-21" y="19"/>
-<vertex x="-21" y="9"/>
-<vertex x="-15" y="9"/>
+<vertex x="-21" y="8"/>
+<vertex x="-15" y="8"/>
 <vertex x="-15" y="19"/>
 <vertex x="-11" y="19"/>
-<vertex x="-11" y="9"/>
-<vertex x="-5" y="9"/>
+<vertex x="-11" y="8"/>
+<vertex x="-5" y="8"/>
 <vertex x="-5" y="19"/>
 </polygon>
 </package>
@@ -6897,6 +6897,8 @@ The ordinary SWITCH-MOMENTARY-2 is likely to be more useful for regular schemati
 <part name="TP24" library="SparkFun-Passives" deviceset="TEST-POINT" device="3"/>
 <part name="TP25" library="SparkFun-Passives" deviceset="TEST-POINT" device="3"/>
 <part name="TP26" library="SparkFun-Passives" deviceset="TEST-POINT" device="3"/>
+<part name="X1-DNI1" library="con-coax" deviceset="SMA-SMD" device=""/>
+<part name="SUPPLY15" library="supply2" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -7397,6 +7399,13 @@ Resistive touch switch footprint will be incorperated into switch footprint**</t
 <instance part="TP26" gate="&gt;NAME" x="78.74" y="185.42" smashed="yes" rot="R90">
 <attribute name="NAME" x="86.36" y="190.5" size="1.778" layer="95" font="vector" rot="R180"/>
 </instance>
+<instance part="X1-DNI1" gate="G$1" x="162.56" y="22.86" smashed="yes" rot="R270">
+<attribute name="VALUE" x="157.48" y="25.4" size="1.778" layer="96"/>
+<attribute name="NAME" x="165.1" y="21.082" size="1.778" layer="95"/>
+</instance>
+<instance part="SUPPLY15" gate="GND" x="160.02" y="17.78" smashed="yes">
+<attribute name="VALUE" x="153.035" y="17.145" size="1.778" layer="96"/>
+</instance>
 </instances>
 <busses>
 <bus name="P1.5/RX,TEST/SBWTCK,RST/NMI/SBWTDIO,P1.6/TX">
@@ -7668,6 +7677,10 @@ Resistive touch switch footprint will be incorperated into switch footprint**</t
 <segment>
 <pinref part="X1-DNI" gate="G$1" pin="2"/>
 <pinref part="SUPPLY18" gate="GND" pin="GND"/>
+</segment>
+<segment>
+<pinref part="X1-DNI1" gate="G$1" pin="2"/>
+<pinref part="SUPPLY15" gate="GND" pin="GND"/>
 </segment>
 </net>
 <net name="VCC" class="0">
@@ -8304,6 +8317,12 @@ Resistive touch switch footprint will be incorperated into switch footprint**</t
 <segment>
 <pinref part="U1" gate="G$1" pin="48"/>
 <pinref part="TP28" gate="&gt;NAME" pin="1"/>
+</segment>
+</net>
+<net name="TEST50" class="0">
+<segment>
+<pinref part="X1-DNI1" gate="G$1" pin="1"/>
+<wire x1="162.56" y1="20.32" x2="162.56" y2="17.78" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
