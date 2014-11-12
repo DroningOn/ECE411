@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="7.1.0">
+<eagle version="6.4">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -6897,7 +6897,7 @@ The ordinary SWITCH-MOMENTARY-2 is likely to be more useful for regular schemati
 <part name="TP24" library="SparkFun-Passives" deviceset="TEST-POINT" device="3"/>
 <part name="TP25" library="SparkFun-Passives" deviceset="TEST-POINT" device="3"/>
 <part name="TP26" library="SparkFun-Passives" deviceset="TEST-POINT" device="3"/>
-<part name="X1-DNI1" library="con-coax" deviceset="SMA-SMD" device=""/>
+<part name="XCAL-DNI" library="con-coax" deviceset="SMA-SMD" device=""/>
 <part name="SUPPLY15" library="supply2" deviceset="GND" device=""/>
 </parts>
 <sheets>
@@ -7399,7 +7399,7 @@ Resistive touch switch footprint will be incorperated into switch footprint**</t
 <instance part="TP26" gate="&gt;NAME" x="78.74" y="185.42" smashed="yes" rot="R90">
 <attribute name="NAME" x="86.36" y="190.5" size="1.778" layer="95" font="vector" rot="R180"/>
 </instance>
-<instance part="X1-DNI1" gate="G$1" x="162.56" y="22.86" smashed="yes" rot="R270">
+<instance part="XCAL-DNI" gate="G$1" x="162.56" y="22.86" smashed="yes" rot="R270">
 <attribute name="VALUE" x="157.48" y="25.4" size="1.778" layer="96"/>
 <attribute name="NAME" x="165.1" y="21.082" size="1.778" layer="95"/>
 </instance>
@@ -7679,7 +7679,7 @@ Resistive touch switch footprint will be incorperated into switch footprint**</t
 <pinref part="SUPPLY18" gate="GND" pin="GND"/>
 </segment>
 <segment>
-<pinref part="X1-DNI1" gate="G$1" pin="2"/>
+<pinref part="XCAL-DNI" gate="G$1" pin="2"/>
 <pinref part="SUPPLY15" gate="GND" pin="GND"/>
 </segment>
 </net>
@@ -8321,7 +8321,7 @@ Resistive touch switch footprint will be incorperated into switch footprint**</t
 </net>
 <net name="TEST50" class="0">
 <segment>
-<pinref part="X1-DNI1" gate="G$1" pin="1"/>
+<pinref part="XCAL-DNI" gate="G$1" pin="1"/>
 <wire x1="162.56" y1="20.32" x2="162.56" y2="17.78" width="0.1524" layer="91"/>
 </segment>
 </net>

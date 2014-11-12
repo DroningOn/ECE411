@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="7.1.0">
+<eagle version="6.4">
 <drawing>
 <settings>
 <setting alwaysvectorfont="yes"/>
@@ -29,9 +29,9 @@
 <layer number="19" name="Unrouted" color="6" fill="1" visible="yes" active="yes"/>
 <layer number="20" name="Dimension" color="15" fill="1" visible="yes" active="yes"/>
 <layer number="21" name="tPlace" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="22" name="bPlace" color="7" fill="1" visible="no" active="yes"/>
-<layer number="23" name="tOrigins" color="15" fill="1" visible="no" active="yes"/>
-<layer number="24" name="bOrigins" color="15" fill="1" visible="no" active="yes"/>
+<layer number="22" name="bPlace" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="23" name="tOrigins" color="15" fill="1" visible="yes" active="yes"/>
+<layer number="24" name="bOrigins" color="15" fill="1" visible="yes" active="yes"/>
 <layer number="25" name="tNames" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="26" name="bNames" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="27" name="tValues" color="7" fill="1" visible="no" active="yes"/>
@@ -148,9 +148,8 @@
 <plain>
 <wire x1="8.636" y1="0" x2="81.28" y2="0" width="0" layer="20"/>
 <wire x1="83.82" y1="2.54" x2="83.82" y2="39.624" width="0" layer="20"/>
-<text x="46.0121" y="31.623" size="1.524" layer="22" font="vector" rot="SMR0">Portland State University
-Team: T08    Nov2014    RevA
-</text>
+<text x="62.5221" y="0.508" size="0.762" layer="21" font="vector" rot="SR0">Portland State University
+Team: T08    Nov2014    RevA</text>
 <text x="44.323" y="22.352" size="5.08" layer="21" font="vector" rot="SR270">A</text>
 <text x="30.861" y="22.352" size="5.08" layer="21" font="vector" rot="SR270">B</text>
 <text x="17.526" y="22.352" size="5.08" layer="21" font="vector" rot="SR270">C</text>
@@ -2182,9 +2181,6 @@ Please make sure your boards conform to these design rules.</description>
 <autorouter>
 <pass name="Default">
 <param name="RoutingGrid" value="50mil"/>
-<param name="AutoGrid" value="1"/>
-<param name="Efforts" value="0"/>
-<param name="TopRouterVariant" value="1"/>
 <param name="tpViaShape" value="round"/>
 <param name="PrefDir.1" value="|"/>
 <param name="PrefDir.2" value="0"/>
@@ -2615,11 +2611,13 @@ Please make sure your boards conform to these design rules.</description>
 <element name="TP26" library="SparkFun-Passives" package="PAD.03X.03" value="" x="24.892" y="4.191" smashed="yes">
 <attribute name="NAME" x="25.4" y="3.9624" size="0.508" layer="25" font="vector"/>
 </element>
-<element name="X1-DNI1" library="con-coax" package="SMA-SMD" value="SMA-SMD" x="7.62" y="14.224" rot="MR0">
+<element name="XCAL-DNI" library="con-coax" package="SMA-SMD" value="SMA-SMD" x="7.62" y="14.224" smashed="yes" rot="MR0">
 <attribute name="OC_NEWARK" value="unknown" x="7.62" y="14.224" size="1.778" layer="28" rot="MR0" display="off"/>
 <attribute name="MPN" value="" x="7.62" y="14.224" size="1.778" layer="28" rot="MR0" display="off"/>
 <attribute name="MF" value="" x="7.62" y="14.224" size="1.778" layer="28" rot="MR0" display="off"/>
 <attribute name="OC_FARNELL" value="unknown" x="7.62" y="14.224" size="1.778" layer="28" rot="MR0" display="off"/>
+<attribute name="NAME" x="12.7" y="18.034" size="1.27" layer="26" rot="MR270"/>
+<attribute name="VALUE" x="10.795" y="8.509" size="1.27" layer="28" rot="MR0"/>
 </element>
 </elements>
 <signals>
@@ -2715,7 +2713,7 @@ Please make sure your boards conform to these design rules.</description>
 <contactref element="U$6" pad="GPLANE"/>
 <contactref element="C9" pad="2"/>
 <contactref element="C12" pad="2"/>
-<polygon width="0.254" layer="16">
+<polygon width="0.254" layer="16" isolate="0.254">
 <vertex x="0" y="0"/>
 <vertex x="61.8236" y="0"/>
 <vertex x="61.8236" y="42.164"/>
@@ -2777,12 +2775,12 @@ Please make sure your boards conform to these design rules.</description>
 <via x="39.9034" y="27.4066" extent="1-16" drill="0.3302"/>
 <wire x1="40.64" y1="24.478" x2="40.632" y2="24.47" width="0.254" layer="1"/>
 <via x="48.2854" y="22.5806" extent="1-16" drill="0.3302"/>
-<contactref element="X1-DNI1" pad="2@1"/>
-<contactref element="X1-DNI1" pad="2@6"/>
-<contactref element="X1-DNI1" pad="2@5"/>
-<contactref element="X1-DNI1" pad="2@4"/>
-<contactref element="X1-DNI1" pad="2@2"/>
-<contactref element="X1-DNI1" pad="2@3"/>
+<contactref element="XCAL-DNI" pad="2@1"/>
+<contactref element="XCAL-DNI" pad="2@6"/>
+<contactref element="XCAL-DNI" pad="2@5"/>
+<contactref element="XCAL-DNI" pad="2@4"/>
+<contactref element="XCAL-DNI" pad="2@2"/>
+<contactref element="XCAL-DNI" pad="2@3"/>
 <wire x1="40.64" y1="22.86" x2="40.632" y2="22.86" width="0.254" layer="1"/>
 <via x="60.3504" y="40.6146" extent="1-16" drill="0.3302"/>
 <via x="58.3184" y="40.4876" extent="1-16" drill="0.3302"/>
@@ -2900,7 +2898,7 @@ Please make sure your boards conform to these design rules.</description>
 <via x="59.7154" y="4.6736" extent="1-16" drill="0.3302"/>
 <via x="61.1124" y="1.3716" extent="1-16" drill="0.3302"/>
 <via x="58.1914" y="1.6256" extent="1-16" drill="0.3302"/>
-<via x="58.0644" y="5.6896" extent="1-16" drill="0.3302"/>
+<via x="57.5564" y="6.9596" extent="1-16" drill="0.3302"/>
 <via x="61.1124" y="3.9116" extent="1-16" drill="0.3302"/>
 <via x="61.2394" y="2.6416" extent="1-16" drill="0.3302"/>
 <via x="60.9854" y="5.6896" extent="1-16" drill="0.3302"/>
@@ -3686,7 +3684,7 @@ Please make sure your boards conform to these design rules.</description>
 <wire x1="40.3284" y1="14.18" x2="39.8272" y2="14.6812" width="0.254" layer="1"/>
 </signal>
 <signal name="TEST50">
-<contactref element="X1-DNI1" pad="1"/>
+<contactref element="XCAL-DNI" pad="1"/>
 <wire x1="7.62" y1="14.224" x2="7.62" y2="9.144" width="1.1938" layer="16"/>
 </signal>
 </signals>
