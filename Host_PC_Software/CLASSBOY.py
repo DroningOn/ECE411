@@ -68,14 +68,32 @@ def graph_points(seq, userWidth, userHeight):
     x_stretch = 10
     x_width = 20
     x_gap = 20
+    loopCount = 1
     for x, y in enumerate(seq):
         x0 = x * x_stretch + x * x_width + x_gap
         y0 = userHeight - (y * y_stretch + y_gap)
         x1 = x * x_stretch + x * x_width + x_width + x_gap
         y1 = userHeight - y_gap
-        c.create_rectangle(x0, y0, x1, y1, fill="red")
-        c.create_text(x0+2, y0, anchor=SW, text=str(y))
+        print x0
+        if loopCount == 1:
+                c.create_rectangle(x0, y0, x1, y1, fill="red")
+                c.create_text(x0+5, y0, anchor=SW, text=str(y))
+                c.create_text(x0+5, 322 , anchor=SW, text = 'A')
+        elif loopCount == 2:
+                c.create_rectangle(x0, y0, x1, y1, fill="green")
+                c.create_text(x0+5, y0, anchor=SW, text=str(y))
+                c.create_text(x0+5, 322 , anchor=SW, text = 'B')
+        elif loopCount == 3:
+                c.create_rectangle(x0, y0, x1, y1, fill="yellow")
+                c.create_text(x0+5, y0, anchor=SW, text=str(y))
+                c.create_text(x0+5, 322 , anchor=SW, text = 'C')
+        elif loopCount == 4:
+                c.create_rectangle(x0, y0, x1, y1, fill="blue")
+                c.create_text(x0+5, y0, anchor=SW, text=str(y))
+                c.create_text(x0+5, 322 , anchor=SW, text = 'D')
+        loopCount +=1        
     mainloop()		
+
 
     
 testPackets = ['08957b8903', '8123579700', '12375ba902', '123bc49001', '57dbc46701',
@@ -87,24 +105,20 @@ testPackets = ['08957b8903', '8123579700', '12375ba902', '123bc49001', '57dbc467
 
 
 
+
 print(time.time())			   
 testDict = parse(testPackets)
-print testDict
 
 userIDList = genKeyList(testDict)
 
-print userIDList
-
 numAnswers = answerCount(testDict,userIDList)
-
-print numAnswers
 
 userWidth = 325
 userHeight = 325
 
+print(time.time())
 graph_points(numAnswers,userWidth,userHeight)
 
-print(time.time())
 
 
 
