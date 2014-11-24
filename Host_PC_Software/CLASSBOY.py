@@ -1,15 +1,28 @@
+#Import necessary modules
 import time
 from Tkinter import *
 
 def parse(packets):
-	x = 0
+""" This function receives a list of packets and separates
+	them into their User ID and User Answer, and converts
+	the answer into the corresponding letter for the response.
+	It returns a dictionary of the User ID's (keys) and User 
+	Answers (values).
+	"""
+	
+	#setting up variables
+	loopCount = 0
 	userData={}
-	while x < len(packets):
+	
+	while loopCount < len(packets):
 		
-		newPack = packets[x]
+		
+		newPack = packets[loopCount] #Gets the next packet in the list
+		#Separate out User ID and Answer
 		userID = newPack[0:8]
 		userAnswer = newPack[8:10]
-
+		
+		#Check the Answer and create a alphabetical response for the answer
 		if userAnswer == '00':
 			alphaAnswer = 'A'
 		elif userAnswer == '01':
@@ -20,32 +33,40 @@ def parse(packets):
 			alphaAnswer = 'D'
 		else:
 			alphaAnswer = 'Not a valid answer'
-		userData[userID] = alphaAnswer
 		
-		x += 1
+		userData[userID] = alphaAnswer  #Create new dictionary entry 
+		
+		loopCount += 1
 	return userData
 
 def genKeyList(userDict):
+""" This function takes the dictionary of user data returns a list of the
+user ID's """
 
      userIDList=userDict.keys()
 
      return userIDList
     
 def answerCount(userDict,userList):
-
-    loopCount = 0
-
+""" This function gets a count of the the answers from the dictionary of 
+user data, and returns a tuple of counts for each answer. """
+    
+	#setting up variables
+	loopCount = 0
     aCount = 0
     bCount = 0
     cCount = 0
     dCount = 0
 
     while loopCount < len(userList):
-
+		
+		#get an ID
         currentUser = userList[loopCount]
         
+		#get that ID's answer
         currentUserAnswer = userDict[currentUser]
-    
+		
+		#increment the count for that answer
         if currentUserAnswer == 'A':
             aCount += 1
         elif currentUserAnswer == 'B':
@@ -59,16 +80,23 @@ def answerCount(userDict,userList):
         
     return (aCount,bCount,cCount,dCount)
 	
-def graph_points(seq, userWidth, userHeight):
-    root = Tk()
-    c = Canvas(root,width=userWidth, height=userHeight, bg='white')
-    c.pack()
+def barGraph(seq, userWidth, userHeight):
+""" This function generates a bar graph of the answers"""
+    
+	#Setup for the canvas
+	root = Tk()
+    canvas = Canvas(root,width=userWidth, height=userHeight, bg='white')
+    canvas.pack()
+	
+	#Setting up the variables
     y_stretch = 15
     y_gap = 20
     x_stretch = 10
     x_width = 20
     x_gap = 20
     loopCount = 1
+	
+	
     for x, y in enumerate(seq):
         x0 = x * x_stretch + x * x_width + x_gap
         y0 = userHeight - (y * y_stretch + y_gap)
@@ -117,7 +145,7 @@ userWidth = 325
 userHeight = 325
 
 print(time.time())
-graph_points(numAnswers,userWidth,userHeight)
+barGraph(numAnswers,userWidth,userHeight)
 
 
 
