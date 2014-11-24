@@ -51,8 +51,9 @@ def answerCount(userDict,userList):
 """ This function gets a count of the the answers from the dictionary of 
 user data, and returns a tuple of counts for each answer. """
     
-	#setting up variables
-	loopCount = 0
+	# setting up variables
+	
+    loopCount = 0
     aCount = 0
     bCount = 0
     cCount = 0
@@ -96,8 +97,9 @@ def barGraph(seq, userWidth, userHeight):
     x_gap = 20
     loopCount = 1
 	
-	
+	#Generate bar for each answer
     for x, y in enumerate(seq):
+
         x0 = x * x_stretch + x * x_width + x_gap
         y0 = userHeight - (y * y_stretch + y_gap)
         x1 = x * x_stretch + x * x_width + x_width + x_gap
