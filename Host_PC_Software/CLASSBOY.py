@@ -14,8 +14,6 @@ def main():
         pollTime = defaultTime
         defaultAns = (0,0,0,0)
         
-
-       
         root = Tk()
         root.title('CLASSBOY')
         
@@ -26,7 +24,6 @@ def main():
         mainloop()
         
         
-
 def changePollTime15():
         global pollTime
         pollTime = 15
@@ -70,12 +67,9 @@ def newParse():
                 pollCountDown.configure(text = currentTimeLeft)
                 root.update()
                 
-                
                 if intCheckTime > pollTime:
                         polling = FALSE
 
-        
-        
         pollCountDown.configure(text = "Time's Up!")
         root.update()
         testPackets = ['08957b8903', '8123579700', '12375ba902', '123bc49001', '57dbc46701',
@@ -85,15 +79,9 @@ def newParse():
                        '2345789300', '123789ab00', '8918915602', '1897418403', '8154984601',
                        '874819ba01', '019874af02', '48abc84f01', '17897feb02', '849fcea301']
 
-
-                        
         testDict = parse(testPackets)
-
         userIDList = genKeyList(testDict)
-
         numAnswers = answerCount(testDict,userIDList)
-        
-
         barGraph(numAnswers,325,325)
         
 
@@ -114,14 +102,11 @@ def parse(packets):
         userData={}
         
         while loopCount < len(packets):
-                
-                
-                newPack = packets[loopCount] #Gets the next packet in the list
-
+                #Gets the next packet in the list
+                newPack = packets[loopCount] 
                 #Separate out User ID and Answer
                 userID = newPack[0:8]
                 userAnswer = newPack[8:10]
-                
                 #Check the Answer and create a alphabetical response for the answer
                 if userAnswer == '00':
                         alphaAnswer = 'A'
@@ -133,18 +118,16 @@ def parse(packets):
                         alphaAnswer = 'D'
                 else:
                         alphaAnswer = 'Not a valid answer'
-                
-                userData[userID] = alphaAnswer  #Create new dictionary entry 
-                
+                #Create new dictionary entry 
+                userData[userID] = alphaAnswer  
                 loopCount += 1
         return userData
 
 def genKeyList(userDict):
         """ This function takes the dictionary of user data returns a list of the
         user ID's """
-
+        
         userIDList=userDict.keys()
-
         return userIDList
     
 def answerCount(userDict,userList):
