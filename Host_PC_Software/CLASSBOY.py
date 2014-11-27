@@ -3,6 +3,81 @@ import time
 from Tkinter import *
 
 def main():    
+        global root
+        global pollTime
+        global GUIGraph
+        global polling
+        global defaultAns
+        
+        
+        defaultTime = 60
+        pollTime = defaultTime
+        defaultAns = (0,0,0,0)
+        
+
+       
+        root = Tk()
+        root.title('CLASSBOY')
+        
+        global canvas
+        canvas = Canvas(root,width=325, height=325, bg='grey')
+        canvas.pack()
+        GUI(defaultAns,325,325)
+        mainloop()
+        
+        
+
+def changePollTime15():
+        global pollTime
+        pollTime = 15
+        pollCountDown.configure(text = str(pollTime))
+        root.update()
+        
+
+def changePollTime30():
+        global pollTime
+        pollTime = 30
+        pollCountDown.configure(text = str(pollTime))
+        root.update()
+        
+
+def changePollTime45():
+        global pollTime
+        pollTime= 45
+        pollCountDown.configure(text = str(pollTime))
+        root.update()
+        
+
+def changePollTime60():
+        global pollTime
+        pollTime = 60
+        pollCountDown.configure(text = str(pollTime))
+        root.update()
+
+        
+def newParse():
+        global polling
+        canvas.delete("all")
+        barGraph(defaultAns,325,325)
+        polling = TRUE
+        timer = time.time()
+
+        while polling:
+                currentTime = time.time()
+                checkTime = currentTime - timer
+                intCheckTime = int(checkTime)
+                currentTimeLeft = str( pollTime - intCheckTime)
+                pollCountDown.configure(text = currentTimeLeft)
+                root.update()
+                
+                
+                if intCheckTime > pollTime:
+                        polling = FALSE
+
+        
+        
+        pollCountDown.configure(text = "Time's Up!")
+        root.update()
         testPackets = ['08957b8903', '8123579700', '12375ba902', '123bc49001', '57dbc46701',
                        '57dbc46702', '12375ba901', '123857ab00', '167857ff03', '1857987a03',
                        '7b8a175c00', '12387b9002', '6729bca802', '5878cda703', '7571657801',
@@ -11,25 +86,20 @@ def main():
                        '874819ba01', '019874af02', '48abc84f01', '17897feb02', '849fcea301']
 
 
-
-
-        print(time.time())                         
+                        
         testDict = parse(testPackets)
 
         userIDList = genKeyList(testDict)
 
         numAnswers = answerCount(testDict,userIDList)
+        
 
-        userWidth = 325
-        userHeight = 325
+        barGraph(numAnswers,325,325)
+        
 
-        print(time.time())
-        global root
-        root = Tk()
-        root.title('CLASSBOY')
-        GUI(numAnswers,userWidth,userHeight)
-        mainloop()
-
+def endPolling():
+        global polling
+        polling = FALSE
         
 def parse(packets):
         """ This function receives a list of packets and separates
@@ -47,6 +117,7 @@ def parse(packets):
                 
                 
                 newPack = packets[loopCount] #Gets the next packet in the list
+
                 #Separate out User ID and Answer
                 userID = newPack[0:8]
                 userAnswer = newPack[8:10]
@@ -110,32 +181,50 @@ def answerCount(userDict,userList):
         return (aCount,bCount,cCount,dCount)
 
 def GUI(seq,userWidth,userHeight):
-    menuBar()
-    barGraph(seq,userWidth,userHeight)
+    controls()
+    GUIGraph = barGraph(seq,userWidth,userHeight)
 
-def menuBar():
+
+
+
+
+        
+def controls():
 
     menubar = Menu(root)
 
     pollDuration = Menu(menubar,tearoff = 0)
-    pollDuration.add_command(label='15 secs')
-    pollDuration.add_command(label='30 secs')
-    pollDuration.add_command(label='45 secs')
-    pollDuration.add_command(label='60 secs')
+    pollDuration.add_command(label='15 secs', command = changePollTime15)
+    pollDuration.add_command(label='30 secs', command = changePollTime30)
+    pollDuration.add_command(label='45 secs', command = changePollTime45)
+    pollDuration.add_command(label='60 secs', command = changePollTime60)
     menubar.add_cascade(label='Polling Duration',menu = pollDuration)
     
     root.config(menu=menubar)
+
+    stopButton = Button(root,text = "Stop Polling", command = endPolling)
+    stopButton.pack(side = RIGHT)    
+    startButton = Button(root, text = "Start Polling", command = newParse)
+    startButton.pack(side = RIGHT)
+
+    pollTimeStr = str(pollTime)
+
+    global pollCountDown
+    pollCountDown = Label(root,text = pollTimeStr)
+    pollCountDown.pack(side=BOTTOM) 
+    
+    timeLeft = Label(root,text = 'Time Left:')
+    timeLeft.pack(side=BOTTOM)
+
+                
+        
         
 def barGraph(seq, userWidth, userHeight):
     """ This function generates a bar graph of the answers"""
     
-        #Setup for the canvas
 
 
 
-    
-    canvas = Canvas(root,width=userWidth, height=userHeight, bg='grey')
-    canvas.pack()
         
         #Setting up the variables
     y_stretch = 15
@@ -146,6 +235,7 @@ def barGraph(seq, userWidth, userHeight):
     loopCount = 1
         
         #Generate bar for each answer
+
     for x, y in enumerate(seq):
 
         x0 = x * x_stretch + x * x_width + x_gap
