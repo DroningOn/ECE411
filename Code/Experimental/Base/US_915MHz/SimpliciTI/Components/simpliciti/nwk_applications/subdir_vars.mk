@@ -4,13 +4,13 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
-C:/ti/msp430/MSP-EXPCC430_UE_1_00_00_01/src/MSP-EXP430F6137Rx_User_Experience/SimpliciTI/Components/simpliciti/nwk_applications/nwk_freq.c \
-C:/ti/msp430/MSP-EXPCC430_UE_1_00_00_01/src/MSP-EXP430F6137Rx_User_Experience/SimpliciTI/Components/simpliciti/nwk_applications/nwk_ioctl.c \
-C:/ti/msp430/MSP-EXPCC430_UE_1_00_00_01/src/MSP-EXP430F6137Rx_User_Experience/SimpliciTI/Components/simpliciti/nwk_applications/nwk_join.c \
-C:/ti/msp430/MSP-EXPCC430_UE_1_00_00_01/src/MSP-EXP430F6137Rx_User_Experience/SimpliciTI/Components/simpliciti/nwk_applications/nwk_link.c \
-C:/ti/msp430/MSP-EXPCC430_UE_1_00_00_01/src/MSP-EXP430F6137Rx_User_Experience/SimpliciTI/Components/simpliciti/nwk_applications/nwk_mgmt.c \
-C:/ti/msp430/MSP-EXPCC430_UE_1_00_00_01/src/MSP-EXP430F6137Rx_User_Experience/SimpliciTI/Components/simpliciti/nwk_applications/nwk_ping.c \
-C:/ti/msp430/MSP-EXPCC430_UE_1_00_00_01/src/MSP-EXP430F6137Rx_User_Experience/SimpliciTI/Components/simpliciti/nwk_applications/nwk_security.c 
+../SimpliciTI/Components/simpliciti/nwk_applications/nwk_freq.c \
+../SimpliciTI/Components/simpliciti/nwk_applications/nwk_ioctl.c \
+../SimpliciTI/Components/simpliciti/nwk_applications/nwk_join.c \
+../SimpliciTI/Components/simpliciti/nwk_applications/nwk_link.c \
+../SimpliciTI/Components/simpliciti/nwk_applications/nwk_mgmt.c \
+../SimpliciTI/Components/simpliciti/nwk_applications/nwk_ping.c \
+../SimpliciTI/Components/simpliciti/nwk_applications/nwk_security.c 
 
 OBJS += \
 ./SimpliciTI/Components/simpliciti/nwk_applications/nwk_freq.obj \
@@ -49,12 +49,12 @@ OBJS__QUOTED += \
 "SimpliciTI\Components\simpliciti\nwk_applications\nwk_security.obj" 
 
 C_SRCS__QUOTED += \
-"C:/ti/msp430/MSP-EXPCC430_UE_1_00_00_01/src/MSP-EXP430F6137Rx_User_Experience/SimpliciTI/Components/simpliciti/nwk_applications/nwk_freq.c" \
-"C:/ti/msp430/MSP-EXPCC430_UE_1_00_00_01/src/MSP-EXP430F6137Rx_User_Experience/SimpliciTI/Components/simpliciti/nwk_applications/nwk_ioctl.c" \
-"C:/ti/msp430/MSP-EXPCC430_UE_1_00_00_01/src/MSP-EXP430F6137Rx_User_Experience/SimpliciTI/Components/simpliciti/nwk_applications/nwk_join.c" \
-"C:/ti/msp430/MSP-EXPCC430_UE_1_00_00_01/src/MSP-EXP430F6137Rx_User_Experience/SimpliciTI/Components/simpliciti/nwk_applications/nwk_link.c" \
-"C:/ti/msp430/MSP-EXPCC430_UE_1_00_00_01/src/MSP-EXP430F6137Rx_User_Experience/SimpliciTI/Components/simpliciti/nwk_applications/nwk_mgmt.c" \
-"C:/ti/msp430/MSP-EXPCC430_UE_1_00_00_01/src/MSP-EXP430F6137Rx_User_Experience/SimpliciTI/Components/simpliciti/nwk_applications/nwk_ping.c" \
-"C:/ti/msp430/MSP-EXPCC430_UE_1_00_00_01/src/MSP-EXP430F6137Rx_User_Experience/SimpliciTI/Components/simpliciti/nwk_applications/nwk_security.c" 
+"../SimpliciTI/Components/simpliciti/nwk_applications/nwk_freq.c" \
+"../SimpliciTI/Components/simpliciti/nwk_applications/nwk_ioctl.c" \
+"../SimpliciTI/Components/simpliciti/nwk_applications/nwk_join.c" \
+"../SimpliciTI/Components/simpliciti/nwk_applications/nwk_link.c" \
+"../SimpliciTI/Components/simpliciti/nwk_applications/nwk_mgmt.c" \
+"../SimpliciTI/Components/simpliciti/nwk_applications/nwk_ping.c" \
+"../SimpliciTI/Components/simpliciti/nwk_applications/nwk_security.c" 
 
 

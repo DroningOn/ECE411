@@ -4,12 +4,12 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
-C:/ti/msp430/MSP-EXPCC430_UE_1_00_00_01/src/MSP-EXP430F6137Rx_User_Experience/MSP-EXP430F6137_HAL/RF1A.c \
-C:/ti/msp430/MSP-EXPCC430_UE_1_00_00_01/src/MSP-EXP430F6137Rx_User_Experience/MSP-EXP430F6137_HAL/hal_adc.c \
-C:/ti/msp430/MSP-EXPCC430_UE_1_00_00_01/src/MSP-EXP430F6137Rx_User_Experience/MSP-EXP430F6137_HAL/hal_buttons.c \
-C:/ti/msp430/MSP-EXPCC430_UE_1_00_00_01/src/MSP-EXP430F6137Rx_User_Experience/MSP-EXP430F6137_HAL/hal_lcd.c \
-C:/ti/msp430/MSP-EXPCC430_UE_1_00_00_01/src/MSP-EXP430F6137Rx_User_Experience/MSP-EXP430F6137_HAL/hal_leds.c \
-C:/ti/msp430/MSP-EXPCC430_UE_1_00_00_01/src/MSP-EXP430F6137Rx_User_Experience/MSP-EXP430F6137_HAL/hal_uart.c 
+../MSP-EXP430F6137_HAL/RF1A.c \
+../MSP-EXP430F6137_HAL/hal_adc.c \
+../MSP-EXP430F6137_HAL/hal_buttons.c \
+../MSP-EXP430F6137_HAL/hal_lcd.c \
+../MSP-EXP430F6137_HAL/hal_leds.c \
+../MSP-EXP430F6137_HAL/hal_uart.c 
 
 OBJS += \
 ./MSP-EXP430F6137_HAL/RF1A.obj \
@@ -44,11 +44,11 @@ OBJS__QUOTED += \
 "MSP-EXP430F6137_HAL\hal_uart.obj" 
 
 C_SRCS__QUOTED += \
-"C:/ti/msp430/MSP-EXPCC430_UE_1_00_00_01/src/MSP-EXP430F6137Rx_User_Experience/MSP-EXP430F6137_HAL/RF1A.c" \
-"C:/ti/msp430/MSP-EXPCC430_UE_1_00_00_01/src/MSP-EXP430F6137Rx_User_Experience/MSP-EXP430F6137_HAL/hal_adc.c" \
-"C:/ti/msp430/MSP-EXPCC430_UE_1_00_00_01/src/MSP-EXP430F6137Rx_User_Experience/MSP-EXP430F6137_HAL/hal_buttons.c" \
-"C:/ti/msp430/MSP-EXPCC430_UE_1_00_00_01/src/MSP-EXP430F6137Rx_User_Experience/MSP-EXP430F6137_HAL/hal_lcd.c" \
-"C:/ti/msp430/MSP-EXPCC430_UE_1_00_00_01/src/MSP-EXP430F6137Rx_User_Experience/MSP-EXP430F6137_HAL/hal_leds.c" \
-"C:/ti/msp430/MSP-EXPCC430_UE_1_00_00_01/src/MSP-EXP430F6137Rx_User_Experience/MSP-EXP430F6137_HAL/hal_uart.c" 
+"../MSP-EXP430F6137_HAL/RF1A.c" \
+"../MSP-EXP430F6137_HAL/hal_adc.c" \
+"../MSP-EXP430F6137_HAL/hal_buttons.c" \
+"../MSP-EXP430F6137_HAL/hal_lcd.c" \
+"../MSP-EXP430F6137_HAL/hal_leds.c" \
+"../MSP-EXP430F6137_HAL/hal_uart.c" 
 
 

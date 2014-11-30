@@ -4,11 +4,11 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
-C:/ti/msp430/MSP-EXPCC430_UE_1_00_00_01/src/MSP-EXP430F6137Rx_User_Experience/F5xx_F6xx_Core_Lib/HAL_FLASH.c \
-C:/ti/msp430/MSP-EXPCC430_UE_1_00_00_01/src/MSP-EXP430F6137Rx_User_Experience/F5xx_F6xx_Core_Lib/HAL_PMAP.c \
-C:/ti/msp430/MSP-EXPCC430_UE_1_00_00_01/src/MSP-EXP430F6137Rx_User_Experience/F5xx_F6xx_Core_Lib/HAL_PMM.c \
-C:/ti/msp430/MSP-EXPCC430_UE_1_00_00_01/src/MSP-EXP430F6137Rx_User_Experience/F5xx_F6xx_Core_Lib/HAL_TLV.c \
-C:/ti/msp430/MSP-EXPCC430_UE_1_00_00_01/src/MSP-EXP430F6137Rx_User_Experience/F5xx_F6xx_Core_Lib/HAL_UCS.c 
+../F5xx_F6xx_Core_Lib/HAL_FLASH.c \
+../F5xx_F6xx_Core_Lib/HAL_PMAP.c \
+../F5xx_F6xx_Core_Lib/HAL_PMM.c \
+../F5xx_F6xx_Core_Lib/HAL_TLV.c \
+../F5xx_F6xx_Core_Lib/HAL_UCS.c 
 
 OBJS += \
 ./F5xx_F6xx_Core_Lib/HAL_FLASH.obj \
@@ -39,10 +39,10 @@ OBJS__QUOTED += \
 "F5xx_F6xx_Core_Lib\HAL_UCS.obj" 
 
 C_SRCS__QUOTED += \
-"C:/ti/msp430/MSP-EXPCC430_UE_1_00_00_01/src/MSP-EXP430F6137Rx_User_Experience/F5xx_F6xx_Core_Lib/HAL_FLASH.c" \
-"C:/ti/msp430/MSP-EXPCC430_UE_1_00_00_01/src/MSP-EXP430F6137Rx_User_Experience/F5xx_F6xx_Core_Lib/HAL_PMAP.c" \
-"C:/ti/msp430/MSP-EXPCC430_UE_1_00_00_01/src/MSP-EXP430F6137Rx_User_Experience/F5xx_F6xx_Core_Lib/HAL_PMM.c" \
-"C:/ti/msp430/MSP-EXPCC430_UE_1_00_00_01/src/MSP-EXP430F6137Rx_User_Experience/F5xx_F6xx_Core_Lib/HAL_TLV.c" \
-"C:/ti/msp430/MSP-EXPCC430_UE_1_00_00_01/src/MSP-EXP430F6137Rx_User_Experience/F5xx_F6xx_Core_Lib/HAL_UCS.c" 
+"../F5xx_F6xx_Core_Lib/HAL_FLASH.c" \
+"../F5xx_F6xx_Core_Lib/HAL_PMAP.c" \
+"../F5xx_F6xx_Core_Lib/HAL_PMM.c" \
+"../F5xx_F6xx_Core_Lib/HAL_TLV.c" \
+"../F5xx_F6xx_Core_Lib/HAL_UCS.c" 
 
 

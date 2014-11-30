@@ -4,11 +4,11 @@
 
 SHELL = cmd.exe
 
-CG_TOOL_ROOT := c:/ti/ccsv6/tools/compiler/msp430_4.1.9
+CG_TOOL_ROOT := c:/ti/ccsv6/tools/compiler/msp430_4.3.3
 
 ORDERED_OBJS += \
 $(GEN_CMDS__FLAG) \
-"./MspExp430F6137RxUserExperience.obj" \
+"./Base.obj" \
 "./main.obj" \
 "./SimpliciTI/Components/simpliciti/nwk_applications/nwk_freq.obj" \
 "./SimpliciTI/Components/simpliciti/nwk_applications/nwk_ioctl.obj" \
@@ -159,7 +159,7 @@ all: MSP-EXP430F6137RxUserExperience.out
 MSP-EXP430F6137RxUserExperience.out: $(OBJS) $(CMD_SRCS) $(GEN_CMDS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: MSP430 Linker'
-	"c:/ti/ccsv6/tools/compiler/msp430_4.1.9/bin/cl430" --cmd_file="C:/ti/msp430/MSP-EXPCC430_UE_1_00_00_01/src/MSP-EXP430F6137Rx_User_Experience/CCS/../SimpliciTI/Application/configuration/Access_Point/smpl_config_CCS.dat" --cmd_file="C:/ti/msp430/MSP-EXPCC430_UE_1_00_00_01/src/MSP-EXP430F6137Rx_User_Experience/CCS/../SimpliciTI/Application/configuration/smpl_nwk_config_CCS.dat"  -vmsp --abi=eabi -O0 -g --advice:power_severity=remark --define=__CC430F6137__ --define=ISM_US --define=MRFI_CC430 --diag_warning=225 --display_error_number --silicon_errata=CPU18 --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU23 --silicon_errata=CPU40 --printf_support=minimal -z --stack_size=80 -m"MSP-EXP430F6137RxUserExperience.map" --heap_size=80 --use_hw_mpy=F5 -i"c:/ti/ccsv6/ccs_base/msp430/include" -i"c:/ti/ccsv6/tools/compiler/msp430_4.1.9/lib" -i"c:/ti/ccsv6/tools/compiler/msp430_4.1.9/include" --reread_libs --warn_sections --xml_link_info="MSP-EXP430F6137RxUserExperience_linkInfo.xml" --rom_model -o "MSP-EXP430F6137RxUserExperience.out" $(ORDERED_OBJS)
+	"c:/ti/ccsv6/tools/compiler/msp430_4.3.3/bin/cl430" --cmd_file="C:/Users/Seth/Documents/GitHub/ECE411/Code/Experimental/Base/../SimpliciTI/Application/configuration/Access_Point/smpl_config_CCS.dat" --cmd_file="C:/Users/Seth/Documents/GitHub/ECE411/Code/Experimental/Base/../SimpliciTI/Application/configuration/smpl_nwk_config_CCS.dat"  -vmsp --abi=eabi -O0 -g --advice:power_severity=remark --define=__CC430F6137__ --define=ISM_US --define=MRFI_CC430 --diag_warning=225 --display_error_number --silicon_errata=CPU18 --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU23 --silicon_errata=CPU40 --printf_support=minimal -z --stack_size=80 -m"MSP-EXP430F6137RxUserExperience.map" --heap_size=80 --use_hw_mpy=F5 -i"c:/ti/ccsv6/ccs_base/msp430/include" -i"c:/ti/ccsv6/tools/compiler/msp430_4.3.3/lib" -i"c:/ti/ccsv6/tools/compiler/msp430_4.3.3/include" --reread_libs --warn_sections --xml_link_info="MSP-EXP430F6137RxUserExperience_linkInfo.xml" --rom_model -o "MSP-EXP430F6137RxUserExperience.out" $(ORDERED_OBJS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 	@$(MAKE) --no-print-directory post-build
@@ -169,14 +169,14 @@ clean:
 	-$(RM) $(EXE_OUTPUTS__QUOTED)
 	-$(RM) "Base.pp" "main.pp" "SimpliciTI\Components\simpliciti\nwk_applications\nwk_freq.pp" "SimpliciTI\Components\simpliciti\nwk_applications\nwk_ioctl.pp" "SimpliciTI\Components\simpliciti\nwk_applications\nwk_join.pp" "SimpliciTI\Components\simpliciti\nwk_applications\nwk_link.pp" "SimpliciTI\Components\simpliciti\nwk_applications\nwk_mgmt.pp" "SimpliciTI\Components\simpliciti\nwk_applications\nwk_ping.pp" "SimpliciTI\Components\simpliciti\nwk_applications\nwk_security.pp" "SimpliciTI\Components\simpliciti\nwk\nwk.pp" "SimpliciTI\Components\simpliciti\nwk\nwk_QMgmt.pp" "SimpliciTI\Components\simpliciti\nwk\nwk_api.pp" "SimpliciTI\Components\simpliciti\nwk\nwk_frame.pp" "SimpliciTI\Components\simpliciti\nwk\nwk_globals.pp" "SimpliciTI\Components\mrfi\mrfi.pp" "SimpliciTI\Components\bsp\bsp.pp" "MSP-EXP430F6137_HAL\RF1A.pp" "MSP-EXP430F6137_HAL\hal_adc.pp" "MSP-EXP430F6137_HAL\hal_buttons.pp" "MSP-EXP430F6137_HAL\hal_lcd.pp" "MSP-EXP430F6137_HAL\hal_leds.pp" "MSP-EXP430F6137_HAL\hal_uart.pp" "F5xx_F6xx_Core_Lib\HAL_FLASH.pp" 
 	-$(RM) "F5xx_F6xx_Core_Lib\HAL_PMAP.pp" "F5xx_F6xx_Core_Lib\HAL_PMM.pp" "F5xx_F6xx_Core_Lib\HAL_TLV.pp" "F5xx_F6xx_Core_Lib\HAL_UCS.pp" 
-	-$(RM) "MspExp430F6137RxUserExperience.obj" "main.obj" "SimpliciTI\Components\simpliciti\nwk_applications\nwk_freq.obj" "SimpliciTI\Components\simpliciti\nwk_applications\nwk_ioctl.obj" "SimpliciTI\Components\simpliciti\nwk_applications\nwk_join.obj" "SimpliciTI\Components\simpliciti\nwk_applications\nwk_link.obj" "SimpliciTI\Components\simpliciti\nwk_applications\nwk_mgmt.obj" "SimpliciTI\Components\simpliciti\nwk_applications\nwk_ping.obj" "SimpliciTI\Components\simpliciti\nwk_applications\nwk_security.obj" "SimpliciTI\Components\simpliciti\nwk\nwk.obj" "SimpliciTI\Components\simpliciti\nwk\nwk_QMgmt.obj" "SimpliciTI\Components\simpliciti\nwk\nwk_api.obj" "SimpliciTI\Components\simpliciti\nwk\nwk_frame.obj" "SimpliciTI\Components\simpliciti\nwk\nwk_globals.obj" "SimpliciTI\Components\mrfi\mrfi.obj" "SimpliciTI\Components\bsp\bsp.obj" "MSP-EXP430F6137_HAL\RF1A.obj" "MSP-EXP430F6137_HAL\hal_adc.obj" "MSP-EXP430F6137_HAL\hal_buttons.obj" "MSP-EXP430F6137_HAL\hal_lcd.obj" "MSP-EXP430F6137_HAL\hal_leds.obj" 
-	-$(RM) "MSP-EXP430F6137_HAL\hal_uart.obj" "F5xx_F6xx_Core_Lib\HAL_FLASH.obj" "F5xx_F6xx_Core_Lib\HAL_PMAP.obj" "F5xx_F6xx_Core_Lib\HAL_PMM.obj" "F5xx_F6xx_Core_Lib\HAL_TLV.obj" "F5xx_F6xx_Core_Lib\HAL_UCS.obj" 
+	-$(RM) "Base.obj" "main.obj" "SimpliciTI\Components\simpliciti\nwk_applications\nwk_freq.obj" "SimpliciTI\Components\simpliciti\nwk_applications\nwk_ioctl.obj" "SimpliciTI\Components\simpliciti\nwk_applications\nwk_join.obj" "SimpliciTI\Components\simpliciti\nwk_applications\nwk_link.obj" "SimpliciTI\Components\simpliciti\nwk_applications\nwk_mgmt.obj" "SimpliciTI\Components\simpliciti\nwk_applications\nwk_ping.obj" "SimpliciTI\Components\simpliciti\nwk_applications\nwk_security.obj" "SimpliciTI\Components\simpliciti\nwk\nwk.obj" "SimpliciTI\Components\simpliciti\nwk\nwk_QMgmt.obj" "SimpliciTI\Components\simpliciti\nwk\nwk_api.obj" "SimpliciTI\Components\simpliciti\nwk\nwk_frame.obj" "SimpliciTI\Components\simpliciti\nwk\nwk_globals.obj" "SimpliciTI\Components\mrfi\mrfi.obj" "SimpliciTI\Components\bsp\bsp.obj" "MSP-EXP430F6137_HAL\RF1A.obj" "MSP-EXP430F6137_HAL\hal_adc.obj" "MSP-EXP430F6137_HAL\hal_buttons.obj" "MSP-EXP430F6137_HAL\hal_lcd.obj" "MSP-EXP430F6137_HAL\hal_leds.obj" "MSP-EXP430F6137_HAL\hal_uart.obj" 
+	-$(RM) "F5xx_F6xx_Core_Lib\HAL_FLASH.obj" "F5xx_F6xx_Core_Lib\HAL_PMAP.obj" "F5xx_F6xx_Core_Lib\HAL_PMM.obj" "F5xx_F6xx_Core_Lib\HAL_TLV.obj" "F5xx_F6xx_Core_Lib\HAL_UCS.obj" 
 	-@echo 'Finished clean'
 	-@echo ' '
 
 post-build:
 	-@echo 'Create flash image: TI-TXT'
-	-"c:/ti/ccsv6/tools/compiler/msp430_4.1.9/bin/hex430.exe" --ti_txt "MSP-EXP430F6137RxUserExperience.out" -o "MSP-EXP430F6137RxUserExperience.txt" -order MS -romwidth 16
+	-"c:/ti/ccsv6/tools/compiler/msp430_4.3.3/bin/hex430.exe" --ti_txt "MSP-EXP430F6137RxUserExperience.out" -o "MSP-EXP430F6137RxUserExperience.txt" -order MS -romwidth 16
 	-@echo ' '
 
 .PHONY: all clean dependents
