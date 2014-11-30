@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?fileVersion 3.1.0?>
+
+<ManagedProjectBuildInfo>
+<project id="MSP-EXP430F6137Rx User Experience.com.ti.ccstudio.buildDefinitions.MSP430.ProjectType.807137546" name="MSP430" projectType="com.ti.ccstudio.buildDefinitions.MSP430.ProjectType">
+<configuration artifactExtension="out" artifactName="MSP-EXP430F6137RxUserExperience" description="" id="com.ti.ccstudio.buildDefinitions.MSP430.Release.770323926" name="US_915MHz" parent="com.ti.ccstudio.buildDefinitions.MSP430.Release" postannouncebuildStep="Create flash image: TI-TXT" postbuildStep="&quot;${CG_TOOL_ROOT}/bin/hex${CG_TOOL_SUFFIX}.exe&quot; --ti_txt &quot;${BuildArtifactFileName}&quot; -o &quot;${BuildArtifactFileBaseName}.txt&quot; -order MS -romwidth 16">
+<toolChain id="com.ti.ccstudio.buildDefinitions.MSP430_3.3.exe.ReleaseToolchain.2141639353" name="TI Code Generation Tools" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.3.exe.ReleaseToolchain" targetTool="com.ti.ccstudio.buildDefinitions.MSP430_3.3.exe.linkerRelease.235977480">
+<option id="com.ti.ccstudio.buildDefinitions.core.OPT_TAGS.861609581" superClass="com.ti.ccstudio.buildDefinitions.core.OPT_TAGS" valueType="stringList">
+<listOptionValue builtIn="false" value="DEVICE_CONFIGURATION_ID=CC430F6137"/>
+<listOptionValue builtIn="false" value="DEVICE_ENDIANNESS=little"/>
+<listOptionValue builtIn="false" value="OUTPUT_FORMAT=COFF"/>
+<listOptionValue builtIn="false" value="CCS_MBS_VERSION=4.2.0"/>
+<listOptionValue builtIn="false" value="LINKER_COMMAND_FILE=lnk_cc430f6137.cmd"/>
+<listOptionValue builtIn="false" value="RUNTIME_SUPPORT_LIBRARY=libc.a"/>
+<listOptionValue builtIn="false" value="OUTPUT_TYPE=executable"/>
+</option>
+<option id="com.ti.ccstudio.buildDefinitions.core.OPT_CODEGEN_VERSION.1987384563" superClass="com.ti.ccstudio.buildDefinitions.core.OPT_CODEGEN_VERSION" value="3.3.1" valueType="string"/>
+<tool id="com.ti.ccstudio.buildDefinitions.MSP430_3.3.exe.compilerRelease.394053443" name="MSP430 Compiler" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.3.exe.compilerRelease">
+<option id="com.ti.ccstudio.buildDefinitions.MSP430_3.3.compilerID.SILICON_VERSION.1322199245" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.3.compilerID.SILICON_VERSION" value="com.ti.ccstudio.buildDefinitions.MSP430_3.3.compilerID.SILICON_VERSION.mspx" valueType="enumerated"/>
+<option id="com.ti.ccstudio.buildDefinitions.MSP430_3.3.compilerID.DEFINE.1896407985" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.3.compilerID.DEFINE" valueType="definedSymbols">
+<listOptionValue builtIn="false" value="__CC430F6137__"/>
+<listOptionValue builtIn="false" value="ISM_US"/>
+<listOptionValue builtIn="false" value="MRFI_CC430"/>
+</option>
+<option id="com.ti.ccstudio.buildDefinitions.MSP430_3.3.compilerID.INCLUDE_PATH.990162359" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.3.compilerID.INCLUDE_PATH" valueType="includePath">
+<listOptionValue builtIn="false" value="&quot;${CCS_INSTALL_ROOT}/msp430/include&quot;"/>
+<listOptionValue builtIn="false" value="&quot;${CG_TOOL_ROOT}/include&quot;"/>
+<listOptionValue builtIn="false" value="&quot;${PROJECT_ROOT}/SimpliciTI/Components/bsp&quot;"/>
+<listOptionValue builtIn="false" value="&quot;${PROJECT_ROOT}/../F5xx_F6xx_Core_Lib&quot;"/>
+<listOptionValue builtIn="false" value="&quot;${PROJECT_ROOT}/../MSP-EXP430F6137_HAL&quot;"/>
+<listOptionValue builtIn="false" value="&quot;${PROJECT_ROOT}/../SimpliciTI/Components/bsp&quot;"/>
+<listOptionValue builtIn="false" value="&quot;${PROJECT_ROOT}/../SimpliciTI/Components/bsp/drivers&quot;"/>
+<listOptionValue builtIn="false" value="&quot;${PROJECT_ROOT}/../SimpliciTI/Components/bsp/boards/MSP-EXP430F6137Rx&quot;"/>
+<listOptionValue builtIn="false" value="&quot;${PROJECT_ROOT}/../SimpliciTI/Components/mrfi&quot;"/>
+<listOptionValue builtIn="false" value="&quot;${PROJECT_ROOT}/../SimpliciTI/Components/simpliciti/nwk&quot;"/>
+<listOptionValue builtIn="false" value="&quot;${PROJECT_ROOT}/../SimpliciTI/Components/simpliciti/nwk_applications&quot;"/>
+</option>
+<option id="com.ti.ccstudio.buildDefinitions.MSP430_3.3.compilerID.DIAG_WARNING.1350688542" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.3.compilerID.DIAG_WARNING" valueType="stringList">
+<listOptionValue builtIn="false" value="225"/>
+</option>
+<option id="com.ti.ccstudio.buildDefinitions.MSP430_3.3.compilerID.SILICON_ERRATA.CPU22.1601576169" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.3.compilerID.SILICON_ERRATA.CPU22" value="true" valueType="boolean"/>
+<option id="com.ti.ccstudio.buildDefinitions.MSP430_3.3.compilerID.SILICON_ERRATA.CPU21.869986727" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.3.compilerID.SILICON_ERRATA.CPU21" value="true" valueType="boolean"/>
+<option id="com.ti.ccstudio.buildDefinitions.MSP430_3.3.compilerID.SILICON_ERRATA.CPU23.1230408291" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.3.compilerID.SILICON_ERRATA.CPU23" value="true" valueType="boolean"/>
+<option id="com.ti.ccstudio.buildDefinitions.MSP430_3.3.compilerID.SILICON_ERRATA.CPU18.672131024" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.3.compilerID.SILICON_ERRATA.CPU18" value="true" valueType="boolean"/>
+<option id="com.ti.ccstudio.buildDefinitions.MSP430_3.3.compilerID.SILICON_ERRATA.CPU40.1699033061" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.3.compilerID.SILICON_ERRATA.CPU40" value="true" valueType="boolean"/>
+<option id="com.ti.ccstudio.buildDefinitions.MSP430_3.3.compilerID.PRINTF_SUPPORT.1370280657" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.3.compilerID.PRINTF_SUPPORT" value="com.ti.ccstudio.buildDefinitions.MSP430_3.3.compilerID.PRINTF_SUPPORT.minimal" valueType="enumerated"/>
+<option id="com.ti.ccstudio.buildDefinitions.MSP430_3.3.compilerID.CMD_FILE.1346656103" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.3.compilerID.CMD_FILE" valueType="stringList">
+<listOptionValue builtIn="false" value="&quot;${PROJECT_ROOT}/../SimpliciTI/Application/configuration/Access_Point/smpl_config_CCS.dat&quot;"/>
+<listOptionValue builtIn="false" value="&quot;${PROJECT_ROOT}/../SimpliciTI/Application/configuration/smpl_nwk_config_CCS.dat&quot;"/>
+</option>
+</tool>
+<tool id="com.ti.ccstudio.buildDefinitions.MSP430_3.3.exe.linkerRelease.235977480" name="MSP430 Linker" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.3.exe.linkerRelease">
+<option id="com.ti.ccstudio.buildDefinitions.MSP430_3.3.linkerID.OUTPUT_FILE.1263916124" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.3.linkerID.OUTPUT_FILE" value="&quot;MSP-EXP430F6137RxUserExperience.out&quot;" valueType="string"/>
+<option id="com.ti.ccstudio.buildDefinitions.MSP430_3.3.linkerID.MAP_FILE.1622906012" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.3.linkerID.MAP_FILE" value="&quot;MSP-EXP430F6137RxUserExperience.map&quot;" valueType="string"/>
+<option id="com.ti.ccstudio.buildDefinitions.MSP430_3.3.linkerID.STACK_SIZE.524880058" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.3.linkerID.STACK_SIZE" value="80" valueType="string"/>
+<option id="com.ti.ccstudio.buildDefinitions.MSP430_3.3.linkerID.HEAP_SIZE.298520303" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.3.linkerID.HEAP_SIZE" value="80" valueType="string"/>
+<option id="com.ti.ccstudio.buildDefinitions.MSP430_3.3.linkerID.generatedLinkerCommandFiles.996329600" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.3.linkerID.generatedLinkerCommandFiles" valueType="libs">
+<listOptionValue builtIn="false" value="&quot;$(GEN_CMDS_QUOTED)&quot;"/>
+</option>
+<option id="com.ti.ccstudio.buildDefinitions.MSP430_3.3.linkerID.SEARCH_PATH.735472654" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.3.linkerID.SEARCH_PATH" valueType="stringList">
+<listOptionValue builtIn="false" value="&quot;${CCS_INSTALL_ROOT}/msp430/include&quot;"/>
+<listOptionValue builtIn="false" value="&quot;${CG_TOOL_ROOT}/lib&quot;"/>
+<listOptionValue builtIn="false" value="&quot;${CG_TOOL_ROOT}/include&quot;"/>
+</option>
+<option id="com.ti.ccstudio.buildDefinitions.MSP430_3.3.linkerID.USE_HW_MPY.74692654" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.3.linkerID.USE_HW_MPY" value="com.ti.ccstudio.buildDefinitions.MSP430_3.3.linkerID.USE_HW_MPY.F5" valueType="enumerated"/>
+<option id="com.ti.ccstudio.buildDefinitions.MSP430_3.3.linkerID.LIBRARY.200538064" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.3.linkerID.LIBRARY" valueType="libs">
+<listOptionValue builtIn="false" value="&quot;libc.a&quot;"/>
+</option>
+</tool>
+<macros expandEnvironmentMacros="true"/>
+</toolChain>
+<resourceConfiguration exclude="false" id="com.ti.ccstudio.buildDefinitions.MSP430.Release.770323926./MSP-EXP430F6137Rx User Experience/MSP-EXP430F6137_HAL/hal_adc.c" name="hal_adc.c" rcbsApplicability="disable" resourcePath="/MSP-EXP430F6137Rx User Experience/MSP-EXP430F6137_HAL/hal_adc.c" toolsToInvoke="com.ti.ccstudio.buildDefinitions.MSP430_3.3.exe.compilerRelease.394053443./MSP-EXP430F6137Rx User Experience/MSP-EXP430F6137_HAL/hal_adc.c">
+<tool id="com.ti.ccstudio.buildDefinitions.MSP430_3.3.exe.compilerRelease.394053443./MSP-EXP430F6137Rx User Experience/MSP-EXP430F6137_HAL/hal_adc.c" name="MSP430 Compiler" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.3.exe.compilerRelease.394053443"/>
+</resourceConfiguration>
+<resourceConfiguration exclude="false" id="com.ti.ccstudio.buildDefinitions.MSP430.Release.770323926./MSP-EXP430F6137Rx User Experience/MSP-EXP430F6137_HAL/hal_lcd.c" name="hal_lcd.c" rcbsApplicability="disable" resourcePath="/MSP-EXP430F6137Rx User Experience/MSP-EXP430F6137_HAL/hal_lcd.c" toolsToInvoke="com.ti.ccstudio.buildDefinitions.MSP430_3.3.exe.compilerRelease.394053443./MSP-EXP430F6137Rx User Experience/MSP-EXP430F6137_HAL/hal_lcd.c">
+<tool id="com.ti.ccstudio.buildDefinitions.MSP430_3.3.exe.compilerRelease.394053443./MSP-EXP430F6137Rx User Experience/MSP-EXP430F6137_HAL/hal_lcd.c" name="MSP430 Compiler" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.3.exe.compilerRelease.394053443"/>
+</resourceConfiguration>
+<resourceConfiguration exclude="false" id="com.ti.ccstudio.buildDefinitions.MSP430.Release.770323926./MSP-EXP430F6137Rx User Experience/MspExp430F6137RxUserExperience.c" name="MspExp430F6137RxUserExperience.c" rcbsApplicability="disable" resourcePath="/MSP-EXP430F6137Rx User Experience/MspExp430F6137RxUserExperience.c" toolsToInvoke="com.ti.ccstudio.buildDefinitions.MSP430_3.3.exe.compilerRelease.394053443./MSP-EXP430F6137Rx User Experience/MspExp430F6137RxUserExperience.c">
+<tool id="com.ti.ccstudio.buildDefinitions.MSP430_3.3.exe.compilerRelease.394053443./MSP-EXP430F6137Rx User Experience/MspExp430F6137RxUserExperience.c" name="MSP430 Compiler" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.3.exe.compilerRelease.394053443"/>
+</resourceConfiguration>
+<resourceConfiguration exclude="true" id="com.ti.ccstudio.buildDefinitions.MSP430.Release.770323926./MSP-EXP430F6137Rx User Experience/SimpliciTI/Application/application/Access_Point/main_AP_Async_Listen.c" name="main_AP_Async_Listen.c" rcbsApplicability="disable" resourcePath="/MSP-EXP430F6137Rx User Experience/SimpliciTI/Application/application/Access_Point/main_AP_Async_Listen.c" toolsToInvoke="com.ti.ccstudio.buildDefinitions.MSP430_3.3.exe.compilerRelease.394053443./MSP-EXP430F6137Rx User Experience/SimpliciTI/Application/application/Access_Point/main_AP_Async_Listen.c">
+<tool id="com.ti.ccstudio.buildDefinitions.MSP430_3.3.exe.compilerRelease.394053443./MSP-EXP430F6137Rx User Experience/SimpliciTI/Application/application/Access_Point/main_AP_Async_Listen.c" name="MSP430 Compiler" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.3.exe.compilerRelease.394053443"/>
+</resourceConfiguration>
+<resourceConfiguration exclude="true" id="com.ti.ccstudio.buildDefinitions.MSP430.Release.770323926./MSP-EXP430F6137Rx User Experience/SimpliciTI/Components/bsp/boards/MSP-EXP430F6137Rx/bsp_board.c" name="bsp_board.c" rcbsApplicability="disable" resourcePath="/MSP-EXP430F6137Rx User Experience/SimpliciTI/Components/bsp/boards/MSP-EXP430F6137Rx/bsp_board.c" toolsToInvoke="com.ti.ccstudio.buildDefinitions.MSP430_3.3.exe.compilerRelease.394053443./MSP-EXP430F6137Rx User Experience/SimpliciTI/Components/bsp/boards/MSP-EXP430F6137Rx/bsp_board.c">
+<tool id="com.ti.ccstudio.buildDefinitions.MSP430_3.3.exe.compilerRelease.394053443./MSP-EXP430F6137Rx User Experience/SimpliciTI/Components/bsp/boards/MSP-EXP430F6137Rx/bsp_board.c" name="MSP430 Compiler" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.3.exe.compilerRelease.394053443"/>
+</resourceConfiguration>
+<resourceConfiguration exclude="true" id="com.ti.ccstudio.buildDefinitions.MSP430.Release.770323926./MSP-EXP430F6137Rx User Experience/SimpliciTI/Components/bsp/boards/MSP-EXP430F6137Rx/bsp_drivers.c" name="bsp_drivers.c" rcbsApplicability="disable" resourcePath="/MSP-EXP430F6137Rx User Experience/SimpliciTI/Components/bsp/boards/MSP-EXP430F6137Rx/bsp_drivers.c" toolsToInvoke="com.ti.ccstudio.buildDefinitions.MSP430_3.3.exe.compilerRelease.394053443./MSP-EXP430F6137Rx User Experience/SimpliciTI/Components/bsp/boards/MSP-EXP430F6137Rx/bsp_drivers.c">
+<tool id="com.ti.ccstudio.buildDefinitions.MSP430_3.3.exe.compilerRelease.394053443./MSP-EXP430F6137Rx User Experience/SimpliciTI/Components/bsp/boards/MSP-EXP430F6137Rx/bsp_drivers.c" name="MSP430 Compiler" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.3.exe.compilerRelease.394053443"/>
+</resourceConfiguration>
+<resourceConfiguration exclude="false" id="com.ti.ccstudio.buildDefinitions.MSP430.Release.770323926./MSP-EXP430F6137Rx User Experience/SimpliciTI/Components/bsp/bsp.c" name="bsp.c" rcbsApplicability="disable" resourcePath="/MSP-EXP430F6137Rx User Experience/SimpliciTI/Components/bsp/bsp.c" toolsToInvoke="com.ti.ccstudio.buildDefinitions.MSP430_3.3.exe.compilerRelease.394053443./MSP-EXP430F6137Rx User Experience/SimpliciTI/Components/bsp/bsp.c">
+<tool id="com.ti.ccstudio.buildDefinitions.MSP430_3.3.exe.compilerRelease.394053443./MSP-EXP430F6137Rx User Experience/SimpliciTI/Components/bsp/bsp.c" name="MSP430 Compiler" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.3.exe.compilerRelease.394053443"/>
+</resourceConfiguration>
+<resourceConfiguration exclude="true" id="com.ti.ccstudio.buildDefinitions.MSP430.Release.770323926./MSP-EXP430F6137Rx User Experience/SimpliciTI/Components/bsp/drivers/code/bsp_buttons.c" name="bsp_buttons.c" rcbsApplicability="disable" resourcePath="/MSP-EXP430F6137Rx User Experience/SimpliciTI/Components/bsp/drivers/code/bsp_buttons.c" toolsToInvoke="com.ti.ccstudio.buildDefinitions.MSP430_3.3.exe.compilerRelease.394053443./MSP-EXP430F6137Rx User Experience/SimpliciTI/Components/bsp/drivers/code/bsp_buttons.c">
+<tool id="com.ti.ccstudio.buildDefinitions.MSP430_3.3.exe.compilerRelease.394053443./MSP-EXP430F6137Rx User Experience/SimpliciTI/Components/bsp/drivers/code/bsp_buttons.c" name="MSP430 Compiler" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.3.exe.compilerRelease.394053443"/>
+</resourceConfiguration>
+<resourceConfiguration exclude="true" id="com.ti.ccstudio.buildDefinitions.MSP430.Release.770323926./MSP-EXP430F6137Rx User Experience/SimpliciTI/Components/bsp/drivers/code/bsp_leds.c" name="bsp_leds.c" rcbsApplicability="disable" resourcePath="/MSP-EXP430F6137Rx User Experience/SimpliciTI/Components/bsp/drivers/code/bsp_leds.c" toolsToInvoke="com.ti.ccstudio.buildDefinitions.MSP430_3.3.exe.compilerRelease.394053443./MSP-EXP430F6137Rx User Experience/SimpliciTI/Components/bsp/drivers/code/bsp_leds.c">
+<tool id="com.ti.ccstudio.buildDefinitions.MSP430_3.3.exe.compilerRelease.394053443./MSP-EXP430F6137Rx User Experience/SimpliciTI/Components/bsp/drivers/code/bsp_leds.c" name="MSP430 Compiler" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.3.exe.compilerRelease.394053443"/>
+</resourceConfiguration>
+<resourceConfiguration exclude="true" id="com.ti.ccstudio.buildDefinitions.MSP430.Release.770323926./MSP-EXP430F6137Rx User Experience/SimpliciTI/Components/mrfi/radios/family5/mrfi_radio.c" name="mrfi_radio.c" rcbsApplicability="disable" resourcePath="/MSP-EXP430F6137Rx User Experience/SimpliciTI/Components/mrfi/radios/family5/mrfi_radio.c" toolsToInvoke="com.ti.ccstudio.buildDefinitions.MSP430_3.3.exe.compilerRelease.394053443./MSP-EXP430F6137Rx User Experience/SimpliciTI/Components/mrfi/radios/family5/mrfi_radio.c">
+<tool id="com.ti.ccstudio.buildDefinitions.MSP430_3.3.exe.compilerRelease.394053443./MSP-EXP430F6137Rx User Experience/SimpliciTI/Components/mrfi/radios/family5/mrfi_radio.c" name="MSP430 Compiler" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.3.exe.compilerRelease.394053443"/>
+</resourceConfiguration>
+<resourceConfiguration exclude="true" id="com.ti.ccstudio.buildDefinitions.MSP430.Release.770323926./MSP-EXP430F6137Rx User Experience/SimpliciTI/Components/mrfi/radios/family5/mrfi_radio_interface.c" name="mrfi_radio_interface.c" rcbsApplicability="disable" resourcePath="/MSP-EXP430F6137Rx User Experience/SimpliciTI/Components/mrfi/radios/family5/mrfi_radio_interface.c" toolsToInvoke="com.ti.ccstudio.buildDefinitions.MSP430_3.3.exe.compilerRelease.394053443./MSP-EXP430F6137Rx User Experience/SimpliciTI/Components/mrfi/radios/family5/mrfi_radio_interface.c">
+<tool id="com.ti.ccstudio.buildDefinitions.MSP430_3.3.exe.compilerRelease.394053443./MSP-EXP430F6137Rx User Experience/SimpliciTI/Components/mrfi/radios/family5/mrfi_radio_interface.c" name="MSP430 Compiler" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.3.exe.compilerRelease.394053443"/>
+</resourceConfiguration>
+<resourceConfiguration exclude="false" id="com.ti.ccstudio.buildDefinitions.MSP430.Release.770323926./MSP-EXP430F6137Rx User Experience/lnk_cc430f6137.cmd" name="lnk_cc430f6137.cmd" rcbsApplicability="disable" resourcePath="/MSP-EXP430F6137Rx User Experience/lnk_cc430f6137.cmd" toolsToInvoke="com.ti.ccstudio.buildDefinitions.MSP430_3.3.exe.linkerRelease.235977480./MSP-EXP430F6137Rx User Experience/lnk_cc430f6137.cmd">
+<tool id="com.ti.ccstudio.buildDefinitions.MSP430_3.3.exe.linkerRelease.235977480./MSP-EXP430F6137Rx User Experience/lnk_cc430f6137.cmd" name="MSP430 Linker" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.3.exe.linkerRelease.235977480"/>
+</resourceConfiguration>
+</configuration>
+<configuration artifactExtension="out" artifactName="MSP-EXP430F6137RxUserExperience" description="" id="com.ti.ccstudio.buildDefinitions.MSP430.Release.354066836" name="EU_868MHz" parent="com.ti.ccstudio.buildDefinitions.MSP430.Release" postannouncebuildStep="Create flash image: TI-TXT" postbuildStep="&quot;${CG_TOOL_ROOT}/bin/hex${CG_TOOL_SUFFIX}.exe&quot; --ti_txt &quot;${BuildArtifactFileName}&quot; -o &quot;${BuildArtifactFileBaseName}.txt&quot; -order MS -romwidth 16">
+<toolChain id="com.ti.ccstudio.buildDefinitions.MSP430.Release.ToolchainPlaceholder.135523679" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.3.exe.ReleaseToolchain" targetTool="com.ti.ccstudio.buildDefinitions.MSP430_3.3.exe.linkerRelease.235977480">
+<option id="com.ti.ccstudio.buildDefinitions.core.OPT_TAGS.898943862" superClass="com.ti.ccstudio.buildDefinitions.core.OPT_TAGS" valueType="stringList">
+<listOptionValue builtIn="false" value="DEVICE_CONFIGURATION_ID=CC430F6137"/>
+<listOptionValue builtIn="false" value="DEVICE_ENDIANNESS=little"/>
+<listOptionValue builtIn="false" value="OUTPUT_FORMAT=COFF"/>
+<listOptionValue builtIn="false" value="CCS_MBS_VERSION=4.2.0"/>
+<listOptionValue builtIn="false" value="LINKER_COMMAND_FILE=lnk_cc430f6137.cmd"/>
+<listOptionValue builtIn="false" value="RUNTIME_SUPPORT_LIBRARY=libc.a"/>
+<listOptionValue builtIn="false" value="OUTPUT_TYPE=executable"/>
+</option>
+<option id="com.ti.ccstudio.buildDefinitions.core.OPT_CODEGEN_VERSION.1693467233" name="Code Generation tools version" superClass="com.ti.ccstudio.buildDefinitions.core.OPT_CODEGEN_VERSION" value="3.3.1" valueType="string"/>
+<tool id="com.ti.ccstudio.buildDefinitions.MSP430_3.3.exe.compilerRelease.1721390137" name="MSP430 Compiler" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.3.exe.compilerRelease">
+<option id="com.ti.ccstudio.buildDefinitions.MSP430_3.3.compilerID.SILICON_VERSION.1808739772" name="Silicon version (--silicon_version, -v)" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.3.compilerID.SILICON_VERSION" value="com.ti.ccstudio.buildDefinitions.MSP430_3.3.compilerID.SILICON_VERSION.mspx" valueType="enumerated"/>
+<option id="com.ti.ccstudio.buildDefinitions.MSP430_3.3.compilerID.DEFINE.1424224325" name="Pre-define NAME (--define, -D)" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.3.compilerID.DEFINE" valueType="definedSymbols">
+<listOptionValue builtIn="false" value="__CC430F6137__"/>
+<listOptionValue builtIn="false" value="ISM_EU"/>
+<listOptionValue builtIn="false" value="MRFI_CC430"/>
+</option>
+<option id="com.ti.ccstudio.buildDefinitions.MSP430_3.3.compilerID.INCLUDE_PATH.6659012" name="Add dir to #include search path (--include_path, -I)" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.3.compilerID.INCLUDE_PATH" valueType="includePath">
+<listOptionValue builtIn="false" value="&quot;${CCS_INSTALL_ROOT}/msp430/include&quot;"/>
+<listOptionValue builtIn="false" value="&quot;${CG_TOOL_ROOT}/include&quot;"/>
+<listOptionValue builtIn="false" value="&quot;${PROJECT_ROOT}/SimpliciTI/Components/bsp&quot;"/>
+<listOptionValue builtIn="false" value="&quot;${PROJECT_ROOT}/../F5xx_F6xx_Core_Lib&quot;"/>
+<listOptionValue builtIn="false" value="&quot;${PROJECT_ROOT}/../MSP-EXP430F6137_HAL&quot;"/>
+<listOptionValue builtIn="false" value="&quot;${PROJECT_ROOT}/../SimpliciTI/Components/bsp&quot;"/>
+<listOptionValue builtIn="false" value="&quot;${PROJECT_ROOT}/../SimpliciTI/Components/bsp/drivers&quot;"/>
+<listOptionValue builtIn="false" value="&quot;${PROJECT_ROOT}/../SimpliciTI/Components/bsp/boards/MSP-EXP430F6137Rx&quot;"/>
+<listOptionValue builtIn="false" value="&quot;${PROJECT_ROOT}/../SimpliciTI/Components/mrfi&quot;"/>
+<listOptionValue builtIn="false" value="&quot;${PROJECT_ROOT}/../SimpliciTI/Components/simpliciti/nwk&quot;"/>
+<listOptionValue builtIn="false" value="&quot;${PROJECT_ROOT}/../SimpliciTI/Components/simpliciti/nwk_applications&quot;"/>
+</option>
+<option id="com.ti.ccstudio.buildDefinitions.MSP430_3.3.compilerID.DIAG_WARNING.197108667" name="Treat diagnostic &lt;id&gt; as warning (--diag_warning, -pdsw)" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.3.compilerID.DIAG_WARNING" valueType="stringList">
+<listOptionValue builtIn="false" value="225"/>
+</option>
+<option id="com.ti.ccstudio.buildDefinitions.MSP430_3.3.compilerID.SILICON_ERRATA.CPU22.921244829" name="Workaround specified silicon errata (--silicon_errata) [CPU22]" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.3.compilerID.SILICON_ERRATA.CPU22" value="true" valueType="boolean"/>
+<option id="com.ti.ccstudio.buildDefinitions.MSP430_3.3.compilerID.SILICON_ERRATA.CPU21.1256926157" name="Workaround specified silicon errata (--silicon_errata) [CPU21]" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.3.compilerID.SILICON_ERRATA.CPU21" value="true" valueType="boolean"/>
+<option id="com.ti.ccstudio.buildDefinitions.MSP430_3.3.compilerID.SILICON_ERRATA.CPU23.1084508743" name="Workaround specified silicon errata (--silicon_errata) [CPU23]" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.3.compilerID.SILICON_ERRATA.CPU23" value="true" valueType="boolean"/>
+<option id="com.ti.ccstudio.buildDefinitions.MSP430_3.3.compilerID.SILICON_ERRATA.CPU18.450817862" name="Workaround specified silicon errata (--silicon_errata) [CPU18]" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.3.compilerID.SILICON_ERRATA.CPU18" value="true" valueType="boolean"/>
+<option id="com.ti.ccstudio.buildDefinitions.MSP430_3.3.compilerID.SILICON_ERRATA.CPU40.2120008333" name="Workaround specified silicon errata (--silicon_errata) [CPU40]" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.3.compilerID.SILICON_ERRATA.CPU40" value="true" valueType="boolean"/>
+<option id="com.ti.ccstudio.buildDefinitions.MSP430_3.3.compilerID.PRINTF_SUPPORT.245709481" name="Level of printf support required (--printf_support)" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.3.compilerID.PRINTF_SUPPORT" value="com.ti.ccstudio.buildDefinitions.MSP430_3.3.compilerID.PRINTF_SUPPORT.minimal" valueType="enumerated"/>
+<option id="com.ti.ccstudio.buildDefinitions.MSP430_3.3.compilerID.CMD_FILE.1304056166" name="Read options from specified file (--cmd_file, -@)" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.3.compilerID.CMD_FILE" valueType="stringList">
+<listOptionValue builtIn="false" value="&quot;${PROJECT_ROOT}/../SimpliciTI/Application/configuration/Access_Point/smpl_config_CCS.dat&quot;"/>
+<listOptionValue builtIn="false" value="&quot;${PROJECT_ROOT}/../SimpliciTI/Application/configuration/smpl_nwk_config_CCS.dat&quot;"/>
+</option>
+</tool>
+<tool id="com.ti.ccstudio.buildDefinitions.MSP430_3.3.exe.linkerRelease.244590367" name="MSP430 Linker" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.3.exe.linkerRelease">
+<option id="com.ti.ccstudio.buildDefinitions.MSP430_3.3.linkerID.OUTPUT_FILE.2038651343" name="Specify output file name (--output_file, -o)" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.3.linkerID.OUTPUT_FILE" value="&quot;MSP-EXP430F6137RxUserExperience.out&quot;" valueType="string"/>
+<option id="com.ti.ccstudio.buildDefinitions.MSP430_3.3.linkerID.MAP_FILE.1894654658" name="Input and output sections listed into &lt;file&gt; (--map_file, -m)" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.3.linkerID.MAP_FILE" value="&quot;MSP-EXP430F6137RxUserExperience.map&quot;" valueType="string"/>
+<option id="com.ti.ccstudio.buildDefinitions.MSP430_3.3.linkerID.STACK_SIZE.2021090206" name="Set C system stack size (--stack_size, -stack)" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.3.linkerID.STACK_SIZE" value="80" valueType="string"/>
+<option id="com.ti.ccstudio.buildDefinitions.MSP430_3.3.linkerID.HEAP_SIZE.1774207034" name="Heap size for C/C++ dynamic memory allocation (--heap_size, -heap)" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.3.linkerID.HEAP_SIZE" value="80" valueType="string"/>
+<option id="com.ti.ccstudio.buildDefinitions.MSP430_3.3.linkerID.generatedLinkerCommandFiles.961440676" name="Generated Linker Command files" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.3.linkerID.generatedLinkerCommandFiles" valueType="libs">
+<listOptionValue builtIn="false" value="&quot;$(GEN_CMDS_QUOTED)&quot;"/>
+</option>
+<option id="com.ti.ccstudio.buildDefinitions.MSP430_3.3.linkerID.SEARCH_PATH.56889841" name="Add &lt;dir&gt; to library search path (--search_path, -i)" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.3.linkerID.SEARCH_PATH" valueType="stringList">
+<listOptionValue builtIn="false" value="&quot;${CCS_INSTALL_ROOT}/msp430/include&quot;"/>
+<listOptionValue builtIn="false" value="&quot;${CG_TOOL_ROOT}/lib&quot;"/>
+<listOptionValue builtIn="false" value="&quot;${CG_TOOL_ROOT}/include&quot;"/>
+</option>
+<option id="com.ti.ccstudio.buildDefinitions.MSP430_3.3.linkerID.USE_HW_MPY.1157928646" name="Link in hardware version of RTS mpy routine (--use_hw_mpy)" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.3.linkerID.USE_HW_MPY" value="com.ti.ccstudio.buildDefinitions.MSP430_3.3.linkerID.USE_HW_MPY.F5" valueType="enumerated"/>
+<option id="com.ti.ccstudio.buildDefinitions.MSP430_3.3.linkerID.LIBRARY.118653191" name="Include library file or command file as input (--library, -l)" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.3.linkerID.LIBRARY" valueType="libs">
+<listOptionValue builtIn="false" value="&quot;libc.a&quot;"/>
+</option>
+</tool>
+<macros expandEnvironmentMacros="true"/>
+</toolChain>
+<resourceConfiguration exclude="false" id="com.ti.ccstudio.buildDefinitions.MSP430.Release.354066836./MSP-EXP430F6137Rx User Experience/MSP-EXP430F6137_HAL/hal_adc.c" name="hal_adc.c" rcbsApplicability="disable" resourcePath="/MSP-EXP430F6137Rx User Experience/MSP-EXP430F6137_HAL/hal_adc.c" toolsToInvoke="com.ti.ccstudio.buildDefinitions.MSP430_3.3.exe.compilerRelease.394053443.992381058">
+<tool id="com.ti.ccstudio.buildDefinitions.MSP430_3.3.exe.compilerRelease.394053443.992381058" name="MSP430 Compiler" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.3.exe.compilerRelease.1721390137"/>
+</resourceConfiguration>
+<resourceConfiguration exclude="false" id="com.ti.ccstudio.buildDefinitions.MSP430.Release.354066836./MSP-EXP430F6137Rx User Experience/MSP-EXP430F6137_HAL/hal_lcd.c" name="hal_lcd.c" rcbsApplicability="disable" resourcePath="/MSP-EXP430F6137Rx User Experience/MSP-EXP430F6137_HAL/hal_lcd.c" toolsToInvoke="com.ti.ccstudio.buildDefinitions.MSP430_3.3.exe.compilerRelease.394053443.1381287899">
+<tool id="com.ti.ccstudio.buildDefinitions.MSP430_3.3.exe.compilerRelease.394053443.1381287899" name="MSP430 Compiler" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.3.exe.compilerRelease.1721390137"/>
+</resourceConfiguration>
+<resourceConfiguration exclude="false" id="com.ti.ccstudio.buildDefinitions.MSP430.Release.354066836./MSP-EXP430F6137Rx User Experience/MspExp430F6137RxUserExperience.c" name="MspExp430F6137RxUserExperience.c" rcbsApplicability="disable" resourcePath="/MSP-EXP430F6137Rx User Experience/MspExp430F6137RxUserExperience.c" toolsToInvoke="com.ti.ccstudio.buildDefinitions.MSP430_3.3.exe.compilerRelease.394053443.1370697970">
+<tool id="com.ti.ccstudio.buildDefinitions.MSP430_3.3.exe.compilerRelease.394053443.1370697970" name="MSP430 Compiler" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.3.exe.compilerRelease.1721390137"/>
+</resourceConfiguration>
+<resourceConfiguration exclude="true" id="com.ti.ccstudio.buildDefinitions.MSP430.Release.354066836./MSP-EXP430F6137Rx User Experience/SimpliciTI/Application/application/Access_Point/main_AP_Async_Listen.c" name="main_AP_Async_Listen.c" rcbsApplicability="disable" resourcePath="/MSP-EXP430F6137Rx User Experience/SimpliciTI/Application/application/Access_Point/main_AP_Async_Listen.c" toolsToInvoke="com.ti.ccstudio.buildDefinitions.MSP430_3.3.exe.compilerRelease.394053443.2141014299">
+<tool id="com.ti.ccstudio.buildDefinitions.MSP430_3.3.exe.compilerRelease.394053443.2141014299" name="MSP430 Compiler" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.3.exe.compilerRelease.1721390137"/>
+</resourceConfiguration>
+<resourceConfiguration exclude="true" id="com.ti.ccstudio.buildDefinitions.MSP430.Release.354066836./MSP-EXP430F6137Rx User Experience/SimpliciTI/Components/bsp/boards/MSP-EXP430F6137Rx/bsp_board.c" name="bsp_board.c" rcbsApplicability="disable" resourcePath="/MSP-EXP430F6137Rx User Experience/SimpliciTI/Components/bsp/boards/MSP-EXP430F6137Rx/bsp_board.c" toolsToInvoke="com.ti.ccstudio.buildDefinitions.MSP430_3.3.exe.compilerRelease.394053443.1018993554">
+<tool id="com.ti.ccstudio.buildDefinitions.MSP430_3.3.exe.compilerRelease.394053443.1018993554" name="MSP430 Compiler" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.3.exe.compilerRelease.1721390137"/>
+</resourceConfiguration>
+<resourceConfiguration exclude="true" id="com.ti.ccstudio.buildDefinitions.MSP430.Release.354066836./MSP-EXP430F6137Rx User Experience/SimpliciTI/Components/bsp/boards/MSP-EXP430F6137Rx/bsp_drivers.c" name="bsp_drivers.c" rcbsApplicability="disable" resourcePath="/MSP-EXP430F6137Rx User Experience/SimpliciTI/Components/bsp/boards/MSP-EXP430F6137Rx/bsp_drivers.c" toolsToInvoke="com.ti.ccstudio.buildDefinitions.MSP430_3.3.exe.compilerRelease.394053443.1354873525">
+<tool id="com.ti.ccstudio.buildDefinitions.MSP430_3.3.exe.compilerRelease.394053443.1354873525" name="MSP430 Compiler" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.3.exe.compilerRelease.1721390137"/>
+</resourceConfiguration>
+<resourceConfiguration exclude="false" id="com.ti.ccstudio.buildDefinitions.MSP430.Release.354066836./MSP-EXP430F6137Rx User Experience/SimpliciTI/Components/bsp/bsp.c" name="bsp.c" rcbsApplicability="disable" resourcePath="/MSP-EXP430F6137Rx User Experience/SimpliciTI/Components/bsp/bsp.c" toolsToInvoke="com.ti.ccstudio.buildDefinitions.MSP430_3.3.exe.compilerRelease.394053443.356597229">
+<tool id="com.ti.ccstudio.buildDefinitions.MSP430_3.3.exe.compilerRelease.394053443.356597229" name="MSP430 Compiler" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.3.exe.compilerRelease.1721390137"/>
+</resourceConfiguration>
+<resourceConfiguration exclude="true" id="com.ti.ccstudio.buildDefinitions.MSP430.Release.354066836./MSP-EXP430F6137Rx User Experience/SimpliciTI/Components/bsp/drivers/code/bsp_buttons.c" name="bsp_buttons.c" rcbsApplicability="disable" resourcePath="/MSP-EXP430F6137Rx User Experience/SimpliciTI/Components/bsp/drivers/code/bsp_buttons.c" toolsToInvoke="com.ti.ccstudio.buildDefinitions.MSP430_3.3.exe.compilerRelease.394053443.1063244005">
+<tool id="com.ti.ccstudio.buildDefinitions.MSP430_3.3.exe.compilerRelease.394053443.1063244005" name="MSP430 Compiler" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.3.exe.compilerRelease.1721390137"/>
+</resourceConfiguration>
+<resourceConfiguration exclude="true" id="com.ti.ccstudio.buildDefinitions.MSP430.Release.354066836./MSP-EXP430F6137Rx User Experience/SimpliciTI/Components/bsp/drivers/code/bsp_leds.c" name="bsp_leds.c" rcbsApplicability="disable" resourcePath="/MSP-EXP430F6137Rx User Experience/SimpliciTI/Components/bsp/drivers/code/bsp_leds.c" toolsToInvoke="com.ti.ccstudio.buildDefinitions.MSP430_3.3.exe.compilerRelease.394053443.103645139">
+<tool id="com.ti.ccstudio.buildDefinitions.MSP430_3.3.exe.compilerRelease.394053443.103645139" name="MSP430 Compiler" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.3.exe.compilerRelease.1721390137"/>
+</resourceConfiguration>
+<resourceConfiguration exclude="true" id="com.ti.ccstudio.buildDefinitions.MSP430.Release.354066836./MSP-EXP430F6137Rx User Experience/SimpliciTI/Components/mrfi/radios/family5/mrfi_radio.c" name="mrfi_radio.c" rcbsApplicability="disable" resourcePath="/MSP-EXP430F6137Rx User Experience/SimpliciTI/Components/mrfi/radios/family5/mrfi_radio.c" toolsToInvoke="com.ti.ccstudio.buildDefinitions.MSP430_3.3.exe.compilerRelease.394053443.425499766">
+<tool id="com.ti.ccstudio.buildDefinitions.MSP430_3.3.exe.compilerRelease.394053443.425499766" name="MSP430 Compiler" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.3.exe.compilerRelease.1721390137"/>
+</resourceConfiguration>
+<resourceConfiguration exclude="true" id="com.ti.ccstudio.buildDefinitions.MSP430.Release.354066836./MSP-EXP430F6137Rx User Experience/SimpliciTI/Components/mrfi/radios/family5/mrfi_radio_interface.c" name="mrfi_radio_interface.c" rcbsApplicability="disable" resourcePath="/MSP-EXP430F6137Rx User Experience/SimpliciTI/Components/mrfi/radios/family5/mrfi_radio_interface.c" toolsToInvoke="com.ti.ccstudio.buildDefinitions.MSP430_3.3.exe.compilerRelease.394053443.1773910463">
+<tool id="com.ti.ccstudio.buildDefinitions.MSP430_3.3.exe.compilerRelease.394053443.1773910463" name="MSP430 Compiler" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.3.exe.compilerRelease.1721390137"/>
+</resourceConfiguration>
+<resourceConfiguration exclude="false" id="com.ti.ccstudio.buildDefinitions.MSP430.Release.354066836./MSP-EXP430F6137Rx User Experience/lnk_cc430f6137.cmd" name="lnk_cc430f6137.cmd" rcbsApplicability="disable" resourcePath="/MSP-EXP430F6137Rx User Experience/lnk_cc430f6137.cmd" toolsToInvoke="com.ti.ccstudio.buildDefinitions.MSP430_3.3.exe.linkerRelease.235977480.1889225160">
+<tool id="com.ti.ccstudio.buildDefinitions.MSP430_3.3.exe.linkerRelease.235977480.1889225160" name="MSP430 Linker" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.3.exe.linkerRelease.244590367"/>
+</resourceConfiguration>
+</configuration>
+<configuration artifactExtension="out" artifactName="MSP-EXP430F6137RxUserExperience" description="" id="com.ti.ccstudio.buildDefinitions.MSP430.Release.1821508969" name="LF_433MHz" parent="com.ti.ccstudio.buildDefinitions.MSP430.Release" postannouncebuildStep="Create flash image: TI-TXT" postbuildStep="&quot;${CG_TOOL_ROOT}/bin/hex${CG_TOOL_SUFFIX}.exe&quot; --ti_txt &quot;${BuildArtifactFileName}&quot; -o &quot;${BuildArtifactFileBaseName}.txt&quot; -order MS -romwidth 16">
+<toolChain id="com.ti.ccstudio.buildDefinitions.MSP430.Release.ToolchainPlaceholder.1053489146" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.3.exe.ReleaseToolchain" targetTool="com.ti.ccstudio.buildDefinitions.MSP430_3.3.exe.linkerRelease.235977480">
+<option id="com.ti.ccstudio.buildDefinitions.core.OPT_TAGS.183745796" superClass="com.ti.ccstudio.buildDefinitions.core.OPT_TAGS" valueType="stringList">
+<listOptionValue builtIn="false" value="DEVICE_CONFIGURATION_ID=CC430F6137"/>
+<listOptionValue builtIn="false" value="DEVICE_ENDIANNESS=little"/>
+<listOptionValue builtIn="false" value="OUTPUT_FORMAT=COFF"/>
+<listOptionValue builtIn="false" value="CCS_MBS_VERSION=4.2.0"/>
+<listOptionValue builtIn="false" value="LINKER_COMMAND_FILE=lnk_cc430f6137.cmd"/>
+<listOptionValue builtIn="false" value="RUNTIME_SUPPORT_LIBRARY=libc.a"/>
+<listOptionValue builtIn="false" value="OUTPUT_TYPE=executable"/>
+</option>
+<option id="com.ti.ccstudio.buildDefinitions.core.OPT_CODEGEN_VERSION.1959468275" name="Code Generation tools version" superClass="com.ti.ccstudio.buildDefinitions.core.OPT_CODEGEN_VERSION" value="3.3.1" valueType="string"/>
+<tool id="com.ti.ccstudio.buildDefinitions.MSP430_3.3.exe.compilerRelease.1549377332" name="MSP430 Compiler" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.3.exe.compilerRelease">
+<option id="com.ti.ccstudio.buildDefinitions.MSP430_3.3.compilerID.SILICON_VERSION.497139333" name="Silicon version (--silicon_version, -v)" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.3.compilerID.SILICON_VERSION" value="com.ti.ccstudio.buildDefinitions.MSP430_3.3.compilerID.SILICON_VERSION.mspx" valueType="enumerated"/>
+<option id="com.ti.ccstudio.buildDefinitions.MSP430_3.3.compilerID.DEFINE.1986561662" name="Pre-define NAME (--define, -D)" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.3.compilerID.DEFINE" valueType="definedSymbols">
+<listOptionValue builtIn="false" value="__CC430F6137__"/>
+<listOptionValue builtIn="false" value="ISM_LF"/>
+<listOptionValue builtIn="false" value="MRFI_CC430"/>
+</option>
+<option id="com.ti.ccstudio.buildDefinitions.MSP430_3.3.compilerID.INCLUDE_PATH.1121247681" name="Add dir to #include search path (--include_path, -I)" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.3.compilerID.INCLUDE_PATH" valueType="includePath">
+<listOptionValue builtIn="false" value="&quot;${CCS_INSTALL_ROOT}/msp430/include&quot;"/>
+<listOptionValue builtIn="false" value="&quot;${CG_TOOL_ROOT}/include&quot;"/>
+<listOptionValue builtIn="false" value="&quot;${PROJECT_ROOT}/../F5xx_F6xx_Core_Lib&quot;"/>
+<listOptionValue builtIn="false" value="&quot;${PROJECT_ROOT}/../MSP-EXP430F6137_HAL&quot;"/>
+<listOptionValue builtIn="false" value="&quot;${PROJECT_ROOT}/../SimpliciTI/Components/bsp&quot;"/>
+<listOptionValue builtIn="false" value="&quot;${PROJECT_ROOT}/../SimpliciTI/Components/bsp/drivers&quot;"/>
+<listOptionValue builtIn="false" value="&quot;${PROJECT_ROOT}/../SimpliciTI/Components/bsp/boards/MSP-EXP430F6137Rx&quot;"/>
+<listOptionValue builtIn="false" value="&quot;${PROJECT_ROOT}/../SimpliciTI/Components/mrfi&quot;"/>
+<listOptionValue builtIn="false" value="&quot;${PROJECT_ROOT}/../SimpliciTI/Components/simpliciti/nwk&quot;"/>
+<listOptionValue builtIn="false" value="&quot;${PROJECT_ROOT}/../SimpliciTI/Components/simpliciti/nwk_applications&quot;"/>
+</option>
+<option id="com.ti.ccstudio.buildDefinitions.MSP430_3.3.compilerID.DIAG_WARNING.363311047" name="Treat diagnostic &lt;id&gt; as warning (--diag_warning, -pdsw)" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.3.compilerID.DIAG_WARNING" valueType="stringList">
+<listOptionValue builtIn="false" value="225"/>
+</option>
+<option id="com.ti.ccstudio.buildDefinitions.MSP430_3.3.compilerID.SILICON_ERRATA.CPU22.1445633831" name="Workaround specified silicon errata (--silicon_errata) [CPU22]" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.3.compilerID.SILICON_ERRATA.CPU22" value="true" valueType="boolean"/>
+<option id="com.ti.ccstudio.buildDefinitions.MSP430_3.3.compilerID.SILICON_ERRATA.CPU21.1225289608" name="Workaround specified silicon errata (--silicon_errata) [CPU21]" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.3.compilerID.SILICON_ERRATA.CPU21" value="true" valueType="boolean"/>
+<option id="com.ti.ccstudio.buildDefinitions.MSP430_3.3.compilerID.SILICON_ERRATA.CPU23.1031195381" name="Workaround specified silicon errata (--silicon_errata) [CPU23]" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.3.compilerID.SILICON_ERRATA.CPU23" value="true" valueType="boolean"/>
+<option id="com.ti.ccstudio.buildDefinitions.MSP430_3.3.compilerID.SILICON_ERRATA.CPU18.957618670" name="Workaround specified silicon errata (--silicon_errata) [CPU18]" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.3.compilerID.SILICON_ERRATA.CPU18" value="true" valueType="boolean"/>
+<option id="com.ti.ccstudio.buildDefinitions.MSP430_3.3.compilerID.SILICON_ERRATA.CPU40.854563884" name="Workaround specified silicon errata (--silicon_errata) [CPU40]" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.3.compilerID.SILICON_ERRATA.CPU40" value="true" valueType="boolean"/>
+<option id="com.ti.ccstudio.buildDefinitions.MSP430_3.3.compilerID.PRINTF_SUPPORT.1833380705" name="Level of printf support required (--printf_support)" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.3.compilerID.PRINTF_SUPPORT" value="com.ti.ccstudio.buildDefinitions.MSP430_3.3.compilerID.PRINTF_SUPPORT.minimal" valueType="enumerated"/>
+<option id="com.ti.ccstudio.buildDefinitions.MSP430_3.3.compilerID.CMD_FILE.1188971248" name="Read options from specified file (--cmd_file, -@)" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.3.compilerID.CMD_FILE" valueType="stringList">
+<listOptionValue builtIn="false" value="&quot;${PROJECT_ROOT}/../SimpliciTI/Application/configuration/Access_Point/smpl_config_CCS.dat&quot;"/>
+<listOptionValue builtIn="false" value="&quot;${PROJECT_ROOT}/../SimpliciTI/Application/configuration/smpl_nwk_config_CCS.dat&quot;"/>
+</option>
+</tool>
+<tool id="com.ti.ccstudio.buildDefinitions.MSP430_3.3.exe.linkerRelease.1275690924" name="MSP430 Linker" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.3.exe.linkerRelease">
+<option id="com.ti.ccstudio.buildDefinitions.MSP430_3.3.linkerID.OUTPUT_FILE.194457658" name="Specify output file name (--output_file, -o)" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.3.linkerID.OUTPUT_FILE" value="&quot;MSP-EXP430F6137RxUserExperience.out&quot;" valueType="string"/>
+<option id="com.ti.ccstudio.buildDefinitions.MSP430_3.3.linkerID.MAP_FILE.161881924" name="Input and output sections listed into &lt;file&gt; (--map_file, -m)" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.3.linkerID.MAP_FILE" value="&quot;MSP-EXP430F6137RxUserExperience.map&quot;" valueType="string"/>
+<option id="com.ti.ccstudio.buildDefinitions.MSP430_3.3.linkerID.STACK_SIZE.843918056" name="Set C system stack size (--stack_size, -stack)" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.3.linkerID.STACK_SIZE" value="80" valueType="string"/>
+<option id="com.ti.ccstudio.buildDefinitions.MSP430_3.3.linkerID.HEAP_SIZE.1144629234" name="Heap size for C/C++ dynamic memory allocation (--heap_size, -heap)" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.3.linkerID.HEAP_SIZE" value="80" valueType="string"/>
+<option id="com.ti.ccstudio.buildDefinitions.MSP430_3.3.linkerID.generatedLinkerCommandFiles.1575423896" name="Generated Linker Command files" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.3.linkerID.generatedLinkerCommandFiles" valueType="libs">
+<listOptionValue builtIn="false" value="&quot;$(GEN_CMDS_QUOTED)&quot;"/>
+</option>
+<option id="com.ti.ccstudio.buildDefinitions.MSP430_3.3.linkerID.SEARCH_PATH.1827870635" name="Add &lt;dir&gt; to library search path (--search_path, -i)" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.3.linkerID.SEARCH_PATH" valueType="stringList">
+<listOptionValue builtIn="false" value="&quot;${CCS_INSTALL_ROOT}/msp430/include&quot;"/>
+<listOptionValue builtIn="false" value="&quot;${CG_TOOL_ROOT}/lib&quot;"/>
+<listOptionValue builtIn="false" value="&quot;${CG_TOOL_ROOT}/include&quot;"/>
+</option>
+<option id="com.ti.ccstudio.buildDefinitions.MSP430_3.3.linkerID.USE_HW_MPY.463587981" name="Link in hardware version of RTS mpy routine (--use_hw_mpy)" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.3.linkerID.USE_HW_MPY" value="com.ti.ccstudio.buildDefinitions.MSP430_3.3.linkerID.USE_HW_MPY.F5" valueType="enumerated"/>
+<option id="com.ti.ccstudio.buildDefinitions.MSP430_3.3.linkerID.LIBRARY.1008867730" name="Include library file or command file as input (--library, -l)" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.3.linkerID.LIBRARY" valueType="libs">
+<listOptionValue builtIn="false" value="&quot;libc.a&quot;"/>
+</option>
+</tool>
+<macros expandEnvironmentMacros="true"/>
+</toolChain>
+<resourceConfiguration exclude="false" id="com.ti.ccstudio.buildDefinitions.MSP430.Release.1821508969./MSP-EXP430F6137Rx User Experience/MSP-EXP430F6137_HAL/hal_adc.c" name="hal_adc.c" rcbsApplicability="disable" resourcePath="/MSP-EXP430F6137Rx User Experience/MSP-EXP430F6137_HAL/hal_adc.c" toolsToInvoke="com.ti.ccstudio.buildDefinitions.MSP430_3.3.exe.compilerRelease.394053443.633896498">
+<tool id="com.ti.ccstudio.buildDefinitions.MSP430_3.3.exe.compilerRelease.394053443.633896498" name="MSP430 Compiler" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.3.exe.compilerRelease.1549377332"/>
+</resourceConfiguration>
+<resourceConfiguration exclude="false" id="com.ti.ccstudio.buildDefinitions.MSP430.Release.1821508969./MSP-EXP430F6137Rx User Experience/MSP-EXP430F6137_HAL/hal_lcd.c" name="hal_lcd.c" rcbsApplicability="disable" resourcePath="/MSP-EXP430F6137Rx User Experience/MSP-EXP430F6137_HAL/hal_lcd.c" toolsToInvoke="com.ti.ccstudio.buildDefinitions.MSP430_3.3.exe.compilerRelease.394053443.1645799469">
+<tool id="com.ti.ccstudio.buildDefinitions.MSP430_3.3.exe.compilerRelease.394053443.1645799469" name="MSP430 Compiler" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.3.exe.compilerRelease.1549377332"/>
+</resourceConfiguration>
+<resourceConfiguration exclude="false" id="com.ti.ccstudio.buildDefinitions.MSP430.Release.1821508969./MSP-EXP430F6137Rx User Experience/MspExp430F6137RxUserExperience.c" name="MspExp430F6137RxUserExperience.c" rcbsApplicability="disable" resourcePath="/MSP-EXP430F6137Rx User Experience/MspExp430F6137RxUserExperience.c" toolsToInvoke="com.ti.ccstudio.buildDefinitions.MSP430_3.3.exe.compilerRelease.394053443.6152491">
+<tool id="com.ti.ccstudio.buildDefinitions.MSP430_3.3.exe.compilerRelease.394053443.6152491" name="MSP430 Compiler" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.3.exe.compilerRelease.1549377332"/>
+</resourceConfiguration>
+<resourceConfiguration exclude="true" id="com.ti.ccstudio.buildDefinitions.MSP430.Release.1821508969./MSP-EXP430F6137Rx User Experience/SimpliciTI/Application/application/Access_Point/main_AP_Async_Listen.c" name="main_AP_Async_Listen.c" rcbsApplicability="disable" resourcePath="/MSP-EXP430F6137Rx User Experience/SimpliciTI/Application/application/Access_Point/main_AP_Async_Listen.c" toolsToInvoke="com.ti.ccstudio.buildDefinitions.MSP430_3.3.exe.compilerRelease.394053443.915706392">
+<tool id="com.ti.ccstudio.buildDefinitions.MSP430_3.3.exe.compilerRelease.394053443.915706392" name="MSP430 Compiler" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.3.exe.compilerRelease.1549377332"/>
+</resourceConfiguration>
+<resourceConfiguration exclude="true" id="com.ti.ccstudio.buildDefinitions.MSP430.Release.1821508969./MSP-EXP430F6137Rx User Experience/SimpliciTI/Components/bsp/boards/MSP-EXP430F6137Rx/bsp_board.c" name="bsp_board.c" rcbsApplicability="disable" resourcePath="/MSP-EXP430F6137Rx User Experience/SimpliciTI/Components/bsp/boards/MSP-EXP430F6137Rx/bsp_board.c" toolsToInvoke="com.ti.ccstudio.buildDefinitions.MSP430_3.3.exe.compilerRelease.394053443.255556576">
+<tool id="com.ti.ccstudio.buildDefinitions.MSP430_3.3.exe.compilerRelease.394053443.255556576" name="MSP430 Compiler" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.3.exe.compilerRelease.1549377332"/>
+</resourceConfiguration>
+<resourceConfiguration exclude="true" id="com.ti.ccstudio.buildDefinitions.MSP430.Release.1821508969./MSP-EXP430F6137Rx User Experience/SimpliciTI/Components/bsp/boards/MSP-EXP430F6137Rx/bsp_drivers.c" name="bsp_drivers.c" rcbsApplicability="disable" resourcePath="/MSP-EXP430F6137Rx User Experience/SimpliciTI/Components/bsp/boards/MSP-EXP430F6137Rx/bsp_drivers.c" toolsToInvoke="com.ti.ccstudio.buildDefinitions.MSP430_3.3.exe.compilerRelease.394053443.1575656155">
+<tool id="com.ti.ccstudio.buildDefinitions.MSP430_3.3.exe.compilerRelease.394053443.1575656155" name="MSP430 Compiler" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.3.exe.compilerRelease.1549377332"/>
+</resourceConfiguration>
+<resourceConfiguration exclude="false" id="com.ti.ccstudio.buildDefinitions.MSP430.Release.1821508969./MSP-EXP430F6137Rx User Experience/SimpliciTI/Components/bsp/bsp.c" name="bsp.c" rcbsApplicability="disable" resourcePath="/MSP-EXP430F6137Rx User Experience/SimpliciTI/Components/bsp/bsp.c" toolsToInvoke="com.ti.ccstudio.buildDefinitions.MSP430_3.3.exe.compilerRelease.394053443.1690741084">
+<tool id="com.ti.ccstudio.buildDefinitions.MSP430_3.3.exe.compilerRelease.394053443.1690741084" name="MSP430 Compiler" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.3.exe.compilerRelease.1549377332"/>
+</resourceConfiguration>
+<resourceConfiguration exclude="true" id="com.ti.ccstudio.buildDefinitions.MSP430.Release.1821508969./MSP-EXP430F6137Rx User Experience/SimpliciTI/Components/bsp/drivers/code/bsp_buttons.c" name="bsp_buttons.c" rcbsApplicability="disable" resourcePath="/MSP-EXP430F6137Rx User Experience/SimpliciTI/Components/bsp/drivers/code/bsp_buttons.c" toolsToInvoke="com.ti.ccstudio.buildDefinitions.MSP430_3.3.exe.compilerRelease.394053443.524035370">
+<tool id="com.ti.ccstudio.buildDefinitions.MSP430_3.3.exe.compilerRelease.394053443.524035370" name="MSP430 Compiler" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.3.exe.compilerRelease.1549377332"/>
+</resourceConfiguration>
+<resourceConfiguration exclude="true" id="com.ti.ccstudio.buildDefinitions.MSP430.Release.1821508969./MSP-EXP430F6137Rx User Experience/SimpliciTI/Components/bsp/drivers/code/bsp_leds.c" name="bsp_leds.c" rcbsApplicability="disable" resourcePath="/MSP-EXP430F6137Rx User Experience/SimpliciTI/Components/bsp/drivers/code/bsp_leds.c" toolsToInvoke="com.ti.ccstudio.buildDefinitions.MSP430_3.3.exe.compilerRelease.394053443.89218623">
+<tool id="com.ti.ccstudio.buildDefinitions.MSP430_3.3.exe.compilerRelease.394053443.89218623" name="MSP430 Compiler" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.3.exe.compilerRelease.1549377332"/>
+</resourceConfiguration>
+<resourceConfiguration exclude="true" id="com.ti.ccstudio.buildDefinitions.MSP430.Release.1821508969./MSP-EXP430F6137Rx User Experience/SimpliciTI/Components/mrfi/radios/family5/mrfi_radio.c" name="mrfi_radio.c" rcbsApplicability="disable" resourcePath="/MSP-EXP430F6137Rx User Experience/SimpliciTI/Components/mrfi/radios/family5/mrfi_radio.c" toolsToInvoke="com.ti.ccstudio.buildDefinitions.MSP430_3.3.exe.compilerRelease.394053443.1129379503">
+<tool id="com.ti.ccstudio.buildDefinitions.MSP430_3.3.exe.compilerRelease.394053443.1129379503" name="MSP430 Compiler" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.3.exe.compilerRelease.1549377332"/>
+</resourceConfiguration>
+<resourceConfiguration exclude="true" id="com.ti.ccstudio.buildDefinitions.MSP430.Release.1821508969./MSP-EXP430F6137Rx User Experience/SimpliciTI/Components/mrfi/radios/family5/mrfi_radio_interface.c" name="mrfi_radio_interface.c" rcbsApplicability="disable" resourcePath="/MSP-EXP430F6137Rx User Experience/SimpliciTI/Components/mrfi/radios/family5/mrfi_radio_interface.c" toolsToInvoke="com.ti.ccstudio.buildDefinitions.MSP430_3.3.exe.compilerRelease.394053443.1435375536">
+<tool id="com.ti.ccstudio.buildDefinitions.MSP430_3.3.exe.compilerRelease.394053443.1435375536" name="MSP430 Compiler" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.3.exe.compilerRelease.1549377332"/>
+</resourceConfiguration>
+<resourceConfiguration exclude="false" id="com.ti.ccstudio.buildDefinitions.MSP430.Release.1821508969./MSP-EXP430F6137Rx User Experience/lnk_cc430f6137.cmd" name="lnk_cc430f6137.cmd" rcbsApplicability="disable" resourcePath="/MSP-EXP430F6137Rx User Experience/lnk_cc430f6137.cmd" toolsToInvoke="com.ti.ccstudio.buildDefinitions.MSP430_3.3.exe.linkerRelease.235977480.680458648">
+<tool id="com.ti.ccstudio.buildDefinitions.MSP430_3.3.exe.linkerRelease.235977480.680458648" name="MSP430 Linker" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.3.exe.linkerRelease.1275690924"/>
+</resourceConfiguration>
+</configuration>
+<macros/>
+</project>
+</ManagedProjectBuildInfo>
