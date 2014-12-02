@@ -216,6 +216,10 @@ def barGraph(seq, userWidth, userHeight):
     x_width = 60
     x_gap = 20
     loopCount = 1
+    percent = '0%'
+
+    total = seq[0]+seq[1]+seq[2]+seq[3]
+    total = float(total)
         
         #Generate bar for each answer
 
@@ -225,23 +229,29 @@ def barGraph(seq, userWidth, userHeight):
         y0 = userHeight - (y * y_stretch + y_gap)
         x1 = x * x_stretch + x * x_width + x_width + x_gap
         y1 = userHeight - y_gap
+        if total > 0.00001:
+                percent = y/total*100
+                percent = "%0.2f" % percent
+                stringY = "("+ str(y) + ")"
+                percent = percent + "%" + stringY
+        
         if loopCount == 1:
                 canvas.create_rectangle(x0, y0, x1, y1, fill="blue")
-                canvas.create_text(x0+25, y0, anchor=SW, text=str(y))
+                canvas.create_text(x0, y0, anchor=SW, text=percent)
                 canvas.create_text(x0+25, 322 , anchor=SW, text = 'A')
         elif loopCount == 2:
                 canvas.create_rectangle(x0, y0, x1, y1, fill="green")
-                canvas.create_text(x0+25, y0, anchor=SW, text=str(y))
+                canvas.create_text(x0, y0, anchor=SW, text=percent)
                 canvas.create_text(x0+25, 322 , anchor=SW, text = 'B')
         elif loopCount == 3:
                 canvas.create_rectangle(x0, y0, x1, y1, fill="yellow")
-                canvas.create_text(x0+25, y0, anchor=SW, text=str(y))
+                canvas.create_text(x0, y0, anchor=SW, text=percent)
                 canvas.create_text(x0+25, 322 , anchor=SW, text = 'C')
         elif loopCount == 4:
                 canvas.create_rectangle(x0, y0, x1, y1, fill="red")
-                canvas.create_text(x0+25, y0, anchor=SW, text=str(y))
+                canvas.create_text(x0, y0, anchor=SW, text=percent)
                 canvas.create_text(x0+25, 322 , anchor=SW, text = 'D')
-        loopCount +=1        
+        loopCount +=1       
               
 
 
