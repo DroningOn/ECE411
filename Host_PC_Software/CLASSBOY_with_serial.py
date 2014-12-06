@@ -269,6 +269,7 @@ def controls():
     pollCountDown = Label(root,text = pollTimeStr)
     pollCountDown.pack(side=BOTTOM) 
     
+	#Text widget for time left
     timeLeft = Label(root,text = 'Time Left:')
     timeLeft.pack(side=BOTTOM)
 
