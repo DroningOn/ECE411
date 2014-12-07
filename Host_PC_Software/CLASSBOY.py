@@ -1,6 +1,7 @@
 #Import necessary modules
 import time
 from Tkinter import *
+import csv
 
 def main():    
         global root
@@ -8,7 +9,8 @@ def main():
         global GUIGraph
         global polling
         global defaultAns
-        
+        global newWorkbook       
+        global writeCommand
         
         defaultTime = 60
         pollTime = defaultTime
@@ -16,12 +18,19 @@ def main():
         
         root = Tk()
         root.title('CLASSBOY')
+        root.protocol('WM_DELETE_WINDOW', closeProtocol)
+        newWorkbook = open(time.strftime('%m%d%Y') + '.csv','wb')
+        writeCommand = csv.writer(newWorkbook, dialect = 'excel')
         
         global canvas
         canvas = Canvas(root,width=325, height=325, bg='grey')
         canvas.pack()
         GUI(defaultAns,325,325)
         mainloop()
+
+def closeProtocol():
+        newWorkbook.close()
+        root.destroy()
         
         
 def changePollTime15():
@@ -54,10 +63,12 @@ def changePollTime60():
         
 def newParse():
         global polling
+        global writeCommand
         canvas.delete("all")
         barGraph(defaultAns,325,325)
         polling = TRUE
         timer = time.time()
+        
 
         while polling:
                 currentTime = time.time()
@@ -83,6 +94,10 @@ def newParse():
         userIDList = genKeyList(testDict)
         numAnswers = answerCount(testDict,userIDList)
         barGraph(numAnswers,325,325)
+        writeCommand.writerow(numAnswers)
+
+      
+                        
         
 
 def endPolling():

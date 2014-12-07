@@ -2,6 +2,7 @@
 import time
 from Tkinter import *
 import serial
+import csv
 
 def main():
 
@@ -13,6 +14,9 @@ def main():
         global defaultAns
         global baseStation
         global canvas
+        global newWorkbook
+        global writeCommand
+        
         
         #Set-up default values for GUI
         defaultTime = 60
@@ -29,6 +33,9 @@ def main():
         #On-close protocol for GUI window
         root.protocol("WM_DELETE_WINDOW", portClose)
 
+        #Setup a new Excel file to write
+        newWorkbook = open(time.strftime('%m%d%Y' + '.csv', 'wb'))
+        writeCommand = csv.writer(newWorkbook, dialect = 'excel')
         
         #Set-up canvas for bar graph
         canvas = Canvas(root,width=325, height=325, bg='grey')
@@ -86,6 +93,7 @@ def newParse():
         #Initialize globals used in this method
         global polling
         global baseStation
+        global writeCommand
 
         #Flush all the inputs on the serial port before polling
         baseStation.flushInput()
@@ -149,6 +157,9 @@ def newParse():
         canvas.delete("all")
         #Graph the answers on the GUI
         barGraph(numAnswers,325,325)
+
+        #Write the tuple of answers to the excel file
+        writeCommand.writerow(numAnswers)
         
 
 def endPolling():
