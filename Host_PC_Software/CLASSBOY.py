@@ -19,13 +19,14 @@ def main():
         root = Tk()
         root.title('CLASSBOY')
         root.protocol('WM_DELETE_WINDOW', closeProtocol)
+        root.resizable(0,0)
         newWorkbook = open(time.strftime('%m%d%Y') + '.csv','wb')
         writeCommand = csv.writer(newWorkbook, dialect = 'excel')
         
         global canvas
-        canvas = Canvas(root,width=325, height=325, bg='grey')
+        canvas = Canvas(root,width=625, height=625, bg='grey')
         canvas.pack()
-        GUI(defaultAns,325,325)
+        GUI(defaultAns,625,625)
         mainloop()
 
 def closeProtocol():
@@ -65,7 +66,7 @@ def newParse():
         global polling
         global writeCommand
         canvas.delete("all")
-        barGraph(defaultAns,325,325)
+        barGraph(defaultAns,625,625)
         polling = TRUE
         timer = time.time()
         
@@ -93,7 +94,7 @@ def newParse():
         testDict = parse(testPackets)
         userIDList = genKeyList(testDict)
         numAnswers = answerCount(testDict,userIDList)
-        barGraph(numAnswers,325,325)
+        barGraph(numAnswers,625,625)
         writeCommand.writerow(numAnswers)
 
       
@@ -225,10 +226,10 @@ def barGraph(seq, userWidth, userHeight):
 
         
         #Setting up the variables
-    y_stretch = 15
+    y_stretch = 5
     y_gap = 20
-    x_stretch = 10
-    x_width = 60
+    x_stretch = 30
+    x_width = 120
     x_gap = 20
     loopCount = 1
     percent = '0%'
@@ -253,19 +254,19 @@ def barGraph(seq, userWidth, userHeight):
         if loopCount == 1:
                 canvas.create_rectangle(x0, y0, x1, y1, fill="blue")
                 canvas.create_text(x0, y0, anchor=SW, text=percent)
-                canvas.create_text(x0+25, 322 , anchor=SW, text = 'A')
+                canvas.create_text(x0+25, 622 , anchor=SW, text = 'A')
         elif loopCount == 2:
                 canvas.create_rectangle(x0, y0, x1, y1, fill="green")
                 canvas.create_text(x0, y0, anchor=SW, text=percent)
-                canvas.create_text(x0+25, 322 , anchor=SW, text = 'B')
+                canvas.create_text(x0+25, 622 , anchor=SW, text = 'B')
         elif loopCount == 3:
                 canvas.create_rectangle(x0, y0, x1, y1, fill="yellow")
                 canvas.create_text(x0, y0, anchor=SW, text=percent)
-                canvas.create_text(x0+25, 322 , anchor=SW, text = 'C')
+                canvas.create_text(x0+25, 622 , anchor=SW, text = 'C')
         elif loopCount == 4:
                 canvas.create_rectangle(x0, y0, x1, y1, fill="red")
                 canvas.create_text(x0, y0, anchor=SW, text=percent)
-                canvas.create_text(x0+25, 322 , anchor=SW, text = 'D')
+                canvas.create_text(x0+25, 622 , anchor=SW, text = 'D')
         loopCount +=1       
               
 

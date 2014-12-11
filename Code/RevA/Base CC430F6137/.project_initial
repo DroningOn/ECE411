@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>MSP-EXP430F6137Rx User Experience</name>
+	<comment></comment>
+	<projects>
+	</projects>
+	<buildSpec>
+		<buildCommand>
+			<name>org.eclipse.cdt.managedbuilder.core.genmakebuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+	</buildSpec>
+	<natures>
+		<nature>org.eclipse.cdt.core.cnature</nature>
+		<nature>org.eclipse.cdt.managedbuilder.core.managedBuildNature</nature>
+		<nature>org.eclipse.cdt.core.ccnature</nature>
+		<nature>com.ti.ccstudio.managedbuild.core.ccsNature</nature>
+	</natures>
+	<linkedResources>
+		<link>
+			<name>MspExp430F6137RxUserExperience.c</name>
+			<type>1</type>
+			<locationURI>MSP_EXP430F6137RX_UE_ROOT/MspExp430F6137RxUserExperience.c</locationURI>
+		</link>
+		<link>
+			<name>main.c</name>
+			<type>1</type>
+			<locationURI>MSP_EXP430F6137RX_UE_ROOT/main.c</locationURI>
+		</link>
+		<link>
+			<name>F5xx_F6xx_Core_Lib</name>
+			<type>2</type>
+			<locationURI>MSP_EXP430F6137RX_UE_ROOT/F5xx_F6xx_Core_Lib</locationURI>
+		</link>
+		<link>
+			<name>MSP-EXP430F6137_HAL</name>
+			<type>2</type>
+			<locationURI>MSP_EXP430F6137RX_UE_ROOT/MSP-EXP430F6137_HAL</locationURI>
+		</link>
+		<link>
+			<name>SimpliciTI</name>
+			<type>2</type>
+			<locationURI>MSP_EXP430F6137RX_UE_ROOT/SimpliciTI</locationURI>
+		</link>
+	</linkedResources>
+</projectDescription>

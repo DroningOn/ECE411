@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<psf version="2.0">
+<provider id="org.eclipse.egit.core.GitProvider">
+<project reference="1.0,https://github.com/DroningOn/ECE411.git,master,Code/RevA/Base CC430F6137"/>
+<project reference="1.0,https://github.com/DroningOn/ECE411.git,master,Code/RevA/Satellite CC430F5137"/>
+</provider>
+</psf>
