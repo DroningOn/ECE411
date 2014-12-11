@@ -1,69 +1,39 @@
 #Import necessary modules
 import time
 from Tkinter import *
-import serial
 import csv
-import platform
 
-def main():
-
-        #Initializing global variables
+def main():    
         global root
         global pollTime
         global GUIGraph
         global polling
         global defaultAns
-        global baseStation
-        global canvas
-        global newWorkbook
+        global newWorkbook       
         global writeCommand
         
-        
-        #Set-up default values for GUI
         defaultTime = 60
         pollTime = defaultTime
         defaultAns = (0,0,0,0)
-
-        #Initialize serial port
-        plat = platform.system()
-        if plat == 'Windows':
-                baseStation = serial.Serial('COM3',timeout = 0)
-        elif plat == 'Linux':
-                baseStation = serial.Serial('/dev/ttyUSB0', timeout = 0)
-
-        #Set-up GUI root window for GUI
+        
         root = Tk()
         root.title('CLASSBOY')
-
-        #On-close protocol for GUI window
-        root.protocol("WM_DELETE_WINDOW", portClose)
-
-        #Make frame non-resizable
-        root.resizable(0,0)
-
-        #Setup a new Excel file to write
-        newWorkbook = open(time.strftime('ECE411' +'%m%d%Y' + '.csv', 'wb'))
+        root.protocol('WM_DELETE_WINDOW', closeProtocol)
+        newWorkbook = open(time.strftime('%m%d%Y') + '.csv','wb')
         writeCommand = csv.writer(newWorkbook, dialect = 'excel')
         
-        #Set-up canvas for bar graph
-        canvas = Canvas(root,width=625, height=625, bg='grey')
+        global canvas
+        canvas = Canvas(root,width=325, height=325, bg='grey')
         canvas.pack()
-        #Initialize GUI
-        GUI(defaultAns,625,625)
+        GUI(defaultAns,325,325)
         mainloop()
 
-        
-def portClose():
-        """This method closes the serial port and destoys the GUI window when
-        close is pressed"""
-        
-        global baseStation
-        baseStation.close()
+def closeProtocol():
+        newWorkbook.close()
         root.destroy()
-
-		
+        
+        
 def changePollTime15():
-        """Sets the polling time to 15 seconds"""
         global pollTime
         pollTime = 15
         pollCountDown.configure(text = str(pollTime))
@@ -71,7 +41,6 @@ def changePollTime15():
         
 
 def changePollTime30():
-        """Sets the polling time to 30 seconds"""
         global pollTime
         pollTime = 30
         pollCountDown.configure(text = str(pollTime))
@@ -79,7 +48,6 @@ def changePollTime30():
         
 
 def changePollTime45():
-        """Sets the polling time to 45 seconds"""
         global pollTime
         pollTime= 45
         pollCountDown.configure(text = str(pollTime))
@@ -87,7 +55,6 @@ def changePollTime45():
         
 
 def changePollTime60():
-        """Sets the polling time to 60 seconds"""
         global pollTime
         pollTime = 60
         pollCountDown.configure(text = str(pollTime))
@@ -95,92 +62,52 @@ def changePollTime60():
 
         
 def newParse():
-        """This  is the main method, it polls the serial input,
-        parses the incoming packets,sorts the packets and graphs them in
-        the GUI"""
-
-        #Initialize globals used in this method
         global polling
-        global baseStation
         global writeCommand
-
-        #Flush all the inputs on the serial port before polling
-        baseStation.flushInput()
-
-        #Initialize empty lists and dictionary
-        packetList = []
-        userDict = {}
-        userIDList = []
-
-        #Initialize string variables for comparison in polling-loop
-        currentPacket = ''
-        oldPacket = ''
-        #Reset canvas graphs to 0,0,0,0
         canvas.delete("all")
-        barGraph(defaultAns,625,625)
-
-        #Set loop variable
+        barGraph(defaultAns,325,325)
         polling = TRUE
-        
-        #Get current time for loop timing
         timer = time.time()
+        
 
-        #Polling Loop
         while polling:
-                time.sleep(.075) #.075 second wait interval for proper packet grabbing
-                currentPacket = baseStation.read(5) #Grab a packet
-                currentPacket = currentPacket.encode('hex') #Re-encoded packet to a hex string
-                #Check if the current packet is the same as the packet already stored
-                if currentPacket != oldPacket or currentPacket != '':
-                        #If packet is different, add packet to the list
-                        packetList.append(currentPacket)
-                oldPacket = currentPacket #set the packet just added to the list as an old packet so the packet is not written to the list multiple times
-                currentTime = time.time() #Get current time
-                checkTime = currentTime - timer #Compare time at start of loop for timing, ends loop when currentTime-timer = set polling time
-                #Convert time for displaying on the GUI
+                currentTime = time.time()
+                checkTime = currentTime - timer
                 intCheckTime = int(checkTime)
                 currentTimeLeft = str( pollTime - intCheckTime)
                 pollCountDown.configure(text = currentTimeLeft)
-                #Update GUI
                 root.update()
-
-                #If time runs out exit the loops
+                
                 if intCheckTime > pollTime:
                         polling = FALSE
 
-        
-        #Display Time up on the GUI
         pollCountDown.configure(text = "Time's Up!")
         root.update()
+        testPackets = ['08957b8903', '8123579700', '12375ba902', '123bc49001', '57dbc46701',
+                       '57dbc46702', '12375ba901', '123857ab00', '167857ff03', '1857987a03',
+                       '7b8a175c00', '12387b9002', '6729bca802', '5878cda703', '7571657801',
+                       '8587b7ac02', '9876543201', 'acef543201', '0000001101', '0000000102',
+                       '2345789300', '123789ab00', '8918915602', '1897418403', '8154984601',
+                       '874819ba01', '019874af02', '48abc84f01', '17897feb02', '849fcea301']
 
-        #Parse the packets into a dictionary                
-        userDict = parse(packetList)
-
-        #Get the User ID's from the dictionary
-        userIDList = genKeyList(userDict)
-
-        #Get the number of each answer
-        numAnswers = answerCount(userDict,userIDList)
-
-        #Delete the default from the GUI
-        canvas.delete("all")
-        #Graph the answers on the GUI
-        barGraph(numAnswers,625,625)
-
-        #Write the tuple of answers to the excel file
+        testDict = parse(testPackets)
+        userIDList = genKeyList(testDict)
+        numAnswers = answerCount(testDict,userIDList)
+        barGraph(numAnswers,325,325)
         writeCommand.writerow(numAnswers)
+
+      
+                        
         
 
 def endPolling():
-        """Method for when the stop button is pressed"""
         global polling
         polling = FALSE
         
-		
 def parse(packets):
         """ This function receives a list of packets and separates
         them into their User ID and User Answer, and converts
-        the answer into the corresponding letter(e.g A,B,C,D) for the response.
+        the answer into the corresponding letter for the response.
         It returns a dictionary of the User ID's (keys) and User 
         Answers (values).
         """
@@ -190,15 +117,12 @@ def parse(packets):
         userData={}
         
         while loopCount < len(packets):
-                
-                
-                newPack = packets[loopCount] #Gets the next packet in the list
-
+                #Gets the next packet in the list
+                newPack = packets[loopCount] 
                 #Separate out User ID and Answer
                 userID = newPack[0:8]
                 userAnswer = newPack[8:10]
-                
-                #Check the Answer and creates a alphabetical response for the answer
+                #Check the Answer and create a alphabetical response for the answer
                 if userAnswer == '00':
                         alphaAnswer = 'A'
                 elif userAnswer == '01':
@@ -209,24 +133,20 @@ def parse(packets):
                         alphaAnswer = 'D'
                 else:
                         alphaAnswer = 'Not a valid answer'
-                
-                userData[userID] = alphaAnswer  #Create new dictionary entry 
-                
+                #Create new dictionary entry 
+                userData[userID] = alphaAnswer  
                 loopCount += 1
         return userData
 
-		
 def genKeyList(userDict):
-        """ This function takes the dictionary of user data and returns a list of the
+        """ This function takes the dictionary of user data returns a list of the
         user ID's """
-
+        
         userIDList=userDict.keys()
-
         return userIDList
     
-	
 def answerCount(userDict,userList):
-        """ This function gets a count of the answers from the dictionary of 
+        """ This function gets a count of the the answers from the dictionary of 
         user data, and returns a tuple of counts for each answer. """
         
         # setting up variables                
@@ -258,17 +178,17 @@ def answerCount(userDict,userList):
                 
         return (aCount,bCount,cCount,dCount)
 
-		
 def GUI(seq,userWidth,userHeight):
-    """Quick set-up method for all the GUI widgets"""    
     controls()
     GUIGraph = barGraph(seq,userWidth,userHeight)
-        
-		
-def controls():
-    """Set-up for all the GUI control"""    
 
-    #Set-up for the menu bar    
+
+
+
+
+        
+def controls():
+
     menubar = Menu(root)
 
     pollDuration = Menu(menubar,tearoff = 0)
@@ -280,36 +200,38 @@ def controls():
     
     root.config(menu=menubar)
 
-    #Set-up for the Start and Stop button 
     stopButton = Button(root,text = "Stop Polling", command = endPolling)
     stopButton.pack(side = RIGHT)    
     startButton = Button(root, text = "Start Polling", command = newParse)
     startButton.pack(side = RIGHT)
 
-    #Convert polling time into string
     pollTimeStr = str(pollTime)
 
-    #Set-up for countdown widget
     global pollCountDown
     pollCountDown = Label(root,text = pollTimeStr)
     pollCountDown.pack(side=BOTTOM) 
     
-    #Text widget for time left
     timeLeft = Label(root,text = 'Time Left:')
     timeLeft.pack(side=BOTTOM)
 
                 
+def pieChart(seq,        
+        
 def barGraph(seq, userWidth, userHeight):
     """ This function generates a bar graph of the answers"""
+    
+
+
+
         
-    #Setting up the variables
-    y_stretch = 5
-    y_space = 20
-    x_stretch = 30
-    x_width = 120
-    x_space = 20
+        #Setting up the variables
+    y_stretch = 15
+    y_gap = 20
+    x_stretch = 10
+    x_width = 60
+    x_gap = 20
     loopCount = 1
-    percent ='0%'
+    percent = '0%'
 
     total = seq[0]+seq[1]+seq[2]+seq[3]
     total = float(total)
@@ -317,38 +239,40 @@ def barGraph(seq, userWidth, userHeight):
         #Generate bar for each answer
 
     for x, y in enumerate(seq):
-            
-        #Get dimensions of the bars to be graphed
-        x0 = x * x_stretch + x * x_width + x_space
-        y0 = userHeight - (y * y_stretch + y_space)
-        x1 = x * x_stretch + x * x_width + x_width + x_space
-        y1 = userHeight - y_space
-        if total > 0:
+
+        x0 = x * x_stretch + x * x_width + x_gap
+        y0 = userHeight - (y * y_stretch + y_gap)
+        x1 = x * x_stretch + x * x_width + x_width + x_gap
+        y1 = userHeight - y_gap
+        if total > 0.00001:
                 percent = y/total*100
                 percent = "%0.2f" % percent
                 stringY = "("+ str(y) + ")"
-                percent = percent + "%" + stringY 
-
-        #Graph each bar
+                percent = percent + "%" + stringY
+        
         if loopCount == 1:
                 canvas.create_rectangle(x0, y0, x1, y1, fill="blue")
                 canvas.create_text(x0, y0, anchor=SW, text=percent)
-                canvas.create_text(x0+25, 622 , anchor=SW, text = 'A')
+                canvas.create_text(x0+25, 322 , anchor=SW, text = 'A')
         elif loopCount == 2:
                 canvas.create_rectangle(x0, y0, x1, y1, fill="green")
                 canvas.create_text(x0, y0, anchor=SW, text=percent)
-                canvas.create_text(x0+25, 622 , anchor=SW, text = 'B')
+                canvas.create_text(x0+25, 322 , anchor=SW, text = 'B')
         elif loopCount == 3:
                 canvas.create_rectangle(x0, y0, x1, y1, fill="yellow")
                 canvas.create_text(x0, y0, anchor=SW, text=percent)
-                canvas.create_text(x0+25, 622 , anchor=SW, text = 'C')
+                canvas.create_text(x0+25, 322 , anchor=SW, text = 'C')
         elif loopCount == 4:
                 canvas.create_rectangle(x0, y0, x1, y1, fill="red")
                 canvas.create_text(x0, y0, anchor=SW, text=percent)
-                canvas.create_text(x0+25, 622 , anchor=SW, text = 'D')
-        loopCount +=1        
+                canvas.create_text(x0+25, 322 , anchor=SW, text = 'D')
+        loopCount +=1       
               
-			  
-#run main
+
+
+
+
+
+
 if __name__== "__main__":
         main()
