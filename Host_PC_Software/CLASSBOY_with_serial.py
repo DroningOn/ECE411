@@ -235,7 +235,8 @@ def answerCount(userDict,userList):
         bCount = 0
         cCount = 0
         dCount = 0
-
+        
+        #Counts totals for each answer
         while loopCount < len(userList):
                         
                         #get an ID
@@ -348,7 +349,16 @@ def barGraph(seq, userWidth, userHeight):
                 canvas.create_text(x0+25, 622 , anchor=SW, text = 'D')
         loopCount +=1        
               
+<<<<<<< HEAD
 			  
 #run main
+=======
+
+
+
+
+
+#run program
+>>>>>>> origin/master
 if __name__== "__main__":
         main()
