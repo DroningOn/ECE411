@@ -1,9 +1,5 @@
 <!DOCTYPE SaveWorkspaceState>
 <SaveWorkspaceState>
-    <Windows>
-        <Layout width="1920" cell="F_antLayout_1" view="layout" height="1138" tune="0" y1="-8" x1="-8" lib="ECE411Antenna_lib"/>
-        <DDS name="F_antLayout_1.dds"/>
-        <DDS name="EMFarFieldCut.dds"/>
-    </Windows>
+    <Windows/>
     <MainWindowTab tab="1"/>
 </SaveWorkspaceState>
