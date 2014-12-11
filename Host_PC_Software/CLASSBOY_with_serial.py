@@ -56,7 +56,7 @@ def main():
         root.resizable(0,0)
 
         #Setup a new Excel file to write
-        newWorkbook = open(time.strftime('ECE411' +'%m%d%Y' + '.csv', 'wb'))
+        newWorkbook = open('ECE411'+time.strftime('%m%d%Y') + '.csv', 'wb')
         writeCommand = csv.writer(newWorkbook, dialect = 'excel')
         
         #Set-up canvas for bar graph
@@ -145,7 +145,7 @@ def newParse():
                 currentPacket = baseStation.read(5) #Grab a packet
                 currentPacket = currentPacket.encode('hex') #Re-encoded packet to a hex string
                 #Check if the current packet is the same as the packet already stored
-                if currentPacket != oldPacket or currentPacket != '':
+                if currentPacket != oldPacket and currentPacket != '':
                         #If packet is different, add packet to the list
                         packetList.append(currentPacket)
                 oldPacket = currentPacket #set the packet just added to the list as an old packet so the packet is not written to the list multiple times
@@ -157,6 +157,7 @@ def newParse():
                 pollCountDown.configure(text = currentTimeLeft)
                 #Update GUI
                 root.update()
+                print packetList
 
                 #If time runs out exit the loops
                 if intCheckTime > pollTime:
@@ -363,16 +364,12 @@ def barGraph(seq, userWidth, userHeight):
                 canvas.create_text(x0+25, 622 , anchor=SW, text = 'D')
         loopCount +=1        
               
-<<<<<<< HEAD
-			  
-#run main
-=======
+
 
 
 
 
 
 #run program
->>>>>>> origin/master
 if __name__== "__main__":
         main()
