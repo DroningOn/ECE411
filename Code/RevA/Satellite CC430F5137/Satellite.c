@@ -81,7 +81,8 @@ static void linkTo(void);
 void Satellite (void)
 {
   addr_t lAddr;
-  
+
+  // Input, output, interrupt initizalization
   BSP_Init();
   HalButtonsInit(BUTTON_A, PORT2);
   HalButtonsInterruptEnable(BUTTON_A, PORT2);
@@ -100,8 +101,7 @@ void Satellite (void)
   SetupRtc();
   
   
-  // Create a unique address based off the device's wafer ID & 
-  // X/Y coordinates
+  // Create a unique address based off the device's wafer ID & X/Y coordinates
   
   lAddr.addr[0] = (*(uint8_t *)0x01A0E) ^ (*(uint8_t *)0x01A0A); 
   lAddr.addr[1] = (*(uint8_t *)0x01A0F) ^ (*(uint8_t *)0x01A0B);
