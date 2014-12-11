@@ -112,19 +112,25 @@ void Satellite (void)
 
 
 
-  /* Keep trying to join (a side effect of successful initialization) until
-   * successful. Toggle LEDS to indicate that joining has not occurred.
-   */
+  //Check to see if AP is around a few times, sleep if not.
+  //Toggle LEDS to indicate no connection available.
   while (SMPL_SUCCESS != SMPL_Init(sCB))
   {
-    HalLedsToggle(LED_ALL);
-    SPIN_ABOUT_A_SECOND;
+	  uint8_t attempts;
+	  for(attempts =0; attempts < TX_RECONNECTS; attempts++)
+	  {
+		  HalLedsToggle(LED_ALL);
+		  SPIN_ABOUT_A_20th_SECOND;
+	  }
+	  HalLedsClear(LED_ALL);
+	  __bis_SR_register(LPM3_bits + GIE); //AP probably not there, go to sleep, wait for button press.
+	  __no_operation();
   }
 
-  /* Unconditional link to AP which is listening due to successful join. */
+  //AP is around, sync up and enter main program loop.
   linkTo();
 
-  //Bottomless pit.
+  //Bottomless pit of MCU safety.
   while (1) ;
 }
 
@@ -141,16 +147,23 @@ static void linkTo()
   /* Keep trying to link... */
   while (SMPL_SUCCESS != SMPL_Link(&sLinkID1))
   {
-    HalLedsToggle(LED_D);
-    SPIN_ABOUT_A_20th_SECOND;
+	  for(transmitAttempts =0; transmitAttempts < TX_RECONNECTS; transmitAttempts++)
+	  	  {
+	  		  HalLedsToggle(LED_ALL);
+	  		  SPIN_ABOUT_A_20th_SECOND;
+	  	  }
+	  //AP was there but no reply, go to sleep, wait for button press to try again.
+	  	  HalLedsClear(LED_ALL);
+	  	  __bis_SR_register(LPM3_bits + GIE);
+	  	  __no_operation();
   }
+
   //System linked with AP, clear LEDS, prepare for sleep.
   HalLedsClear(LED_ALL);
 
   /* sleep until button press... */
   SMPL_Ioctl( IOCTL_OBJ_RADIO, IOCTL_ACT_RADIO_SLEEP, 0);
   
-  //RTCPS1CTL |= RT1PSIE;
   
   while (1)
   { 
@@ -158,23 +171,29 @@ static void linkTo()
     __bis_SR_register(LPM3_bits + GIE);   
     __no_operation();
     done = 0;
-    button = HalAlphaButtonsPressed();
-    switch (button)
+    switch (buttonsPressed) //Works with current definitions since button sub ports are unique
     {
-		case 0: //Button A
+		case BUTTON_A:
 			activeLed = LED_A;
+			button = 0;
 			break;
-		case 1: //Button B
+		case BUTTON_B:
 			activeLed = LED_B;
+			button = 1;
 			break;
-		case 2: //Button C
+		case BUTTON_C:
 			activeLed = LED_C;
+			button = 2;
 			break;
-		case 3: //Button D
+		case BUTTON_D:
 			activeLed = LED_D;
+			button = 3;
 			break;
 		default:
 			//Probably don't end up here.
+			//But incase we do, lets tell the user something got messed up.
+			activeLed = LED_ALL;
+			button = 0; 		//Just send 'A', all LED blink should tell user to try again
 			break;
     }
 
@@ -193,11 +212,11 @@ static void linkTo()
 
     
 
-    /* get radio ready...awakens in idle state */
+    //Turn on radio
     SMPL_Ioctl( IOCTL_OBJ_RADIO, IOCTL_ACT_RADIO_AWAKE, 0);
 
-    /* Set TID and designate which LED to toggle */    
 
+    //Try to send the packet and get an ACK
     for(transmitAttempts = 0; transmitAttempts < TX_RECONNECTS; transmitAttempts++)
     {
       for (misses=0; misses < MISSES_IN_A_ROW; ++misses)
@@ -208,15 +227,15 @@ static void linkTo()
 
     	//Assume AP sync issue, so try to reconnect.
 
-    	  /*Drop current link*/
+    	  //Drop current link
     	  SMPL_Unlink(sLinkID1);
-    	  /*Send new join request*/
+    	  //Send new join request
     	  if (SMPL_SUCCESS != SMPL_Init(sCB))
     	   {
     	     HalLedsToggle(LED_ALL);
     	     SPIN_ABOUT_A_20th_SECOND;
     	   }
-    	  /*Relink*/
+    	  //Link up with AP
     	  if (SMPL_SUCCESS != SMPL_Link(&sLinkID1))
     	    {
     	      HalLedsToggle(LED_ALL);
@@ -226,24 +245,41 @@ static void linkTo()
       }
       else
       {
-        /* Got the ack. We're done. */
+        //Got the ACK. Life is good.
     	done = 1;
         break;
       }
     }
 
-    /* radio back to sleep */
+    //Turn off radio
     SMPL_Ioctl( IOCTL_OBJ_RADIO, IOCTL_ACT_RADIO_SLEEP, 0);
 
-    //Probably should do an RTC sleep here to save power
+    //If everything went well blink the LED a couple times.
+    //Fairly hackish but should work ok
     if(done)
     {
-    HalLedsSet(activeLed);
-    SPIN_ABOUT_A_QUARTER_SECOND;
-    HalLedsClear(activeLed);
-    SPIN_ABOUT_A_QUARTER_SECOND;
-    HalLedsSet(activeLed);
-    SPIN_ABOUT_A_QUARTER_SECOND;
+    	HalButtonsInterruptDisable(BUTTON_ALL_PORT1, PORT1); //Disable button interrupts for blinking
+    	HalButtonsInterruptDisable(BUTTON_ALL_PORT2, PORT2);
+
+    	RTCPS1CTL = RT1IP_5;				//Half second delay to turn on light
+		RTCPS1CTL |= RT1PSIE;				//RTC interrupt enable
+
+		__bis_SR_register(LPM3_bits + GIE); //Sleep till RTC wakes it up, first one is to clear fractional periods on RTC
+	    __no_operation();
+		HalLedsSet(activeLed);
+		RTCPS1CTL = RT1IP_4;				//Quarter second blinks
+		RTCPS1CTL |= RT1PSIE;				//RTC interrupt enable
+		__bis_SR_register(LPM3_bits + GIE);
+		 __no_operation();
+		HalLedsClear(activeLed);
+		__bis_SR_register(LPM3_bits + GIE);
+		__no_operation();
+		HalLedsSet(activeLed);
+		__bis_SR_register(LPM3_bits + GIE);
+		__no_operation();
+		RTCPS1CTL &= ~RT1PSIE;				//RTC interrupt disable
+		HalButtonsInterruptEnable(BUTTON_ALL_PORT1, PORT1);
+		HalButtonsInterruptEnable(BUTTON_ALL_PORT2, PORT2);
     }
     HalLedsClear(LED_ALL);
   }
@@ -280,16 +316,10 @@ void SetupRtc(void)
   
   RTCCTL01 &= ~RTCHOLD;
      
-  RTCPS1CTL = RT1IP_7;              // Interrupt freq: .5Hz
+//  RTCPS1CTL = RT1IP_7;              // Interrupt freq: .5Hz
 //  RTCPS1CTL = RT1IP_6;              // Interrupt freq: 1Hz
 //  RTCPS1CTL = RT1IP_5;              // Interrupt freq: 2Hz
-//  RTCPS1CTL = RT1IP_4;              // Interrupt freq: 4Hz
-  
-  
-    
-  //RTCPS0CTL = RT0IP_7;                      // Interrupt freq: 128hz
-  
-  //RTCCTL0 |= RTCTEVIE;           // Enable interrupt  
+    RTCPS1CTL = RT1IP_4;              // Interrupt freq: 4Hz
 }
 
 #pragma vector=RTC_VECTOR
@@ -298,7 +328,7 @@ __interrupt void RTC_ISR(void)
   switch (RTCIV)
   {
     default:      
-      __bic_SR_register_on_exit(LPM3_bits);
+      __bic_SR_register_on_exit(LPM0_bits);
   }
   
 }
