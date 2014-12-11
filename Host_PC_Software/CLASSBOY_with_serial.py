@@ -1,3 +1,17 @@
+######################################################################################
+#Wireless Apparatus for Realtime Classroom Feedback a.k.a. PSUCLASSBOY               #
+#Team T-08 (Michael Schmidt, Chris Halseth, Kyle Lu, Matt Downey)                    #
+#December 2014                                                                       #
+#                                                                                    # 
+#This software application provides a parser for incoming packets for                #
+#a classroom clicker system. Packets are read over USB from the base station,        #
+#parsed, and displayed in a bar graph for the professor. The software also outputs   #
+#a .csv file of the responses to each poll for the professor to review later.        #
+######################################################################################
+
+
+
+
 #Import necessary modules
 import time
 from Tkinter import *
