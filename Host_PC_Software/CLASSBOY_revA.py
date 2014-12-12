@@ -42,10 +42,12 @@ def main():
         while x < 10:
                 try:
                         baseStation = serial.Serial(x,timeout = 0)
+                        
                 except serial.serialutil.SerialException:
                         pass
                 x += 1
                 if baseStation.isOpen():
+                        print baseStation
                         break
 
         #Set-up GUI root window for GUI
@@ -142,12 +144,14 @@ def newParse():
         
         #Get current time for loop timing
         timer = time.time()
+        root.iconify()
 
         #Polling Loop
         while polling:
-                time.sleep(.075) #.075 second wait interval for proper packet grabbing
+                time.sleep(.1) #.1 second wait interval for proper packet grabbing
                 currentPacket = baseStation.read(5) #Grab a packet
                 currentPacket = currentPacket.encode('hex') #Re-encoded packet to a hex string
+                print currentPacket
                 #Check if the current packet is the same as the packet already stored
                 if currentPacket != oldPacket and currentPacket != '':
                         #If packet is different, add packet to the list
@@ -161,7 +165,7 @@ def newParse():
                 pollCountDown.configure(text = currentTimeLeft)
                 #Update GUI
                 root.update()
-
+                print packetList
                 #If time runs out exit the loops
                 if intCheckTime > pollTime:
                         polling = FALSE
@@ -179,6 +183,8 @@ def newParse():
 
         #Get the number of each answer
         numAnswers = answerCount(userDict,userIDList)
+        root.deiconify()
+        
 
         #Delete the default from the GUI
         canvas.delete("all")
