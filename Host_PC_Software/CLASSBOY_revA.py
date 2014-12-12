@@ -31,8 +31,9 @@ def main():
         global canvas
         global newWorkbook
         global writeCommand
-        
-        
+
+        x = 0
+        baseStation = serial.Serial()        
         #Set-up default values for GUI
         defaultTime = 60
         pollTime = defaultTime
@@ -41,7 +42,15 @@ def main():
         #Initialize serial port
         plat = platform.system()
         if plat == 'Windows':
-                baseStation = serial.Serial('COM3',timeout = 0)
+                while x < 10:
+                        try:
+                                baseStation = serial.Serial(x,timeout = 0)
+                        except serial.serialutil.SerialException:
+                                pass
+                        x += 1
+                        if baseStation.isOpen():
+                                break
+                        
         elif plat == 'Linux':
                 baseStation = serial.Serial('/dev/ttyUSB0', timeout = 0)
 
@@ -316,14 +325,20 @@ def controls():
                 
 def barGraph(seq, userWidth, userHeight):
     """ This function generates a bar graph of the answers"""
-    topAnswer = 1
+
+    totalAnswer = 0
     
-    if max(seq) > 0:
+    
+    for item in seq:
+        totalAnswer += item       
+    
+    if totalAnswer  == 0:
+        totalAnswer = 1
             
-        topAnswer = max(seq)
+        
     
     #Setting up the variables
-    y_stretch = 575 /(topAnswer)
+    y_stretch = 575 /(totalAnswer)
     y_space = 20
     x_stretch = 30
     x_width = 120
