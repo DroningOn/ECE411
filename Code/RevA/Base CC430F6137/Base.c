@@ -1,52 +1,33 @@
 /*******************************************************************************
+ *  Base.c - Core Application for the Base Station
+ *  Revision A
+ *  Portland State University ECE411 T08 Dec2014
  *
- *  MspExp430F6137RxUserExperience.c - Main User Experience Application
  *
+ *  Overview: Application sets up and operates the base station as a hub in
+ *  in a star network for receiving and processing incoming join network requests.
+ *  Application has high level control over processing incoming packets from
+ *  satellite devices and LCD display control. Incoming packets are repackaged
+ *  and sent out via serial to the USB connected computer as they are recieved.
+ *  After recieving join requests, incoming packets, or user button input
+ *  (used to navigate the menus) the LCD is updated to show information relative
+ *  to a current node structure containing information about number of connections
+ *  to the hub, and information sent from the end devices such as last answer,
+ *  battery level, and RSSI values.
+ *
+ *  Manages core behavior of PSU Classboy with high level control over:
+ *
+ *  	* Inputs
+ *  	* Interrupt initialization
+ *  	* Network management
+ *      * LED Output
+ *
+ *  Inspiration for this application provided by:
+ *  MspExp430F6137RxUserExperience - Main User Experience Application
  *  Copyright (C) 2010 Texas Instruments Incorporated - http://www.ti.com/
  *
- *  Redistribution and use in source and binary forms, with or without
- *  modification, are permitted provided that the following conditions
- *  are met:
- *
- *    Redistributions of source code must retain the above copyright
- *    notice, this list of conditions and the following disclaimer.
- *
- *    Redistributions in binary form must reproduce the above copyright
- *    notice, this list of conditions and the following disclaimer in the
- *    documentation and/or other materials provided with the
- *    distribution.
- *
- *    Neither the name of Texas Instruments Incorporated nor the names of
- *    its contributors may be used to endorse or promote products derived
- *    from this software without specific prior written permission.
- *
- *  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
- *  "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
- *  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
- *  A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
- *  OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
- *  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
- *  LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
- *  DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
- *  THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
- *  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
- *  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
- *
- ******************************************************************************/
+ *******************************************************************************/
 
-/*----------------------------------------------------------------------------
- *  MSP-EXP430F6137Rx User Epxerience Code
- *  MSP-EXP430F6137Rx configured as SimpliciTI star network access point (AP).
- *  Allows MSP-EXP430F5137Rx end devices (ED) to join the network. 
- *  Displays AP & EDs info on the LCD screen and transmits the data to the PC
- *  via the UART-USB bridge as well.
- *
- *  
- *  Version 1.0                       D. Dang
- *   
- *  Texas Instruments, Inc.
- *  Copyright 2011 Texas Instruments Incorporated. All rights reserved.
- *---------------------------------------------------------------------------- */
 #include <string.h>
 #include "bsp.h"
 #include "mrfi.h"
@@ -64,55 +45,6 @@
 #include "hal_uart.h"
 
 
-/**************************** COMMENTS ON ASYNC LISTEN APPLICATION ***********************
-Summary:
-  This AP build includes implementation of an unknown number of end device peers in
-  addition to AP functionality. In this scenario all End Devices establish a link to
-  the AP and only to the AP. The AP acts as a data hub. All End Device peers are on
-  the AP and not on other distinct ED platforms.
-
-  There is still a limit to the number of peers supported on the AP that is defined
-  by the macro NUM_CONNECTIONS. The AP will support NUM_CONNECTIONS or fewer peers
-  but the exact number does not need to be known at build time.
-
-  In this special but common scenario SimpliciTI restricts each End Device object to a
-  single connection to the AP. If multiple logical connections are required these must
-  be accommodated by supporting contexts in the application payload itself.
-
-Solution overview:
-  When a new peer connection is required the AP main loop must be notified. In essence
-  the main loop polls a semaphore to know whether to begin listening for a peer Link
-  request from a new End Device. There are two solutions: automatic notification and
-  external notification. The only difference between the automatic notification
-  solution and the external notification solution is how the listen semaphore is
-  set. In the external notification solution the sempahore is set by the user when the
-  AP is stimulated for example by a button press or a commend over a serial link. In the
-  automatic scheme the notification is accomplished as a side effect of a new End Device
-  joining.
-
-  The Rx callback must be implemented. When the callback is invoked with a non-zero
-  Link ID the handler could set a semaphore that alerts the main work loop that a
-  SMPL_Receive() can be executed successfully on that Link ID.
-
-  If the callback conveys an argument (LinkID) of 0 then a new device has joined the
-  network. A SMPL_LinkListen() should be executed.
-
-  Whether the joining device supports ED objects is indirectly inferred on the joining
-  device from the setting of the NUM_CONNECTIONS macro. The value of this macro should
-  be non-zero only if ED objects exist on the device. This macro is always non-zero
-  for ED-only devices. But Range Extenders may or may not support ED objects. The macro
-  should be be set to 0 for REs that do not also support ED objects. This prevents the
-  Access Point from reserving resources for a joinng device that does not support any
-  End Device Objects and it prevents the AP from executing a SMPL_LinkListen(). The
-  Access Point will not ever see a Link frame if the joining device does not support
-  any connections.
-
-  Each joining device must execute a SMPL_Link() after receiving the join reply from the
-  Access Point. The Access Point will be listening.
-
-*************************** END COMMENTS ON ASYNC LISTEN APPLICATION ********************/
-
-/************  THIS SOURCE FILE REPRESENTS THE AUTOMATIC NOTIFICATION SOLUTION ************/
 
 /* reserve space for the maximum possible peer Link IDs */
 static linkID_t sLID[NUM_CONNECTIONS];
@@ -129,24 +61,19 @@ static volatile uint8_t sBlinky = 0;
 
 #define SPIN_ABOUT_A_QUARTER_SECOND   NWK_DELAY(250)
 
-#define MESSAGE_BUTTON_PRESSED      0xFF
-#define MESSAGE_HEART_BEAT          0xEE
 #define MESSAGE_LENGTH              6
 #define SERIAL_LENGTH				5
 #define ADDRESS_LENGTH				4
 
 /*-----------------------------------------------------------------------------
- *  
- * 
+ *  Currently defined transmission structure
+ *
  *  Packet construct:
- *  Byte 0: Message Type      [HeartBeat            or        ButtonPressed]
- *  Byte 1:   Content            Vcc                     MESSAGE_BUTTON_PRESSED 
- *  Byte 2:   Content            Temp_MSB                MESSAGE_BUTTON_PRESSED
- *  Byte 3:   Content            Temp_LSB                MESSAGE_BUTTON_PRESSED
- *  Byte 4:   PacketID MSB 
- *  Byte 5:   PacketID LSB
- *  
- 
+ *  Byte 0:   Content            button               User input
+ *  Byte 1:   Content            Vcc                  Battery level
+ *  Byte 2:   PacketID MSB                            Transmission counter highbyte
+ *  Byte 3:   PacketID LSB                            Transmission counter lowbyte
+ *
  *---------------------------------------------------------------------------- */
          
 unsigned char string[6] = "xxxxxx";
@@ -159,6 +86,8 @@ unsigned char temperatureMode = TEMP_MODE_FAHRENHEIT;
 #define UART_MODE_BRIEF               0
 #define UART_MODE_VERBOSE             1
 unsigned char uartMode = UART_MODE_VERBOSE;
+
+#define NUM_CONNECTIONS 100
 
 #define NODE_DISPLAY_ANSWER		        0
 #define NODE_DISPLAY_RSSI               1
@@ -240,7 +169,7 @@ void Base (void)
     {
       /* listen for a new connection */
       HalLcdPrintStopScrolling();
-      HalLcdPrint7Seg((unsigned char*)"Listen");
+      //HalLcdPrint7Seg((unsigned char*)"Listen");
       while (1)
       {
         HalLedsToggle(LED_1);
@@ -252,7 +181,7 @@ void Base (void)
         }
         /* Implement fail-to-link policy here. otherwise, listen again. */
       }
-      HalLcdPrint7SegScroll((unsigned char*)"Add End Device", 14, LCD_SCROLL_NO_REPEAT);
+      //HalLcdPrint7SegScroll((unsigned char*)"Add End Device", 14, LCD_SCROLL_NO_REPEAT);
       HalLedsClear(LED_2);
       HalLedsSet(LED_3);
       nodeInfos[nodeNum].address = nodeNum;
@@ -441,10 +370,6 @@ static void processMessage(linkID_t lid, uint8_t *msg, uint8_t len, addr_t *sour
     outputString[SERIAL_LENGTH-1] = msg[0];
     HalUartTxString(outputString, sizeof outputString );
     UpdateNodeInfoOnLcd(nodeCurrent);
-
-    // INSERT CODE TO SETUP TRANSMIT UART to PC here
-    // LID can be stored to save some info.
-    
     
     //SetupRtc();
     *msg |= NWK_APP_REPLY_BIT;
@@ -465,10 +390,9 @@ void UpdateNodeInfoOnLcd(unsigned char nodeIndex)
   if (nodeIndex>0)
   {  
     //string[0] = '0'+(((nodeInfos[nodeIndex].address)/10)%10);
-    string[0] = '0'+((nodeInfos[nodeIndex].address)%10);
-    if (string[0] > '9')
-      string[0] = string[0]-'9'-1 + 'A';
-    string[1] = ' ';  
+    string[0] = '0'+((nodeInfos[nodeIndex].address)/100%10);
+    string[1] = '0'+((nodeInfos[nodeIndex].address)/10%10);
+    string[2] = '0'+((nodeInfos[nodeIndex].address)%10);
   }
   else
   {
@@ -481,7 +405,7 @@ void UpdateNodeInfoOnLcd(unsigned char nodeIndex)
   {    
     
     string[2] = 'n';
-    if (sNumCurrentPeers<10)
+    if (sNumCurrentPeers<1000)
     {
     	string[3] = '0'+((sNumCurrentPeers/100)%10);
     	string[4] = '0'+((sNumCurrentPeers/10)%10);
@@ -500,17 +424,10 @@ void UpdateNodeInfoOnLcd(unsigned char nodeIndex)
       string[4]='U';
       string[5]='B';  
     }
-    else if (nodeInfos[nodeIndex].rssi<-100)
-    { 
-      string[2] = '-';
-      string[3] = '0'+((-nodeInfos[nodeIndex].rssi/100)%10);
-      string[4] = '0'+((-nodeInfos[nodeIndex].rssi/10)%10);
-      string[5] = '0'+(-nodeInfos[nodeIndex].rssi%10);
-       
-    }
+
     else
     {
-      string[2] = ' ';
+
       string[3] = '-';
       string[4] = '0'+((-nodeInfos[nodeIndex].rssi/10)%10);
       string[5] = '0'+(-nodeInfos[nodeIndex].rssi%10);
@@ -520,15 +437,14 @@ void UpdateNodeInfoOnLcd(unsigned char nodeIndex)
   }
   else                                      // NODE_DISPLAY_ANSWER
   {
-      string[2] = ' ';
-      string[3] = 'A' + nodeInfos[nodeIndex].answer;
-      string[4] = ' ';
+
+      string[3] = ' ';
+      string[4] = 'A' + nodeInfos[nodeIndex].answer;
       string[5] = ' ';
       HalLcdPrint7Seg(string);
   }
     
   lcdClearSymbol  = 1;
-  //HalLcdSetFutureClearSymbol();
 }
 
 /**********************************************************************//**
@@ -549,11 +465,7 @@ void SetupRtc(void)
 }
 
 
-//void ConfigureLcdScrolling(void)
-//{
-//  //lcdClearSymbol = 2;
-//  HalLcdSetupRtc();  
-//}
+
 
 
 #pragma vector=RTC_VECTOR

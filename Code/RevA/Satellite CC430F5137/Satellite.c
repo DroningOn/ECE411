@@ -26,7 +26,7 @@
  *      * LED Output
  *
  *  Inspiration for this application provided by:
- *  MspExp430F5137RxUserExperience.c - Main User Experience Application
+ *  MspExp430F5137RxUserExperience - Main User Experience Application
  *  Copyright (C) 2010 Texas Instruments Incorporated - http://www.ti.com/
  *
  *
@@ -127,6 +127,8 @@ void Satellite (void)
 	  __no_operation();
   }
 
+
+
   //AP is around, sync up and enter main program loop.
   linkTo();
 
@@ -164,12 +166,13 @@ static void linkTo()
   /* sleep until button press... */
   SMPL_Ioctl( IOCTL_OBJ_RADIO, IOCTL_ACT_RADIO_SLEEP, 0);
   
-  
+
   while (1)
-  { 
-    /* Send a message when either button pressed */   
-    __bis_SR_register(LPM3_bits + GIE);   
+  {
+    /* Send a message when either button pressed */
+    __bis_SR_register(LPM3_bits + GIE);
     __no_operation();
+
     done = 0;
     switch (buttonsPressed) //Works with current definitions since button sub ports are unique
     {
@@ -298,22 +301,10 @@ static uint8_t sCB(linkID_t lid)
 }
 
 
-
-/**********************************************************************//**
- * @brief  Initializes the RTC module for interval mode 
- * 
- * 
- * 
- * @param  none 
- *  
- * @return none
- *************************************************************************/
+/* RTC initialization for interval interrupts. No args()*/
 void SetupRtc(void)
 {  
   RTCCTL01 = RTCMODE + RTCBCD + RTCHOLD + RTCTEV_1;
-  
-
-  
   RTCCTL01 &= ~RTCHOLD;
      
 //  RTCPS1CTL = RT1IP_7;              // Interrupt freq: .5Hz
