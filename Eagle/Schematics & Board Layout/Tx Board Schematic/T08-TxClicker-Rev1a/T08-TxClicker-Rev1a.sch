@@ -6843,8 +6843,8 @@ The ordinary SWITCH-MOMENTARY-2 is likely to be more useful for regular schemati
 <part name="SUPPLY5" library="supply2" deviceset="GND" device=""/>
 <part name="U$6" library="PCB_Antenna_915MHz-halseth" deviceset="PCB_ANTENNA_915MHZ" device="OSHP"/>
 <part name="SUPPLY16" library="supply2" deviceset="GND" device=""/>
-<part name="C29" library="rcl-amber" deviceset="C" device="0402" value="16pF"/>
-<part name="L9" library="rcl-amber" deviceset="L" device="L0402" value="5.6nH"/>
+<part name="R100" library="rcl-amber" deviceset="R" device="0402" value="0 Ohm"/>
+<part name="C100" library="rcl-amber" deviceset="C" device="0402" value="1.5pF"/>
 <part name="L8" library="rcl-amber" deviceset="L" device="L0402" value="DNP"/>
 <part name="SUPPLY17" library="supply2" deviceset="GND" device=""/>
 <part name="SUPPLY19" library="supply2" deviceset="GND" device=""/>
@@ -6853,7 +6853,7 @@ The ordinary SWITCH-MOMENTARY-2 is likely to be more useful for regular schemati
 <part name="TP5" library="SparkFun-Passives" deviceset="TEST-POINT" device="3"/>
 <part name="TP6" library="SparkFun-Passives" deviceset="TEST-POINT" device="3"/>
 <part name="TP7" library="SparkFun-Passives" deviceset="TEST-POINT" device="3"/>
-<part name="L10" library="rcl-amber" deviceset="L" device="L0603" value="~200nH"/>
+<part name="L10" library="rcl-amber" deviceset="L" device="L0603" value="200nH"/>
 <part name="TP8" library="SparkFun-Passives" deviceset="TEST-POINT" device="3"/>
 <part name="P+1" library="supply1" deviceset="VCC" device=""/>
 <part name="X1-DNI" library="con-coax" deviceset="SMA-SMD" device=""/>
@@ -6909,7 +6909,7 @@ The ordinary SWITCH-MOMENTARY-2 is likely to be more useful for regular schemati
 <wire x1="127" y1="154.94" x2="127" y2="208.28" width="0.1524" layer="94" style="shortdash"/>
 <wire x1="127" y1="208.28" x2="91.44" y2="208.28" width="0.1524" layer="94" style="shortdash"/>
 <wire x1="91.44" y1="208.28" x2="91.44" y2="154.94" width="0.1524" layer="94" style="shortdash"/>
-<text x="110.49" y="172.72" size="2.54" layer="94" font="vector">CR2032</text>
+<text x="116.84" y="173.99" size="2.54" layer="94" font="vector" rot="R90">CR2032</text>
 <wire x1="129.54" y1="208.28" x2="274.32" y2="208.28" width="0.1524" layer="94" style="shortdash"/>
 <wire x1="274.32" y1="208.28" x2="274.32" y2="154.94" width="0.1524" layer="94" style="shortdash"/>
 <wire x1="274.32" y1="154.94" x2="129.54" y2="154.94" width="0.1524" layer="94" style="shortdash"/>
@@ -6943,7 +6943,7 @@ The ordinary SWITCH-MOMENTARY-2 is likely to be more useful for regular schemati
 <wire x1="233.68" y1="182.88" x2="233.68" y2="190.5" width="0.1524" layer="94" style="shortdash"/>
 <wire x1="241.3" y1="182.88" x2="241.3" y2="190.5" width="0.1524" layer="94" style="shortdash"/>
 <wire x1="241.3" y1="182.88" x2="233.68" y2="182.88" width="0.1524" layer="94" style="shortdash"/>
-<text x="226.06" y="175.26" size="1.778" layer="97">50ohm Tline
+<text x="220.98" y="175.26" size="1.778" layer="97">50ohm Tline
 (if required)</text>
 <text x="119.38" y="203.2" size="2.54" layer="94" font="vector" rot="MR0">Power Supply</text>
 <text x="43.18" y="170.18" size="1.778" layer="97" font="vector" rot="R90">Tag-Connect</text>
@@ -7018,7 +7018,7 @@ Resistive touch switch footprint will be incorperated into switch footprint**</t
 <attribute name="VALUE" x="203.835" y="161.925" size="1.778" layer="96"/>
 </instance>
 <instance part="U$5" gate="CR2032" x="106.68" y="180.34" smashed="yes">
-<attribute name="VALUE" x="97.79" y="167.64" size="1.27" layer="96" font="vector" rot="R90"/>
+<attribute name="VALUE" x="95.25" y="162.56" size="1.778" layer="96" font="vector" rot="R90"/>
 </instance>
 <instance part="C12" gate="G$1" x="142.24" y="116.84" smashed="yes">
 <attribute name="NAME" x="143.764" y="117.221" size="1.778" layer="95"/>
@@ -7039,7 +7039,7 @@ Resistive touch switch footprint will be incorperated into switch footprint**</t
 <attribute name="VALUE" x="104.775" y="161.925" size="1.778" layer="96"/>
 </instance>
 <instance part="P+3" gate="VCC" x="106.68" y="198.12" smashed="yes">
-<attribute name="VALUE" x="102.87" y="198.12" size="1.778" layer="96" rot="R180"/>
+<attribute name="VALUE" x="107.95" y="200.66" size="1.778" layer="96" rot="R180"/>
 </instance>
 <instance part="FRAME2" gate="G$2" x="172.72" y="0" smashed="yes">
 <attribute name="LAST_DATE_TIME" x="185.42" y="1.27" size="2.54" layer="94" font="vector"/>
@@ -7064,7 +7064,7 @@ Resistive touch switch footprint will be incorperated into switch footprint**</t
 <attribute name="VALUE" x="76.2" y="195.58" size="1.778" layer="96" rot="MR90"/>
 </instance>
 <instance part="P+5" gate="VCC" x="248.92" y="134.62" smashed="yes">
-<attribute name="VALUE" x="246.38" y="132.08" size="1.778" layer="96" rot="R90"/>
+<attribute name="VALUE" x="251.46" y="137.16" size="1.778" layer="96" rot="R180"/>
 </instance>
 <instance part="C10" gate="G$1" x="132.08" y="116.84" smashed="yes">
 <attribute name="NAME" x="133.604" y="117.221" size="1.778" layer="95"/>
@@ -7082,7 +7082,7 @@ Resistive touch switch footprint will be incorperated into switch footprint**</t
 <attribute name="VALUE" x="148.844" y="66.421" size="1.778" layer="96"/>
 </instance>
 <instance part="P+6" gate="VCC" x="157.48" y="78.74" smashed="yes">
-<attribute name="VALUE" x="154.94" y="76.2" size="1.778" layer="96" rot="R90"/>
+<attribute name="VALUE" x="152.4" y="78.74" size="1.778" layer="96"/>
 </instance>
 <instance part="SUPPLY8" gate="GND" x="157.48" y="60.96" smashed="yes">
 <attribute name="VALUE" x="155.575" y="57.785" size="1.778" layer="96"/>
@@ -7111,25 +7111,25 @@ Resistive touch switch footprint will be incorperated into switch footprint**</t
 </instance>
 <instance part="C34" gate="G$1" x="264.16" y="71.12" smashed="yes" rot="MR0">
 <attribute name="NAME" x="264.16" y="71.12" size="1.778" layer="95" rot="MR0"/>
-<attribute name="VALUE" x="264.16" y="66.04" size="1.778" layer="96" rot="MR0"/>
+<attribute name="VALUE" x="264.16" y="66.802" size="1.778" layer="96" rot="MR0"/>
 </instance>
 <instance part="C31" gate="G$1" x="256.54" y="71.12" smashed="yes" rot="MR0">
 <attribute name="NAME" x="256.54" y="71.12" size="1.778" layer="95" rot="MR0"/>
-<attribute name="VALUE" x="256.54" y="66.04" size="1.778" layer="96" rot="MR0"/>
+<attribute name="VALUE" x="257.048" y="66.802" size="1.778" layer="96" rot="MR0"/>
 </instance>
 <instance part="C28" gate="G$1" x="248.92" y="71.12" smashed="yes" rot="MR0">
 <attribute name="NAME" x="248.92" y="71.12" size="1.778" layer="95" rot="MR0"/>
-<attribute name="VALUE" x="246.38" y="66.04" size="1.778" layer="96" rot="MR0"/>
+<attribute name="VALUE" x="248.666" y="66.802" size="1.778" layer="96" rot="MR0"/>
 </instance>
 <instance part="P+8" gate="VCC" x="259.08" y="91.44" smashed="yes" rot="MR0">
-<attribute name="VALUE" x="261.62" y="86.36" size="1.778" layer="96" rot="MR90"/>
+<attribute name="VALUE" x="261.62" y="91.44" size="1.778" layer="96" rot="MR180"/>
 </instance>
 <instance part="SUPPLY11" gate="GND" x="264.16" y="60.96" smashed="yes" rot="MR0">
 <attribute name="VALUE" x="266.065" y="57.785" size="1.778" layer="96" rot="MR0"/>
 </instance>
 <instance part="R6" gate="G$1" x="228.6" y="93.98" smashed="yes" rot="R180">
-<attribute name="NAME" x="234.95" y="97.5614" size="1.778" layer="95" rot="R180"/>
-<attribute name="VALUE" x="229.87" y="97.282" size="1.778" layer="96" rot="R180"/>
+<attribute name="NAME" x="233.68" y="97.0534" size="1.778" layer="95" rot="R180"/>
+<attribute name="VALUE" x="228.6" y="97.028" size="1.778" layer="96" rot="R180"/>
 </instance>
 <instance part="C9" gate="G$1" x="121.92" y="116.84" smashed="yes">
 <attribute name="NAME" x="123.444" y="117.221" size="1.778" layer="95"/>
@@ -7165,7 +7165,7 @@ Resistive touch switch footprint will be incorperated into switch footprint**</t
 <attribute name="VALUE" x="64.135" y="100.965" size="1.778" layer="96"/>
 </instance>
 <instance part="P+10" gate="VCC" x="142.24" y="91.44" smashed="yes" rot="MR0">
-<attribute name="VALUE" x="144.78" y="88.9" size="1.778" layer="96" font="vector" rot="MR90"/>
+<attribute name="VALUE" x="139.7" y="91.44" size="1.778" layer="96" font="vector" rot="MR90"/>
 </instance>
 <instance part="P+11" gate="VCC" x="132.08" y="91.44" smashed="yes" rot="MR0">
 <attribute name="VALUE" x="129.54" y="91.44" size="1.778" layer="96" font="vector" rot="MR90"/>
@@ -7177,11 +7177,11 @@ Resistive touch switch footprint will be incorperated into switch footprint**</t
 <attribute name="VALUE" x="119.38" y="91.44" size="1.778" layer="96" font="vector" rot="MR90"/>
 </instance>
 <instance part="C23" gate="G$1" x="231.14" y="71.12" smashed="yes">
-<attribute name="NAME" x="232.664" y="71.501" size="1.778" layer="95"/>
-<attribute name="VALUE" x="225.044" y="66.421" size="1.778" layer="96"/>
+<attribute name="NAME" x="232.156" y="71.247" size="1.778" layer="95"/>
+<attribute name="VALUE" x="231.394" y="66.421" size="1.778" layer="96"/>
 </instance>
 <instance part="C20" gate="G$1" x="220.98" y="71.12" smashed="yes">
-<attribute name="NAME" x="222.504" y="71.501" size="1.778" layer="95"/>
+<attribute name="NAME" x="215.138" y="70.993" size="1.778" layer="95"/>
 <attribute name="VALUE" x="214.884" y="66.421" size="1.778" layer="96"/>
 </instance>
 <instance part="C5" gate="G$1" x="88.9" y="116.84" smashed="yes">
@@ -7219,13 +7219,13 @@ Resistive touch switch footprint will be incorperated into switch footprint**</t
 <instance part="SUPPLY16" gate="GND" x="261.62" y="182.88" smashed="yes">
 <attribute name="VALUE" x="259.715" y="179.705" size="1.778" layer="96"/>
 </instance>
-<instance part="C29" gate="G$1" x="251.46" y="187.96" smashed="yes" rot="R270">
-<attribute name="NAME" x="247.904" y="193.421" size="1.778" layer="95" font="vector"/>
-<attribute name="VALUE" x="247.904" y="190.881" size="1.778" layer="96" font="vector"/>
+<instance part="R100" gate="G$1" x="248.92" y="187.96" smashed="yes" rot="R180">
+<attribute name="NAME" x="252.984" y="190.881" size="1.778" layer="95" font="vector"/>
+<attribute name="VALUE" x="242.824" y="190.881" size="1.778" layer="96" font="vector"/>
 </instance>
-<instance part="L9" gate="G$1" x="256.54" y="180.34" smashed="yes" rot="R180">
-<attribute name="NAME" x="252.9586" y="173.99" size="1.778" layer="95" font="vector" rot="R270"/>
-<attribute name="VALUE" x="253.238" y="182.88" size="1.778" layer="96" font="vector" rot="R270"/>
+<instance part="C100" gate="G$1" x="256.54" y="180.34" smashed="yes" rot="R180">
+<attribute name="NAME" x="258.0386" y="179.07" size="1.778" layer="95" font="vector" rot="R270"/>
+<attribute name="VALUE" x="253.238" y="180.34" size="1.778" layer="96" font="vector" rot="R270"/>
 </instance>
 <instance part="L8" gate="G$1" x="243.84" y="180.34" smashed="yes" rot="R180">
 <attribute name="NAME" x="240.2586" y="173.99" size="1.778" layer="95" font="vector" rot="R270"/>
@@ -7237,7 +7237,10 @@ Resistive touch switch footprint will be incorperated into switch footprint**</t
 <instance part="SUPPLY19" gate="GND" x="256.54" y="170.18" smashed="yes">
 <attribute name="VALUE" x="254.635" y="167.005" size="1.778" layer="96"/>
 </instance>
-<instance part="Y1" gate="G$1" x="226.06" y="76.2"/>
+<instance part="Y1" gate="G$1" x="226.06" y="76.2" smashed="yes">
+<attribute name="NAME" x="227.584" y="76.708" size="1.778" layer="95"/>
+<attribute name="VALUE" x="222.25" y="71.12" size="1.778" layer="96"/>
+</instance>
 <instance part="TP4" gate="&gt;NAME" x="88.9" y="139.7" smashed="yes" rot="R90">
 <attribute name="NAME" x="91.44" y="144.78" size="1.778" layer="95" font="vector" rot="R180"/>
 </instance>
@@ -7252,10 +7255,10 @@ Resistive touch switch footprint will be incorperated into switch footprint**</t
 </instance>
 <instance part="L10" gate="G$1" x="259.08" y="81.28"/>
 <instance part="TP8" gate="&gt;NAME" x="142.24" y="19.05" smashed="yes" rot="R90">
-<attribute name="NAME" x="144.78" y="24.13" size="1.778" layer="95" font="vector" rot="R180"/>
+<attribute name="NAME" x="144.78" y="25.4" size="1.778" layer="95" font="vector" rot="R180"/>
 </instance>
 <instance part="P+1" gate="VCC" x="149.86" y="22.86" smashed="yes">
-<attribute name="VALUE" x="147.32" y="20.32" size="1.778" layer="96" rot="R90"/>
+<attribute name="VALUE" x="152.4" y="25.4" size="1.778" layer="96" rot="R180"/>
 </instance>
 <instance part="X1-DNI" gate="G$1" x="236.22" y="203.2" smashed="yes" rot="R270">
 <attribute name="VALUE" x="231.14" y="205.74" size="1.778" layer="96"/>
@@ -7279,19 +7282,19 @@ Resistive touch switch footprint will be incorperated into switch footprint**</t
 <instance part="R7" gate="G$1" x="238.76" y="195.58" rot="R90"/>
 <instance part="U$1" gate="G$1" x="53.34" y="177.8" rot="MR0"/>
 <instance part="R8" gate="G$1" x="111.76" y="83.82" smashed="yes" rot="R90">
-<attribute name="NAME" x="110.49" y="82.3214" size="1.778" layer="95" rot="R180"/>
+<attribute name="NAME" x="110.49" y="79.7814" size="1.778" layer="95" rot="R180"/>
 <attribute name="VALUE" x="108.458" y="87.63" size="1.778" layer="96" rot="R270"/>
 </instance>
 <instance part="R9" gate="G$1" x="121.92" y="83.82" smashed="yes" rot="R90">
-<attribute name="NAME" x="120.65" y="82.3214" size="1.778" layer="95" rot="R180"/>
+<attribute name="NAME" x="120.65" y="79.7814" size="1.778" layer="95" rot="R180"/>
 <attribute name="VALUE" x="118.618" y="87.63" size="1.778" layer="96" rot="R270"/>
 </instance>
 <instance part="R10" gate="G$1" x="132.08" y="83.82" smashed="yes" rot="R90">
-<attribute name="NAME" x="130.81" y="82.3214" size="1.778" layer="95" rot="R180"/>
+<attribute name="NAME" x="130.81" y="79.7814" size="1.778" layer="95" rot="R180"/>
 <attribute name="VALUE" x="128.778" y="87.63" size="1.778" layer="96" rot="R270"/>
 </instance>
 <instance part="R11" gate="G$1" x="142.24" y="83.82" smashed="yes" rot="R90">
-<attribute name="NAME" x="140.97" y="82.3214" size="1.778" layer="95" rot="R180"/>
+<attribute name="NAME" x="140.97" y="79.7814" size="1.778" layer="95" rot="R180"/>
 <attribute name="VALUE" x="138.938" y="87.63" size="1.778" layer="96" rot="R270"/>
 </instance>
 <instance part="R2" gate="G$1" x="40.64" y="116.84" smashed="yes" rot="R90">
@@ -7401,10 +7404,10 @@ Resistive touch switch footprint will be incorperated into switch footprint**</t
 </instance>
 <instance part="XCAL-DNI" gate="G$1" x="162.56" y="22.86" smashed="yes" rot="R270">
 <attribute name="VALUE" x="157.48" y="25.4" size="1.778" layer="96"/>
-<attribute name="NAME" x="165.1" y="21.082" size="1.778" layer="95"/>
+<attribute name="NAME" x="157.48" y="28.702" size="1.778" layer="95"/>
 </instance>
 <instance part="SUPPLY15" gate="GND" x="160.02" y="17.78" smashed="yes">
-<attribute name="VALUE" x="153.035" y="17.145" size="1.778" layer="96"/>
+<attribute name="VALUE" x="158.115" y="14.605" size="1.778" layer="96"/>
 </instance>
 </instances>
 <busses>
@@ -7665,9 +7668,9 @@ Resistive touch switch footprint will be incorperated into switch footprint**</t
 <wire x1="243.84" y1="172.72" x2="243.84" y2="175.26" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="L9" gate="G$1" pin="1"/>
+<pinref part="C100" gate="G$1" pin="1"/>
 <pinref part="SUPPLY19" gate="GND" pin="GND"/>
-<wire x1="256.54" y1="172.72" x2="256.54" y2="175.26" width="0.1524" layer="91"/>
+<wire x1="256.54" y1="172.72" x2="256.54" y2="177.8" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="SUPPLY16" gate="GND" pin="GND"/>
@@ -8006,9 +8009,9 @@ Resistive touch switch footprint will be incorperated into switch footprint**</t
 <net name="ANTENNA" class="0">
 <segment>
 <pinref part="U$6" gate="G$1" pin="ANT"/>
-<pinref part="C29" gate="G$1" pin="1"/>
+<pinref part="R100" gate="G$1" pin="1"/>
 <wire x1="264.16" y1="187.96" x2="256.54" y2="187.96" width="0.1524" layer="91"/>
-<pinref part="L9" gate="G$1" pin="2"/>
+<pinref part="C100" gate="G$1" pin="2"/>
 <wire x1="256.54" y1="187.96" x2="254" y2="187.96" width="0.1524" layer="91"/>
 <wire x1="256.54" y1="185.42" x2="256.54" y2="187.96" width="0.1524" layer="91"/>
 <junction x="256.54" y="187.96"/>
@@ -8112,8 +8115,7 @@ Resistive touch switch footprint will be incorperated into switch footprint**</t
 <net name="N$12" class="0">
 <segment>
 <pinref part="L8" gate="G$1" pin="2"/>
-<pinref part="C29" gate="G$1" pin="2"/>
-<wire x1="243.84" y1="187.96" x2="246.38" y2="187.96" width="0.1524" layer="91"/>
+<pinref part="R100" gate="G$1" pin="2"/>
 <wire x1="243.84" y1="187.96" x2="243.84" y2="185.42" width="0.1524" layer="91"/>
 <pinref part="C21" gate="G$1" pin="1"/>
 <wire x1="231.14" y1="187.96" x2="238.76" y2="187.96" width="0.1524" layer="91"/>
