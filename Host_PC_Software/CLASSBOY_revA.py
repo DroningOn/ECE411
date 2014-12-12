@@ -17,7 +17,6 @@ import time
 from Tkinter import *
 import serial
 import csv
-import platform
 
 def main():
 
@@ -35,24 +34,19 @@ def main():
         x = 0
         baseStation = serial.Serial()        
         #Set-up default values for GUI
-        defaultTime = 60
+        defaultTime = 15
         pollTime = defaultTime
         defaultAns = (0,0,0,0)
 
         #Initialize serial port
-        plat = platform.system()
-        if plat == 'Windows':
-                while x < 10:
-                        try:
-                                baseStation = serial.Serial(x,timeout = 0)
-                        except serial.serialutil.SerialException:
-                                pass
-                        x += 1
-                        if baseStation.isOpen():
-                                break
-                        
-        elif plat == 'Linux':
-                baseStation = serial.Serial('/dev/ttyUSB0', timeout = 0)
+        while x < 10:
+                try:
+                        baseStation = serial.Serial(x,timeout = 0)
+                except serial.serialutil.SerialException:
+                        pass
+                x += 1
+                if baseStation.isOpen():
+                        break
 
         #Set-up GUI root window for GUI
         root = Tk()
@@ -65,7 +59,7 @@ def main():
         root.resizable(0,0)
 
         #Setup a new Excel file to write
-        newWorkbook = open('ECE411'+time.strftime('%m%d%Y') + '.csv', 'wb')
+        newWorkbook = open('ECE411_'+time.strftime('%H_%M_%S_%m%d%Y') + '.csv', 'wb') 
         writeCommand = csv.writer(newWorkbook, dialect = 'excel')
         
         #Set-up canvas for bar graph
@@ -73,11 +67,12 @@ def main():
         canvas.pack()
         #Initialize GUI
         GUI(defaultAns,625,625)
+        
         mainloop()
 
         
 def portClose():
-        """This method closes the serial port and destoys the GUI window when
+        """This method closes the serial port and destroys the GUI window when
         close is pressed"""
         
         global baseStation
